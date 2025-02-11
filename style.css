@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Liter&display=swap');
+*{
+    padding:0;
+    margin: 0;
+   
+}
+/* -------------------------------------- Om JavaScript------------------------------------- */
+
+.hoved_containeromjs{
+    margin: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav nav"
+    "main main"
+    "main main"
+    "footer footer";
+    font-family: "Liter", serif;
+    font-style: normal;
+    background-color: black;
+    
+}
+
+.hoved_containeromjs .header_omjs{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo navi ham";
+    margin: 2.5rem;  
+    align-items: center;
+}
+.header_omjs .logo1{
+    grid-area:logo ;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+} 
+.header_omjs #ham1{
+    grid-area:ham ;
+    display: flex;
+    justify-content: center;
+} 
+
+.links_nav_omjs{
+    grid-area: navi;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 2.3rem;
+
+
+}
+.links_nav_omjs li{
+    padding: 1.5rem;
+    transition: 0.2s;
+    margin:0 .5rem 0 .5rem;
+    
+}
+.links_nav_omjs li:hover{
+    background-color: #E2E0C8;
+    box-shadow: .3rem .4rem grey; 
+}
+
+.links_nav_omjs li a{
+    text-decoration: none;
+    color: #ffff;
+}
+.links_nav_omjs li a:hover{
+    color:black;
+}
+
+
+.omJS .over1{
+    margin:.5rem 10% 2.5rem 10%;
+    text-align: center;
+}
+.omJS .js1{
+    margin: .5rem 12% 1.5rem 12%;
+}
+
+.info_omjs{
+    grid-area: main;
+    margin: 0 10% 0 10%;
+    background-color: rgb(188, 188, 218);
+}
+
