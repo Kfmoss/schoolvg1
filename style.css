@@ -4,6 +4,96 @@
     margin: 0;
    
 }
+/* ---------------------------------------------------main(index)------------------ */
+.main_maincontainer{
+    margin: .5rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav main_s1"
+    "nav main_s2"
+    "nav main_foo";
+    font-family: "Liter", serif;
+
+}
+.main_maincontainer .main_mainnav{
+    grid-area: nav;
+    background-color: rgb(227, 236, 233);
+    
+}
+.main_mainliks{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main_mainliks #logomain{
+    width: 100%;
+}
+.main_maincontainer .main_s1{
+    margin: .5rem;
+    grid-area: main_s1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "box1"
+    "box2";
+    font-family: "Liter", serif;
+    text-align: center;
+    
+}
+.listbox1{
+    list-style: none;
+}
+.listbox1 .subsect1{
+    grid-area: box1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.listbox1 .subsect1 a{
+    margin: 10%;
+    text-decoration: none;
+    color: black;
+    font-size: 5rem;
+    background-color:#93e4c1 ;
+    padding: 1.125rem;
+    transition: .4s;
+
+}
+.listbox1 .subsect1 a:hover{
+    background-color:#004445;
+    color:#fff;
+}
+
+.listbox1 .subsect2{
+    grid-area: box2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listbox1 .subsect2 a{
+    margin: 10%;
+    text-decoration: none;
+    color: black;
+    font-size: 5rem;
+    background-color: #8594e4;
+    padding: 1.125rem;
+    transition: .4s;
+}
+.listbox1 .subsect2 a:hover{
+    background-color: #430f58;
+    color: #fff;
+
+}
+
+
 /* -------------------------------------- Om JavaScript------------------------------------- */
 
 .hoved_containeromjs{
