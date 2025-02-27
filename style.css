@@ -69,6 +69,7 @@
 .listbox1 .subsect1 a:hover{
     background-color:#004445;
     color:#fff;
+    box-shadow: 10px 5px 5px rgb(48, 46, 46);
 }
 
 .listbox1 .subsect2{
@@ -90,6 +91,7 @@
 .listbox1 .subsect2 a:hover{
     background-color: #430f58;
     color: #fff;
+    box-shadow: 10px 5px 5px rgb(48, 46, 46);
 
 }
 
