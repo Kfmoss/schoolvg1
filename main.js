@@ -25,3 +25,6 @@ document.getElementById('editor').style.fontSize='22px';
 
 
 
+document.querySelector("#myCallbackButton1").addEventListener("click", function () {
+    alert("Knappen ble klikket!");
+});

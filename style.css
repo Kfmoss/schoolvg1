@@ -8,7 +8,7 @@
 .main_maincontainer{
     margin: .5rem;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "nav main_s1"
@@ -102,24 +102,36 @@
     box-shadow: 10px 5px 5px rgb(48, 46, 46);
 
 }
+.main_s2{
+    grid-area: main_s2;
+   
+    padding: 1.5rem;
+    scroll-behavior: smooth;
+}
 
 .footer_main{
     grid-area: main_foo;
-    display: flex;
-    text-align: center;
-    justify-content:space-around;
-    background-color: black;
-
-
+    background-color: rgb(28, 61, 36);
 }
+
 .footer_main ul{
     list-style:none;
-
+    display: flex;
+    justify-content: center;
+    
 }
+
 .footer_main ul a{
     text-decoration: none;
     color:#fff;
+    font-size: 1.25rem;
 }
+.footer_main .footer2 li{
+    padding: 0.5rem 1.7rem ;
+}
+
+
+
 
 
 

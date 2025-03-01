@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hjem - JS</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
                 <li class="main1"><a href="basics.html">Basics</a></li>
                 <li class="main1"><a href="oppgaver.html">Oppgaver</a></li>
                 <li class="main1"><a href="JSeditor.html">JS-kodeeditor </a></li>
+                <li class="main1"><a href="httpmet.html">HTTP metoder</a></li>
                 <li class="main1"><a href="OmJavaScript.html">Om JavaScript</a></li>
             </ul>
 
@@ -22,16 +24,51 @@
         <section class="main_s1">
             <ul class="listbox1">
                 <li class="subsect1">
-                    <a class="box1" href="#">Variabler</a>
-                    <a class="box2" href="#">Funksjoner</a></li>
+                    <a class="box1" href="#variabler">Variabler</a>
+                    <a class="box2" href="#funskjoner">Funksjoner</a></li>
                 <li class="subsect2">
-                    <a class="box3" href="#">Syntaks</a>
-                    <a class="box4" href="#">Modern JS</a>
+                    <a class="box3" href="#syntaks">Syntaks</a>
+                    <a class="box4" href="#modernJS">Modern JS</a>
                 </li>
             </ul>
 
         </section>
         <section class="main_s2">
+            <article id="variabler" class="variabler">
+                <h3>Variabler i JavaScript</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Vel rem modi illum consequatur velit, dolore saepe, mollitia 
+                    iusto repudiandae voluptate nostrum reiciendis nihil nobis! Error 
+                    possimus accusamus sed eaque deserunt vitae, nisi, vel expedita quo 
+                    veniam pariatur sunt laudantium nemo, maxime quasi quibusdam rerum. 
+                    Explicabo voluptates eveniet minus? Dolorem, repudiandae!
+                </p>
+
+            </article>
+            <article id="funskjoner" class="funksjoner">
+                <h3>Funksjoner</h3>
+
+                <p>En callback i JavaScript er en funksjon som sendes som et argument til en annen funksjon og kjøres 
+                    senere, ofte etter at en asynkron operasjon er fullført. 
+                    Dette brukes mye i webutvikling for å håndtere hendelser, AJAX-forespørsler, animasjoner og mer.
+                </p>
+
+                <h4> Eksempel 1</h4>
+                <img src="img/eksempel1.PNG" alt="">
+                <button id="myCallbackButton1" type="button">
+                    Klikk meg, please!
+                </button>
+
+
+            </article>
+            <article id="syntaks" class="syntaks">
+                <h3>Syntaks</h3>
+
+            </article>
+            <article id="modernJS" class="modernJS">
+
+            </article>
 
         </section>
         <section class="main_s3"></section>
@@ -39,29 +76,19 @@
 
         <footer class="footer_main">
            
-            <ul class="footer1">
-             
-                <li><a href="#">logo1</a></li>
-                <li><a href="#">logo2</a></li>
-                <li><a href="#">logo3</a></li>
-   
 
-            </ul>
             <ul class="footer2">
  
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#">logo5</a></li>
-                <li><a href="#">logo6</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
-            <ul class="footer3">
-                <li><a href="#">informasjonsteknologi og medieproduksjon</a></li>
-                <li><a href="#">Fagbrev</a></li>
-                <li><a href="#">Samordna Opptak</a></li>
-            </ul>
+
           
         </footer>
 
     </div>
+    <script src="index.js"></script>
     
 </body>
 </html>
