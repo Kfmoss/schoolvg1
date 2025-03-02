@@ -113,6 +113,35 @@
 .variabler div{
     margin:2.25rem ;
 }
+.funksjoner div{
+    margin:2.25rem ;
+    
+}
+.callback{
+    display: flex;
+    flex-direction: column;
+
+}
+.callback img{
+    width: 50%;
+    padding: 1.25rem 0 1.25rem 0;
+
+}
+.callback #myCallbackButton1{
+    width: 5rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    font-weight: 700;
+    background-color: rgb(210, 213, 226);
+    transition: .4s;
+
+}
+.callback #myCallbackButton1:hover{
+    background-color: blue;
+    color:#ffff;
+    width: 10rem;
+}
+
 
 .footer_main{
     grid-area: main_foo;

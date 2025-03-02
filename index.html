@@ -66,15 +66,56 @@
             </article>
             <article id="funskjoner" class="funksjoner">
                 <h3>Funksjoner</h3>
-
-                <p>En callback i JavaScript er en funksjon som sendes som et argument til en annen funksjon og kjøres 
-                    senere, ofte etter at en asynkron operasjon er fullført. 
-                    Dette brukes mye i webutvikling for å håndtere hendelser, AJAX-forespørsler, animasjoner og mer.
+                <p>En funksjon i JavaScript er en gjenbrukbar kodeblokk som utfører en 
+                    spesifikk oppgave. Funksjoner gjør koden mer organisert, modulær og lettere å 
+                    vedlikeholde.
                 </p>
 
-                <div class="eksempel1">
-                    <h4> Eksempel 1</h4>
+                <div class="Funksjonserklæring" >
+                    <h4>Funksjonserklæring (Function Declaration)</h4>
+                    <img src="img/function1.PNG" alt="">
+                    <p>Brukes ofte når funksjonen skal gjenbrukes mange ganger og
+                        kan kalles før deklarasjonen pga. hoisting.
+                    </p>
+
+                </div>
+                <div class="Funksjonsuttrykk">
+                    <h4>Funksjonsuttrykk (Function Expression)</h4>
+                    <img src="img/function2.PNG" alt="">
+                    <p>Tildeles en variabel og kan ikke kalles før den er definert og
+                        brukes ofte for anonym funksjoner eller  <strong>callback-funksjoner</strong>.
+                    </p>
+                </div>
+                <div class="Pilfunksjon">
+                    <h4>Pilfunksjon (Arrow Function, ES6)</h4>
+                    <img src="img/function3.PNG" alt="">
+                    <p>Kortere syntaks og mer lesbar kode. Automatisk retur hvis det bare er én linje med kode.</p>
+                </div>
+                <div class="f_standard">
+                    <h4>Funksjoner med Standardverdier</h4>
+                    <img src="img/function4.PNG" alt="">
+                    <p>Hvis ingen verdi sendes, brukes standardverdien</p>
+                </div>
+                <div class="f_flpar">
+                    <h4>Funksjoner med Flere Parametere</h4>
+                    <img src="img/function5.PNG" alt="">
+                    <p> </p>
+                </div>
+
+
+
+
+
+                
+                <div class="callback">
+                    <h4> Callback-funksjoner</h4>
+                    <p>En callback i JavaScript er en funksjon som sendes som et argument til en annen funksjon og kjøres 
+                        senere, ofte etter at en asynkron operasjon er fullført. 
+                        Dette brukes mye i webutvikling for å håndtere hendelser, AJAX-forespørsler, animasjoner og mer.
+                    </p>
                     <img src="img/eksempel1.PNG" alt="">
+                    <img src="img/htmlCallback.PNG" alt="">
+
                     <button id="myCallbackButton1" type="button">
                         Klikk meg, please!
                     </button>
