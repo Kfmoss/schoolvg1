@@ -104,9 +104,14 @@
 }
 .main_s2{
     grid-area: main_s2;
-   
     padding: 1.5rem;
     scroll-behavior: smooth;
+}
+.main_s2 .variabler{
+    padding: 2.5rem 0 2.5rem 0;
+}
+.variabler div{
+    margin:2.25rem ;
 }
 
 .footer_main{

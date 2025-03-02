@@ -37,13 +37,31 @@
             <article id="variabler" class="variabler">
                 <h3>Variabler i JavaScript</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Vel rem modi illum consequatur velit, dolore saepe, mollitia 
-                    iusto repudiandae voluptate nostrum reiciendis nihil nobis! Error 
-                    possimus accusamus sed eaque deserunt vitae, nisi, vel expedita quo 
-                    veniam pariatur sunt laudantium nemo, maxime quasi quibusdam rerum. 
-                    Explicabo voluptates eveniet minus? Dolorem, repudiandae!
+                    I JavaScript bruker vi variabler for å lagre og manipulere data. Det finnes tre måter å deklarere variabler på: 
+                    <strong>var, let og const</strong>. 
+                    Forskjellen mellom dem handler hovedsakelig om scope 
+                    (område hvor variabelen er gyldig), mutabilitet (om verdien kan endres) og hoisting (hvordan JavaScript håndterer variabler før koden kjøres).
+                    
                 </p>
+                <img src="img/variabler1.PNG" alt="">
+                <div class="var">
+                    <h4> Var - funksjons-scope og hoisting</h4>
+                    <img src="img/variabler2.PNG" alt="">
+                    <p>Var kan brukes før den er deklarert pga. hoisting, men verdien blir undefined inntil den er tilordnet.</p>
+
+                </div>
+                <div class="let">
+                    <h4>Let - Blokk-scope og ingen re-deklarering</h4>
+                    <img src="img/variabler3.PNG" alt="">
+                    <p>let er blokkområdet, så den eksisterer bare i { } der den er definert.</p>
+
+                </div>
+                <div class="const">
+                    <h4>Const - Konstant verdi og blokk-scope</h4>
+                    <img src="img/variabler4.PNG" alt="">
+                    <p>const kan ikke endres, men objekter/arrayer kan endres innholdsmessig.</p>
+                </div>
+
 
             </article>
             <article id="funskjoner" class="funksjoner">
@@ -54,11 +72,23 @@
                     Dette brukes mye i webutvikling for å håndtere hendelser, AJAX-forespørsler, animasjoner og mer.
                 </p>
 
-                <h4> Eksempel 1</h4>
-                <img src="img/eksempel1.PNG" alt="">
-                <button id="myCallbackButton1" type="button">
-                    Klikk meg, please!
-                </button>
+                <div class="eksempel1">
+                    <h4> Eksempel 1</h4>
+                    <img src="img/eksempel1.PNG" alt="">
+                    <button id="myCallbackButton1" type="button">
+                        Klikk meg, please!
+                    </button>
+
+                </div>
+                <div class="eksempel2">
+                    <h4>Eksempel 2</h4>
+
+                </div>
+                <div class="eksempel3">
+                    <h4>Eksempel 3</h4>
+
+                </div>
+
 
 
             </article>
