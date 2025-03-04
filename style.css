@@ -2,6 +2,7 @@
 *{
     padding:0;
     margin: 0;
+    scroll-behavior: smooth;
    
 }
 /* ---------------------------------------------------main(index)------------------ */
@@ -108,10 +109,17 @@
     scroll-behavior: smooth;
 }
 .main_s2 .variabler{
-    padding: 2.5rem 0 2.5rem 0;
+    padding: 2.5rem 0 2.5rem 1.5rem;
+    border: 1px solid red ;
+    margin-bottom: 0.5rem ;
 }
 .variabler div{
     margin:2.25rem ;
+}
+.main_s2 .funksjoner{
+    padding: 2.5rem 0 2.5rem 1.5rem;
+    border: 1px solid rgb(66, 12, 212) ;
+    margin-bottom: 0.5rem ;
 }
 .funksjoner div{
     margin:2.25rem ;
@@ -141,6 +149,12 @@
     color:#ffff;
     width: 10rem;
 }
+#syntaks{
+    padding: 2.5rem 0 2.5rem 1.5rem;
+    border: 1px solid rgb(7, 245, 78) ;
+    margin-bottom: 0.5rem ;
+    
+}
 .css-manipulering{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -148,7 +162,7 @@
     grid-template-areas: "head head"
     "media media";
 }
-.head{
+    .head{
     grid-area: head;
 
 }
@@ -178,6 +192,13 @@
  
   
 }
+
+#modernJS{
+    padding: 2.5rem 0 2.5rem 1.5rem;
+    border: 1px solid rgb(229, 245, 7) ;
+    margin-bottom: 0.5rem ;
+}
+
 
 
 
