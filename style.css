@@ -141,6 +141,49 @@
     color:#ffff;
     width: 10rem;
 }
+.css-manipulering{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head"
+    "media media";
+}
+.head{
+    grid-area: head;
+
+}
+.selektor{
+    grid-column: media;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+
+    
+}
+.selektor .videoselektor{
+    width: 35rem;
+    /* height: auto;
+    aspect-ratio: 1/1; */
+    padding: 1.5rem;
+}
+.selektor .selektor_ndla img{
+    width: 25rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: 1.5rem;
+    transition: 0.5s ease;
+}
+.selektor .selektor_ndla img:hover{
+    opacity: 0.3;
+ 
+  
+}
+
+
+
+
+
+
 
 
 .footer_main{
