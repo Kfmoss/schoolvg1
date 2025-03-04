@@ -27,7 +27,7 @@
 .main_mainnav .main1 a{
     text-decoration: none;
     color: black;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding:1.2rem 0 1.2rem 0;
 }
 .main_mainliks{
@@ -107,10 +107,11 @@
     grid-area: main_s2;
     padding: 1.5rem;
     scroll-behavior: smooth;
+    font-size: 1.7rem;
 }
 .main_s2 .variabler{
     padding: 2.5rem 0 2.5rem 1.5rem;
-    border: 1px solid red ;
+    border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
 }
 .variabler div{
@@ -118,7 +119,7 @@
 }
 .main_s2 .funksjoner{
     padding: 2.5rem 0 2.5rem 1.5rem;
-    border: 1px solid rgb(66, 12, 212) ;
+    border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
 }
 .funksjoner div{
@@ -151,7 +152,7 @@
 }
 #syntaks{
     padding: 2.5rem 0 2.5rem 1.5rem;
-    border: 1px solid rgb(7, 245, 78) ;
+    border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
     
 }
@@ -195,7 +196,7 @@
 
 #modernJS{
     padding: 2.5rem 0 2.5rem 1.5rem;
-    border: 1px solid rgb(229, 245, 7) ;
+    border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
 }
 
