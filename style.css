@@ -198,7 +198,22 @@
     padding: 2.5rem 0 2.5rem 1.5rem;
     border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
+
 }
+.modernJS{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-area: "intro intro"
+    "example example";
+}
+.intro_manipulation{
+    grid-area: intro;
+}
+.man_exemples{
+    grid-area: example;
+}
+
 
 
 
