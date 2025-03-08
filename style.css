@@ -180,6 +180,10 @@
     grid-template-areas: "head head"
     "media media";
 }
+#minTekst{
+    font-size: 2rem;
+    padding: .5rem;
+}
     .head{
     grid-area: head;
 
@@ -226,6 +230,10 @@
 }
 .intro_manipulation{
     grid-area: intro;
+
+}
+.intro_manipulation h3{
+    padding: .7rem 0 .7rem 0;
 }
 .man_exemples{
     grid-area: example;

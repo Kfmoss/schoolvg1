@@ -11,6 +11,40 @@ eksempel1.addEventListener("click", function () {
 
 
 
+function man1(){
+
+    let element = document.getElementById("minTekst");
+    if(element.style.color =="blue"){
+        element.style.color = "black";
+    }
+    else{
+        element.style.color = "blue";  // Endrer tekstfargen til blå
+    }
+}
+
+
+
+
+
+
+
+
+let elementer = document.getElementsByClassName("tekst");
+for (let i = 0; i < elementer.length; i++) {
+    elementer[i].style.color = "red";  // Gjør all tekst rød
+}
+
+
+
+
+
+let inputs = document.getElementsByName("brukernavn");
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].style.backgroundColor = "lightgray"; // Endrer bakgrunnsfargen
+}
+
+
+
 
 
 
