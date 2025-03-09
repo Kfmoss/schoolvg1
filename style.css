@@ -128,19 +128,18 @@
 
 }
 .loops div{
-    margin:2.25rem ;
+    margin: .5rem 15rem .5rem 15rem ;
 }
 
 .variabler div{
-    margin:2.25rem ;
+    margin: .5rem 15rem .5rem 15rem ;
 }
 .main_s2 .funksjoner{
     padding: 2.5rem 0 2.5rem 1.5rem;
     border: 1px solid rgb(27, 26, 26) ;
-    margin-bottom: 0.5rem ;
 }
 .funksjoner div{
-    margin:2.25rem ;
+    margin:.5rem 15rem .5rem 15rem ;
     
 }
 .callback{
@@ -246,6 +245,9 @@
 }
 .man_exemples{
     grid-area: example;
+}
+.boks{
+    width: 15%;
 }
 
 

@@ -47,6 +47,20 @@ for (let i = 0; i < inputs.length; i++) {
 
 
 
+let boks = document.querySelector(".boks"); // henter elementet med klass "boks"
+boks.style.border = "2px solid black"; // Legger til ramme
+
+
+
+
+
+let listeElementer = document.querySelectorAll("li");
+listeElementer.forEach(li => {
+    li.style.listStyleType = "square";  // Endrer listepunkt til firkanter
+});
+
+
+
 
 
 
