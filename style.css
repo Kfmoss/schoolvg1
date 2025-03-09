@@ -230,7 +230,16 @@
 }
 .intro_manipulation{
     grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15rem 0 15rem;
+    justify-content: center;
 
+}
+.intro_manipulation img{
+    width: 70%;
+    align-items: center;
+    
 }
 .intro_manipulation h3{
     padding: .7rem 0 .7rem 0;
