@@ -281,7 +281,63 @@
 }
 
 
+/*--------------------------------------basicsHTML----------------------------------------------------*/
 
+.Basiccontainer{
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "basicNav"
+    "basicsMain" 
+    "emulator"
+    "basicfooter";
+}
+
+
+.basicNav{
+    grid-area: basicNav;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.basicNav .logo1{
+    width: 25rem;
+    height: auto;
+    max-width: 50%;
+}
+
+.basicNav ul{
+    display: flex;
+    list-style: none;
+    padding-left:2rem ;
+}
+.basicNav ul li{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 3rem;
+    
+    color: rgb(55, 56, 56);
+}
+
+.basicNav ul li a{
+    text-decoration: none;
+    color: rgb(55, 56, 56);
+}
+.basicsMain{
+    grid-area:basicsMain;
+    margin: 2rem 5% 2rem 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.introHTML{
+    margin: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f3efef;
+
+
+}
 
 
 
