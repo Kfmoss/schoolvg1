@@ -3,328 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Hjem - JS</title>
+    <link rel="stylesheet" href="styles/mainStyle.css">
+    <title>Velkommen til IM VG1</title>
 </head>
 <body>
-    <div class="main_maincontainer">
-        <nav class="main_mainnav">
-            
-            <ul class="main_mainliks">
-                <li><a href="#"><img id="logomain" src="img/Logo IM på hvit.jpg" alt=""></a></li>
-                <li class="main1"><a href="basics.html">Grunnleggende HTML</a></li>
-                <li class="main1"><a href="https://editor.p5js.org/">P5.js</a></li>
-                <li class="main1"><a href="oppgaver.html">Oppgaver</a></li>
-                <li class="main1"><a href="JSeditor.html">JS-kodeeditor </a></li>
-                <li class="main1"><a href="httpmet.html">HTTP metoder</a></li>
-                <li class="main1"><a href="OmJavaScript.html">Om JavaScript</a></li>
-                <li class="main1"><a href="html_emulator.html">HTML-editor</a></li>
-                <li class="main1"><a href="javaScript_improved.html">New js</a></li>
-            </ul>
-
+    <div class="mainContainer"></div>
+        <nav class="nav_main">
+            <h2>Velkommen til VG1 - IM</h2>
         </nav>
-        <section class="main_s1">
-            <ul class="listbox1">
-                <li class="subsect1">
-                    <a class="box1" href="#variabler">Variabler</a>
-                    <a class="box2" href="#funskjoner">Funksjoner</a></li>
-                <li class="subsect2">
-                    <a class="box3" href="#syntaks">Syntaks</a>
-                    <a class="box4" href="#modernJS">Modern JS</a>
-                </li>
-            </ul>
 
-        </section>
-        <section class="main_s2">
-            <article id="variabler" class="variabler">
-                <h3>Variabler i JavaScript</h3>
-                <p>
-                    I JavaScript bruker vi variabler for å lagre og manipulere data. Det finnes tre måter å deklarere variabler på: 
-                    <strong>var, let og const</strong>. 
-                    Forskjellen mellom dem handler hovedsakelig om scope 
-                    (område hvor variabelen er gyldig), mutabilitet (om verdien kan endres) og hoisting (hvordan JavaScript håndterer variabler før koden kjøres).
-                    
-                </p>
-                <img src="img/variabler1.PNG" alt="">
-                <div class="var">
-                    <h4> Var - funksjons-scope og hoisting</h4>
-                    <img src="img/variabler2.PNG" alt="">
-                    <p>Var kan brukes før den er deklarert pga. hoisting, men verdien blir undefined inntil den er tilordnet.</p>
-
-                </div>
-                <div class="let">
-                    <h4>Let - Blokk-scope og ingen re-deklarering</h4>
-                    <img src="img/variabler3.PNG" alt="">
-                    <p>let er blokkområdet, så den eksisterer bare i { } der den er definert.</p>
-
-                </div>
-                <div class="const">
-                    <h4>Const - Konstant verdi og blokk-scope</h4>
-                    <img src="img/variabler4.PNG" alt="">
-                    <p>const kan ikke endres, men objekter/arrayer kan endres innholdsmessig.</p>
-                </div>
-
-
-            </article>
-            <article class="loops">
-                <h3>Løkker i JavaScript</h3>
-                <p>Javascript har forskjellige typer løkker. Noen av disse ligner på det dere har sett i Python.
-                    I dette prosjektet skal vi gå gjennom <strong>for</strong> og <strong>while</strong> løkker.
-                </p>
-                <h5>for-løkker</h5>
-                <div class="loop1">
-
-                    <p>En for-løkke brukes når du vet hvor amnge ganger en handling skal gjentas. Den består av tre deler:
-                        initilisering: det vil si en variabel (<strong>let i = 0</strong>) som definerer en teller, En betingelse 
-                        (<strong>i < 5</strong>) som løkken kjører så lenge den er sann, og en oppdatering på telleren (<strong>i++</strong>).
-                    </p>
-                    <img src="img/for1.PNG" alt="">
-    
-                    <p>det finnes også andre for-løkke typer</p>
-                </div>
-                <div class="loop2">
-                    <h5>For-in-løkke</h5>
-                    <img src="img/for2.PNG" alt="">
-                    <p> I javascript bruker du <strong>for...in</strong> for å iterere over indekser (nøklene) i et objekt eller 
-                    en liste. I dette tilfellet er liste1 definert som en array.</p>
-
-                </div>
-                <div class="loop3">
-                    <h5>ForEach-løkke</h5>
-                    
-                    <p>ForEach() brukes til å iterere over en array og utføre en funskjon på hvert element. </p>
-                    <img src="img/for3.PNG" alt=""> 
-
-                </div>
-                <div class="loop4">
-                    <p> Her kan du se magien med 
-                        JavaScript. Du kan kombinere en for-løkke med en funksjon i én og samme kodelinje. Denne 
-                        kan ikke bare iterere gjennom elementer i en liste, men også utføre 
-                        flere oppgaver samtidig – for eksempel endre, slette eller legge til elementer i listen.</p>
-                    <img src="img/for4.PNG" alt="">
-                    <p>Du kan også iterere elementer i et ordbok</p>
-                    <img src="img/for5.PNG" alt="">
-                    <p>koden ovenfor skriver:</p>
-                    <img src="img/resultforeach.PNG" alt="">
-
-                </div>
-                <div class="loop5">
-
-                    <h5>While-løkker</h5>
-                    <p>En while-løkke brukes når du ikke nødvendigvis
-                         vet antall gjentakelser på forhånd. Den kjører så lenge betingelsen er sann.</p>
-                    <img src="img/while1.PNG" alt="">
-    
-                    <p>Strukturen til while-løkken ovenfor kan minne deg det du har sett i Python</p>
-                    <p>Klikk <a href="https://ndla.no/r/konseptutvikling-og-programmering-im-ikm-vg1/lokker/41e28584b6">her</a> for å vite mer om løkker i javascript</p>
+        <ul class="mainMenu">
+            <li class="b1"><a href="basics.html"><button>Grunnleggende HTML</button></a></li>
+            <li class="b2"><a href="html_emulator.html"><button >HTML-editor</button></a></li>
+            <li class="b3"><a href="javaScript_improved.html"><button >Grunnleggende javaScript</button></a></li>
+            <li class="b4"><a href="JSeditor.html"><button >JS-editor</button></a></li>
+            <li class="b5"><a href="httpmet.html"><button >HTTP-metoder</button></a></li>
+            <li class="b6"><a href="#"><button >Nettverk</button></a></li>
+            <li class="b7"><a href="#"><button >Datasikkerhet</button></a></li>
+            <li class="b8"><a href="#"><button >Oppgaver</button></a></li>
             
-
-                </div>
-
+        </ul>
 
 
-            </article>
-            <article id="funskjoner" class="funksjoner">
-                <h3>Funksjoner i JavaScript</h3>
-                <p>En funksjon i JavaScript er en gjenbrukbar kodeblokk som utfører en 
-                    spesifikk oppgave. Funksjoner gjør koden mer organisert, modulær og lettere å 
-                    vedlikeholde.
-                </p>
+        
 
-                <div class="Funksjonserklæring" >
-                    <h4>Funksjonserklæring (Function Declaration)</h4>
-                    <img src="img/function1.PNG" alt="">
-                    <p>Brukes ofte når funksjonen skal gjenbrukes mange ganger og
-                        kan kalles før deklarasjonen pga. hoisting.
-                    </p>
+        
+        
+        <script src="code/main.js"></script>
+    </body>
+    <footer class="footerMain">
+        <ul class="media">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <h3>IM - informasjonteknologi og medikommunikasjon</h3>
+        <h4>Åssiden videregående skole - 2025</h4>
+    </footer>
 
-                </div>
-                <div class="Funksjonsuttrykk">
-                    <h4>Funksjonsuttrykk (Function Expression)</h4>
-                    <img src="img/function2.PNG" alt="">
-                    <p>Tildeles en variabel og kan ikke kalles før den er definert og
-                        brukes ofte for anonym funksjoner eller  <strong>callback-funksjoner</strong>.
-                    </p>
-                </div>
-                <div class="Pilfunksjon">
-                    <h4>Pilfunksjon (Arrow Function, ES6)</h4>
-                    <img src="img/function3.PNG" alt="">
-                    <p>Kortere syntaks og mer lesbar kode. Automatisk retur hvis det bare er én linje med kode.</p>
-                </div>
-                <div class="f_standard">
-                    <h4>Funksjoner med Standardverdier</h4>
-                    <img src="img/function4.PNG" alt="">
-                    <p>Hvis ingen verdi sendes, brukes standardverdien</p>
-                </div>
-                <div class="f_flpar">
-                    <h4>Funksjoner med Flere Parametere</h4>
-                    <img src="img/function5.PNG" alt="">
-                    <p> </p>
-                </div>
-
-
-
-
-
-                
-                <div class="callback">
-                    <h4> Callback-funksjoner</h4>
-                    <p>En callback i JavaScript er en funksjon som sendes som et argument til en annen funksjon og kjøres 
-                        senere, ofte etter at en asynkron operasjon er fullført. 
-                        Dette brukes mye i webutvikling for å håndtere hendelser, AJAX-forespørsler, animasjoner og mer.
-                    </p>
-                    <img src="img/eksempel1.PNG" alt="">
-                    <img src="img/htmlCallback.PNG" alt="">
-
-                    <button id="myCallbackButton1" type="button">
-                        Klikk meg, please!
-                    </button>
-
-                </div>
-                <div class="eksempel2">
-                    <h4>Eksempel 2</h4>
-
-
-                </div>
-                <div class="eksempel3">
-                    <h4>Eksempel 3</h4>
-
-                </div>
-
-
-
-            </article>
-            <article id="syntaks" class="CSS-manipulering">
-                <div class="head">
-                    <h3>Syntaks</h3>
-                    <p>HTML5 og CSS3 gir oss nye og svært fleksible måter å spesifisere stiler på, samt verktøy for å <strong>manipulere</strong> stiler med JavaScript. 
-                        Nøkkelen til dette er selektorer, som dere tidligere har sett  som <strong>CSS-velgere</strong>. Dette er en viktig del av prosjektet og må være klar før vi går videre med koding i javaScript. Om du ikke husker hva CSS-velgere er, klikk på videoen eller ta en titt
-                        på NDLAs nettside om CSS-velgere.
-                    </p>
-                    
-                </div>
-                <div class="selektor"> 
-                    <iframe class="videoselektor"  src="https://www.youtube.com/embed/BNrHK3apKYM?si=PbqjY6i9SM-TZPFj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <a class="selektor_ndla" href="https://ndla.no/r/konseptutvikling-og-programmering-im-ikm-vg1/css-velgere/d67dfcb36d"><img src="img/css-velgere1.webp" alt=""></a>
-                    
-                    
-                </div>
-                
-            </article>
-            
-            <article id="modernJS" class="modernJS">
-                <div class="intro_manipulation">
-                    <h3>Modern JS og CSS-manipulering</h3>
-                    <p>
-                        JavaScript gir oss muligheten til å manipulere CSS-stiler dynamisk, 
-                        slik at vi kan endre utseendet på en nettside basert på brukerinteraksjoner. 
-                        Dette gjøres ved å velge HTML-elementer og endre deres style-egenskaper 
-                        eller klasser.
-                    </p>
-                    <h4>Disse metoden hjelper deg til å velge HTML-elementer med javaScript</h4>
-                    <img src="img/manipulering1.PNG" alt="">
-                    <p>Kolonnen "Returnerer" i tabellen beskriver hvilken <strong>type data</strong> hver metode gir tilbake når den brukes. </p>
-                    <h3>document.getElementById()</h3>
-                    <p>Denne metoden fungerer best når du vet at HTML-elementet har en <strong>unik</strong> ID.</p>
-                    <img src="img/manipulering2.PNG" alt="">
-                    <h3> Slik bruker du getElementById og funksjoner for CSS-manipulering</h3>
-                    <p>Hvis du klikker på teksten <strong>"Endre min stil"</strong> vil fargen endre seg hver gang du klikker på det. Dette er fordi hver gang du klikker vil HTML elementet 
-                    kjøre en funksjon som endrer stilen</p>
-
-
-                    <p onclick="man1()" id="minTekst"> Klikk her for å endre stilen!</p>
-                    <img src="img/manipulering4.PNG" alt="">
-                    <p>HTML-elementet</p>
-                    <br>
-
-                    <img src="img/manipulering3.PNG" alt="">
-                    <p>JavaScript-kode</p>
-
-                    <h3>document.getElementsByClassName()</h3>
-                    <p>Velger alle elementer med en bestemt klasse (HTMLCollection) og brukes når du vil endre flere elementer samtidig.</p>
-                    <img src="img/manipulering6.PNG" alt="">
-                    <p>HTML-elementet</p>
-                    
-                    <br>
-                    <img src="img/manipulering5.PNG" alt="">
-                    <p>JavaScript-kode</p>
-                    <p class="tekst">Første paragraf</p>
-                    <p class="tekst">Andre paragraf</p>
-
-                    <h3>document.getElementsByName()</h3>
-                    <p>Med <strong>getElementsByName</strong> Velger du elementer basert på name-attributtet (HTMLCollection) og den brukes vanligvis i skjemaer, 
-                        f.eks. radio-knapper og input-felt.</p>
-                    <img src="img/manipulering7.PNG" alt="">
-                    <br>
-                    <img src="img/manipulering8.PNG" alt="">
-                    <br>
-
-
-
-                    
-                    <h3>document.getElementsByTagName()</h3>
-                    <p> Med <strong>getElementsByTagName</strong> velger du <strong>alle elementer</strong>  med et bestemt HTML-tagnavn (HTMLCollection) 
-                        og brukes når du vil endre flere elementer av samme type..</p>
-                    <img src="img/manipulering9.PNG" alt="">
-                    <p>JavaScript-kode</p>
-                    <h3>document.querySelector()</h3>
-                    <p> Med <strong>querySelector()</strong> velger du det <strong>FØRSTE</strong> elementet som matcher en CSS-selektor.
-                        Metoden er meget fleksibel og du kan bruke ID, klasse, navn, tag, osv.</p>
-                    <img src="img/manipulering11.PNG" alt="">
-                    <br>
-                    <img src="img/manipulering10.PNG" alt="">
-                    <br>
-                    <p> I dette eksempelet er det to HTML-elementer med samme klasse. Metoden <strong>querySelector()</strong> 
-                        endrer stilen til det første elementet med klassen 'boks' og ignorerer de andre, selv om de også har samme klasse. </p>
-
-                    
-                    <p class="boks">Første boks</p>
-                    <p class="boks">Andre boks</p>
-                    
-                    <h3>document.querySelectorAll()</h3>
-                    <p>Velger <strong>ALLE</strong> elementer som matcher en CSS-selektor (NodeList)
-                         og den er perfekt når du vil endre flere elementer uten bruk av klasser.</p>
-                    
-                    <img src="img/manipulering12.PNG" alt="">
-                    <p>HTML-elementer</p>
-                    <br>
-                    <img src="img/manipulering13.PNG" alt="">
-                    <p>JavaScript-kode</p>
-
-                    <ul>
-                        <li>Element 1</li>
-                        <li>Element 2</li>
-                    </ul>
-
-                </div>
-
-                
-                
-
-                
-            </article>
-
-        </section>
-        <section class="main_s3">
-        </section>
-
-
-        <footer class="footer_main">
-           
-
-            <ul class="footer2">
- 
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-
-          
-        </footer>
-
-    </div>
-    <script src="index.js"></script>
-    
-</body>
 </html>
