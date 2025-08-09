@@ -347,20 +347,40 @@
 }
 .introHTML p{
     padding: .75rem 0 .75rem 0;
-    font-size: 1.55rem;
+    font-size: 1.50rem;
 }
 
+.grunnHTML{
+    padding: 1.75rem 0 .75rem 0;
+
+}
+.grunnHTML p{
+    padding: .75rem 0 .75rem 0;
+    font-size: 1.25rem;
+
+}
 
 .tagger{
     display: flex;
     flex-direction: column;
+    padding: 1.75rem 0 .75rem 0;
+    background-color: #f0f1f6;
+    
 }
 
 .tagg_beskrivelse{
+    display: flex;
+    flex-direction: column;
     list-style: none;
+    padding: .75rem 0 .75rem 0;
     font-size: 1.25rem;
+    
 }
+.tagg_beskrivelse li{
+    padding-left: 1.2rem;
+    padding-bottom: 0.75rem;
 
+}
 
 /* -------------------------------------- Om JavaScript------------------------------------- */
 
