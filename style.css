@@ -304,16 +304,13 @@
     justify-content: center ;
     align-items: center;
 }
-.basicNav .logo1{
-    width: 25rem;
-    height: auto;
-    max-width: 50%;
-}
+
 
 .basicNav ul{
     display: flex;
     list-style: none;
-    padding-left:2rem ;
+  
+    align-items: center;
 }
 .basicNav ul li{
     padding-left: 3rem;
@@ -333,6 +330,11 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     flex-direction: column;
+}
+.basicNav ul .logo1{
+    width: 25rem;
+    height: auto;
+    max-width: 50%;
 }
 .picsBasics{
     display: flex;

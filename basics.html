@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Grunnleggende HTML</title>
 
 </head>
 <body>
+    
     <div class="Basiccontainer">
         <nav class="basicNav">
-            <img src="img/Logo IM på hvit.jpg" alt="" class="logo1">
+            <!-- <img src="img/Logo IM på hvit.jpg" alt="" class="logo1"> -->
             <ul>
-                <li><a href="">Main</a></li>
-                <li><a href="">GIT</a></li>
-                <li><a href="">Oppgaver</a></li>
-                <li><a href="index.html">Tilbake til hovedsiden</a></li>
+                <li><a href="index.html"> <img src="img/Logo IM på hvit.jpg" alt="logo IM Åssiden" class="logo1"></a></li>
+                <li><a href="#">Main</a></li>
+                <li><a href="#git">GIT</a></li>
+                <li><a href="#oppgaver">Oppgaver</a></li>
+                
             </ul>
         
         </nav>
@@ -25,9 +28,11 @@
                 <img class="basicmainpic1" src="img/html_code_background.webp" alt="html1">
 
             </div>
+            
             <article class="introHTML">
+                <button onclick="speak()">text-to-speech</button>
                 <h1>Hvorfor lærer du HTML?</h1>
-                <p>
+                <p id="speechText">
                     Har du noen gang lurt på hvordan nettsider blir til? 
                     Svaret starter nesten alltid med HTML og CSS. HTML bygger selve skjelettet på en nettside – overskrifter, tekst, bilder og lenker. CSS gir sidene farge, form og stil. Sammen skaper de alt fra enkle blogger til avanserte nettbutikker.
                     Selv i en tid med moderne rammeverk som React, Angular og Vue, ligger HTML-strukturen fortsatt i bunnen. Når du forstår HTML og CSS, blir det mye enklere å lære nye verktøy og teknologier. Du får et solid fundament som gjør deg mer fleksibel og verdifull som utvikler eller designer.
@@ -40,8 +45,18 @@
 
             </article>
             <article class="grunnHTML">
-                <h2>Lage nettsider med HTML</h2>
+                <h2>HTML: Hva er dette?</h2>
+                
                 <p>
+                     <strong>Internett er en del av hverdagen vår.</strong> Du har sikkert bestilt bussbilletter, kjøpt pizza eller handlet klær via en nettside eller app.
+                     Der kan du velge blant mange produkter og tjenester – presentert med bilder, tekst, videoer og kanskje til og med musikk.
+                     Men selv om vi gjør dette daglig, er det fortsatt mange som ikke vet hvordan det egentlig fungerer. Hvordan dukker alle bildene, 
+                     beskrivelsene og knappene opp på skjermen din – enten du bruker mobil eller PC?
+                     Svaret ligger i HTML – språket som bygger opp innholdet du ser på nettet. Velkommen til HTML-verden!
+                     <br>
+                     <br>
+
+
                     HTML er et markeringsspråk som brukes når vi lager 
                     nettsider.Nettsidene vises i egne programmer som 
                     kalles nettlesere – for eksempel Chrome, Safari eller 
@@ -55,6 +70,8 @@
                     «programmerer» en nettside. HTML er ikke et 
                     programmeringsspråk, men et språk for å beskrive 
                     strukturen og innholdet på en nettside.
+
+
 
 
                 </p>
@@ -83,19 +100,49 @@
                     
                 </p>
             </article>
+
+           
+            
+            <div class="git" id="git">
+                <article>
+                    <h2>Introduksjon til GIT</h2>
+                    <h3>Hva er GIT?</h3>
+                    <p>
+                        GIT er en distributed version control system (DVCS), det vil si en et program som hjelper deg 
+                        til å holde oversikt over filene og katalogen (directory) i prosjektet ditt. Det finnes flere andre DVCS som
+                        <a href="https://subversion.apache.org/">subversion</a>, <a href="https://www.perforce.com/products/helix-core">perforce</a> og andre. 
+
+    
+                    </p>
+    
+                </article>
+    
+            </div>
+
+            <div class="Oppgaver" id="oppgaver">
+                <article class="opp1">
+                    <h2>Oppgaver</h2>
+                    <ul>
+                        <li><h3>Oppgave 1</h3></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                </article>
+
+            </div>
             <div class="nøkleord">
-                <h2>Viktige ord og konsepter</h2>
+                <h2> ord og konsepter</h2>
                 <ul>
                     <li><p>Dom</p></li>
                     <li><p>Tagg</p></li>
-                    <li><p></p></li>
+                    <li><p>Katalog</p></li>
                     <li></li>
                     <li></li>
                 </ul>
 
             </div>
-           
-            
         </main>
         <div class="emulator">
             
@@ -103,6 +150,7 @@
         </div>
 
     </div>
+    <script src="exp.js"></script>
     
 </body>
 </html>
