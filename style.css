@@ -252,13 +252,6 @@
 
 
 
-
-
-
-
-
-
-
 .footer_main{
     grid-area: main_foo;
     background-color: rgb(28, 61, 36);
@@ -467,3 +460,12 @@
     background-color: rgb(188, 188, 218);
 }
 
+.text-to-speech1{
+    margin: 1rem 0 1rem 0;
+    width: 15rem;
+    height: 5rem;
+    color:red;
+    border: none;
+    background-color: #93e4c1;
+    font-size: 1.2rem;
+}
