@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Grunnleggende HTML</title>
 
 </head>
 <body>
+    
     <div class="Basiccontainer">
         <nav class="basicNav">
-            <img src="img/Logo IM på hvit.jpg" alt="" class="logo1">
+            <!-- <img src="img/Logo IM på hvit.jpg" alt="" class="logo1"> -->
             <ul>
-                <li><a href="">Main</a></li>
-                <li><a href="">GIT</a></li>
-                <li><a href="">Oppgaver</a></li>
-                <li><a href="index.html">Tilbake til hovedsiden</a></li>
+                <li><a href="index.html"> <img src="img/Logo IM på hvit.jpg" alt="logo IM Åssiden" class="logo1"></a></li>
+                <li><a href="#">Main</a></li>
+                <li><a href="#git">GIT</a></li>
+                <li><a href="#oppgaver">Oppgaver</a></li>
+                
             </ul>
         
         </nav>
@@ -25,28 +28,50 @@
                 <img class="basicmainpic1" src="img/html_code_background.webp" alt="html1">
 
             </div>
+            
             <article class="introHTML">
-                <h2>Hvorfor lærer du HTML?</h2>
-                <p>
+                <button onclick="speak()">text-to-speech</button>
+                <h1>Hvorfor lærer du HTML?</h1>
+                <p id="speechText">
                     Har du noen gang lurt på hvordan nettsider blir til? 
                     Svaret starter nesten alltid med HTML og CSS. HTML bygger selve skjelettet på en nettside – overskrifter, tekst, bilder og lenker. CSS gir sidene farge, form og stil. Sammen skaper de alt fra enkle blogger til avanserte nettbutikker.
                     Selv i en tid med moderne rammeverk som React, Angular og Vue, ligger HTML-strukturen fortsatt i bunnen. Når du forstår HTML og CSS, blir det mye enklere å lære nye verktøy og teknologier. Du får et solid fundament som gjør deg mer fleksibel og verdifull som utvikler eller designer.
-                    I Norge er etterspørselen etter folk som kan bygge brukervennlige og pene nettsider fortsatt høy. Med kunnskap i HTML, CSS og litt JavaScript kan du åpne døren til en spennende karriere – enten du vil lage egne prosjekter, jobbe i et kreativt byrå eller bidra til å utvikle digitale løsninger for bedrifter.
+                    I Norge er etterspørselen etter folk som kan bygge brukervennlige og pene nettsider fortsatt høy. Med kunnskap i HTML, CSS og JavaScript kan du åpne døren til en spennende karriere – enten du vil lage egne prosjekter, jobbe i et kreativt byrå eller bidra til å utvikle digitale løsninger for bedrifter.
                     Å lære HTML og CSS handler ikke bare om koding – det handler om å skape, forme og dele ideer med verden.
+                </p>
+                <p>
+                    I løpet av skoleåret blir du med på flere prosjekter innen web- og apputvikling som krever kreativitet – noe vi håper du vil dele med oss og klassen din. 
                 </p>
 
             </article>
             <article class="grunnHTML">
-                <h2>Lage nettsider med HTML</h2>
-                <p>HTML er et markeringsspråk og brukes når vi lager nettsider. Nettsidene vises i egne programmer 
-                    som heter nettleser. Nettlesere er for eksempel Chrome, Safari eller Edge. En nettside Inneholder
-                    ofte tekst og bilder. Teskten som skal vises på nettsiden, skriver vi inn mellom 
-                    markører eller tagger (fra engelsk ord <i>tag</i> ). Taggene forteller nettleseren 
-                    om teksten skal være en overskrift eller tekstavsnitt.             
-                    
-                    
-                    Siden HTML er et markeringsspråk det er formellsett inkorrekt 
-                    å si at man programmerer en nettsiden. HTML er ikke et programmeringsspråk, men et markeringsspråk.
+                <h2>HTML: Hva er dette?</h2>
+                
+                <p>
+                     <strong>Internett er en del av hverdagen vår.</strong> Du har sikkert bestilt bussbilletter, kjøpt pizza eller handlet klær via en nettside eller app.
+                     Der kan du velge blant mange produkter og tjenester – presentert med bilder, tekst, videoer og kanskje til og med musikk.
+                     Men selv om vi gjør dette daglig, er det fortsatt mange som ikke vet hvordan det egentlig fungerer. Hvordan dukker alle bildene, 
+                     beskrivelsene og knappene opp på skjermen din – enten du bruker mobil eller PC?
+                     Svaret ligger i HTML – språket som bygger opp innholdet du ser på nettet. Velkommen til HTML-verden!
+                     <br>
+                     <br>
+
+
+                    HTML er et markeringsspråk som brukes når vi lager 
+                    nettsider.Nettsidene vises i egne programmer som 
+                    kalles nettlesere – for eksempel Chrome, Safari eller 
+                    Edge. En nettside inneholder ofte tekst og bilder. 
+                    Teksten som skal vises på nettsiden, skriver vi inn 
+                    mellom markører eller tagger (fra det engelske ordet 
+                    tag). Taggene forteller nettleseren om teksten skal 
+                    være en overskrift, et avsnitt eller ha en annen 
+                    funksjon. Siden HTML er et markeringsspråk, 
+                    er det formelt sett ikke korrekt å si at man 
+                    «programmerer» en nettside. HTML er ikke et 
+                    programmeringsspråk, men et språk for å beskrive 
+                    strukturen og innholdet på en nettside.
+
+
 
 
                 </p>
@@ -56,26 +81,68 @@
                 <h2>Tagger</h2>
                 <p>
                     <ul class="tagg_beskrivelse">
-                       <li> <p>&lt;!DOCTYPE html&gt;: Dette er en deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</p> </li> 
-                       <li> <p>&lt;html&gt; Den overordnede containeren for hele HTML-dokumentet.</p> </li>
-                       <li> <p>&lt;head&gt; Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</p>  </li>
-                       <li> <p>&lt;title&gt; Viser navnet på siden i nettleserens fane.</p> </li>
-                        <li><p>&lt;body&gt; Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</p>  </li> 
-                        <li><p>&lt;h1&gt; &lt;h2&gt;, etc.: Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</p>  </li> 
-                        <li> <p>&lt;p&gt; Avsnitt som brukes for å gruppere tekst. </p></li>   
-                        <li><p>&lt;a&gt; Anker-tagg som brukes til å lage lenker. href-attributtet angir hvor lenken går.</p> </li>
-                        <li><p>&lt;ul&gt;og &lt;li&gt;: En uordnet liste (ul står for "unordered list") og listeelementer (li står for "list item").</p>  </li>
-                        <li><p></p> &lt;br&gt;: Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt. </li>
-                        <li><p></p> &lt;hr&gt;: Horisontal linje som brukes til å visuelt dele opp innhold. </li>
+                       <li> <p><strong> &lt;!DOCTYPE html&gt;</strong> : Dette er en deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</p> </li> 
+                       <li> <p> <strong>&lt;html&gt; </strong>Den overordnede containeren for hele HTML-dokumentet.</p> </li>
+                       <li> <p> <strong>&lt;head&gt;</strong> Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</p>  </li>
+                       <li> <p> <strong>&lt;title&gt;</strong> Viser navnet på siden i nettleserens fane.</p> </li>
+                        <li><p> <strong>&lt;body&gt;</strong> Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</p>  </li> 
+                        <li><p> <strong>&lt;h1&gt; , &lt;h2&gt;, osv. </strong> : Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</p>  </li> 
+                        <li> <p> <strong>&lt;p&gt;</strong> Avsnitt som brukes for å gruppere tekst. </p></li>   
+                        <li><p> <strong>&lt;a&gt;</strong> Anker-tagg som brukes til å lage lenker. href-attributtet angir hvor lenken går.</p> </li>
+                        <li><p> <strong>&lt;ul&gt; og  &lt;li&gt;</strong>: En uordnet liste (ul står for "unordered list") og listeelementer (li står for "list item").</p>  </li>
+                        <li><p> <strong>&lt;br&gt;</strong>: Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt. </p> </li>
+                        <li><p> <strong>&lt;hr&gt;</strong> : Horisontal linje som brukes til å visuelt dele opp innhold.</p>  </li>
+                        <li><p>Disse taggene gir et godt utgangspunkt når man skal lære om HTML, da de dekker mange av de grunnleggende elementene som ofte brukes på websider. Etter hvert skal dere også lære om mer avanserte tagger som <strong>&lt;img&gt;</strong>  for bilder og <strong>&lt;div&gt;</strong>  for containere. </p></li>
 
                     </ul>
-                    <p>Disse taggene gir et godt utgangspunkt når man skal lære om HTML, da de dekker mange av de grunnleggende elementene som ofte brukes på websider. Etter hvert skal dere også lære om mer avanserte tagger som &lt;img&gt; for bilder og &lt;div&gt; for containere. </p>
+                    
 
                     
                 </p>
             </article>
+
            
             
+            <div class="git" id="git">
+                <article>
+                    <h2>Introduksjon til GIT</h2>
+                    <h3>Hva er GIT?</h3>
+                    <p>
+                        GIT er en distributed version control system (DVCS), det vil si en et program som hjelper deg 
+                        til å holde oversikt over filene og katalogen (directory) i prosjektet ditt. Det finnes flere andre DVCS som
+                        <a href="https://subversion.apache.org/">subversion</a>, <a href="https://www.perforce.com/products/helix-core">perforce</a> og andre. 
+
+    
+                    </p>
+    
+                </article>
+    
+            </div>
+
+            <div class="Oppgaver" id="oppgaver">
+                <article class="opp1">
+                    <h2>Oppgaver</h2>
+                    <ul>
+                        <li><h3>Oppgave 1</h3></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                </article>
+
+            </div>
+            <div class="nøkleord">
+                <h2> ord og konsepter</h2>
+                <ul>
+                    <li><p>Dom</p></li>
+                    <li><p>Tagg</p></li>
+                    <li><p>Katalog</p></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
         </main>
         <div class="emulator">
             
@@ -83,6 +150,7 @@
         </div>
 
     </div>
+    <script src="exp.js"></script>
     
 </body>
 </html>
