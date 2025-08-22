@@ -31,6 +31,7 @@
             
             <article class="introHTML">
                 <button class="text-to-speech1" onclick="speak()">text-to-speech</button>
+                <button class="text-to-speech1" onclick="transUK()">tekst på ukrainsk</button>
                 <h1>Hvorfor lærer du HTML?</h1>
                 <p id="speechText">
                     Har du noen gang lurt på hvordan nettsider blir til? 
@@ -46,9 +47,13 @@
             </article>
             <article class="grunnHTML">
                 <h2>HTML: Hva er dette?</h2>
+
+                <h3><strong>Internett er en del av hverdagen vår.</strong></h3>
+
+
                 
-                <p>
-                     <strong>Internett er en del av hverdagen vår.</strong> Du har sikkert bestilt bussbilletter, kjøpt pizza eller handlet klær via en nettside eller app.
+                <p class="HvaerHTML1">
+                    Du har sikkert bestilt bussbilletter, kjøpt pizza eller handlet klær via en nettside eller app.
                      Der kan du velge blant mange produkter og tjenester – presentert med bilder, tekst, videoer og kanskje til og med musikk.
                      Men selv om vi gjør dette daglig, er det fortsatt mange som ikke vet hvordan det egentlig fungerer. Hvordan dukker alle bildene, 
                      beskrivelsene og knappene opp på skjermen din – enten du bruker mobil eller PC?
@@ -58,7 +63,7 @@
 
 
                     HTML er et markeringsspråk som brukes når vi lager 
-                    nettsider.Nettsidene vises i egne programmer som 
+                    nettsider. Nettsidene vises i egne programmer som 
                     kalles nettlesere – for eksempel Chrome, Safari eller 
                     Edge. En nettside inneholder ofte tekst og bilder. 
                     Teksten som skal vises på nettsiden, skriver vi inn 
@@ -72,9 +77,47 @@
                     strukturen og innholdet på en nettside.
 
 
+                </p>
+
+                <p>
+                    HTML er et markeringsspråk som brukes til å lage <i>nettsider</i>, <i>webapplikasjoner</i>, 
+                    <i>desktop-applikasjoner</i> og <i>mobilapplikasjoner</i>.
+                    I dette prosjektet er det webutvikling og nettsider som er hovedtema, og vi skal derfor 
+                    ikke gå nærmere inn på de andre teknologiene som ble nevnt.
+
+                    Et markeringsspråk er et regelsett som brukes til å definere formatering, struktur og innhold i et dokument ved hjelp av "tagger". En tagg kan beskrive hva slags data som skal vises.
+                    I dette eksemplet kan vi si at hver eske tilsvarer en tagg, 
+                    mens innholdet i eskene tilsvarer dataen eller informasjonen som taggen omgir.
+                    
+                    La oss si at vi har tre forskjellige esker, hver med sitt innhold:
+                    <ul class="html_innhold">
+                        <li><p> - En eske med sko,</p></li>
+                        <li><p> - En eske med sjokolade,</p></li>
+                        <li><p> - En eske med pizza.</p></li>
+                    </ul>
+
 
 
                 </p>
+                <ul class="tagg_metafor">
+                    <li><img src="img/pizza.jpg" alt=""></li>
+                    <li><img src="img/chocolate.jpg" alt=""></li>
+                    <li><img src="img/skoeske.jpeg" alt=""></li>
+                </ul>
+
+
+                <h3><strong>PC-en din er bare en maskin.</strong></h3>
+                <p class="HvaerHTML2">
+                    
+                    Den forstår ikke språket ditt direkte. 
+                    For at du skal kunne kommunisere med den, trenger du programmer som oversetter det du skriver til noe maskinen kan forstå.
+                    Når du skriver kode eller tekst på PC-en, blir det sendt til et program som oversetter
+                    alt til nuller og ettall (binærtall). Hver bokstav har egen kombinasjon eller set av nuller og ettall, og disse set betyr hvor mange bits
+                    tilsvarer hver bosktav, på den måten kan PC-en forstå og kjøre koden din.
+                    
+                    
+                </p>
+                <img class="bincode_img" src="img/bincode.png" alt="explain how the communication between human and machine works">
 
             </article>
             <article class="tagger" >
