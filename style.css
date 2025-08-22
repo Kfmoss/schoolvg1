@@ -376,7 +376,33 @@
     padding-bottom: 0.75rem;
 
 }
+.bincode_img{
+    width: 25rem;
+}
+.tagg_metafor{
+    list-style: none;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tagg_metafor li{
+    padding: 3rem;
 
+
+}
+.tagg_metafor img{
+    width: 20rem;
+
+}
+.html_innhold{
+    list-style: none;
+    
+}
+.html_innhold li{
+    padding-left: 2rem;
+}
 /* -------------------------------------- Om JavaScript------------------------------------- */
 
 .hoved_containeromjs{
