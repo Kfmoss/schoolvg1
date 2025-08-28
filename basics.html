@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/symbHTML.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Grunnleggende HTML</title>
 
@@ -30,7 +32,8 @@
             </div>
             
             <article class="introHTML">
-                <button class="text-to-speech1" onclick="speak()">text-to-speech</button>
+                <h4 class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                <!-- <button class="text-to-speech1" onclick="speak()">text-to-speech</button> -->
             
                 <h1>Hvorfor lærer du HTML?</h1>
                 <p id="speechText">
@@ -43,7 +46,8 @@
 
             </article>
             <article class="grunnHTML">
-                <button class="text-to-speech1" onclick="textToSpeech()">text-to-speech</button>
+                <!-- <button class="text-to-speech1" onclick="textToSpeech()">text-to-speech</button> -->
+                <h4 class="textspeech2"><i onclick="textToSpeech()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
                 <h2>HTML: Hva er dette?</h2>
 
                 <h3><strong>Internett er en del av hverdagen vår.</strong></h3>
@@ -70,22 +74,34 @@
                     
                     La oss si at vi har tre forskjellige esker, hver med sitt innhold:
                     <ul class="html_innhold">
-                        <li><p> - En eske med sko,</p></li>
-                        <li><p> - En eske med sjokolade,</p></li>
-                        <li><p> - En eske med pizza.</p></li>
+                        <li><p> - eske1 inneholder et par Nike-sko</p></li>
+                        <li><p> - eske2 inneholder sjokolade</p></li>
+                        <li><p> - Og eske3 inneholder pizza</p></li>
                     </ul>
 
 
 
                 </p>
+                
                 <ul class="tagg_metafor">
-                    <li><img src="img/pizza.jpg" alt=""></li>
+                    <li><img src="img/skoeske.jpeg"  alt=""></li>
                     <li><img src="img/chocolate.jpg" alt=""></li>
-                    <li><img src="img/skoeske.jpeg" alt=""></li>
+                    <li><img src="img/pizza.jpg" alt=""></li>
                 </ul>
+                <p>Hvis vi bruker en kodeeditor, kan disse eskene – altså taggene – se slik ut:</p>
+
+                <ul>
+                    <li><img src="img/htmlbasic1.png" alt=""></li>
+                    <li></li>
+                </ul>
+                <p>
+                    Men ekte HTML-tagger ser slik ut:
+
+                </p>
+                <img src="img/ektetagg.png" alt="">
 
 
-                <h3><strong>PC-en din er bare en maskin.</strong></h3>
+                <!-- <h3><strong>PC-en din er bare en maskin.</strong></h3>
                 <p class="HvaerHTML2">
                     
                     Den forstår ikke språket ditt direkte. 
@@ -96,31 +112,90 @@
                     
                     
                 </p>
-                <img class="bincode_img" src="img/bincode.png" alt="explain how the communication between human and machine works">
+                <img class="bincode_img" src="img/bincode.png" alt="explain how the communication between human and machine works"> -->
 
             </article>
             <article class="tagger" >
                 <h2>Tagger</h2>
-                <p>
-                    <ul class="tagg_beskrivelse">
-                       <li> <p><strong> &lt;!DOCTYPE html&gt;</strong> : Dette er en deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</p> </li> 
-                       <li> <p> <strong>&lt;html&gt; </strong>Den overordnede containeren for hele HTML-dokumentet.</p> </li>
-                       <li> <p> <strong>&lt;head&gt;</strong> Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</p>  </li>
-                       <li> <p> <strong>&lt;title&gt;</strong> Viser navnet på siden i nettleserens fane.</p> </li>
-                        <li><p> <strong>&lt;body&gt;</strong> Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</p>  </li> 
-                        <li><p> <strong>&lt;h1&gt; , &lt;h2&gt;, osv. </strong> : Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</p>  </li> 
-                        <li> <p> <strong>&lt;p&gt;</strong> Avsnitt som brukes for å gruppere tekst. </p></li>   
-                        <li><p> <strong>&lt;a&gt;</strong> Anker-tagg som brukes til å lage lenker. href-attributtet angir hvor lenken går.</p> </li>
-                        <li><p> <strong>&lt;ul&gt; og  &lt;li&gt;</strong>: En uordnet liste (ul står for "unordered list") og listeelementer (li står for "list item").</p>  </li>
-                        <li><p> <strong>&lt;br&gt;</strong>: Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt. </p> </li>
-                        <li><p> <strong>&lt;hr&gt;</strong> : Horisontal linje som brukes til å visuelt dele opp innhold.</p>  </li>
-                        <li><p>Disse taggene gir et godt utgangspunkt når man skal lære om HTML, da de dekker mange av de grunnleggende elementene som ofte brukes på websider. Etter hvert skal dere også lære om mer avanserte tagger som <strong>&lt;img&gt;</strong>  for bilder og <strong>&lt;div&gt;</strong>  for containere. </p></li>
-
-                    </ul>
-                    
-
-                    
+                <p style="padding: 1.5rem;">
+                    HTML-taggene forteller nettleseren om innholdet og strukturen til de ulike 
+                    elementene på nettsiden. At overskrifter får større skriftstørrelse, eller
+                     at lenker blir blå og understreket, er en tilleggseffekt som mange nettlesere 
+                     gir teksten for å synliggjøre elementenes rolle.
+                    I dag skal utviklere bruke et eksternt CSS-dokument (stilark) for å angi instruksjoner som kun 
+                    påvirker nettsidens utseende, selv om enkelte eldre versjoner av HTML har støtte for dette direkte. 
+                    For funksjonalitet benyttes et scriptingspråk, hvor JavaScript er det mest brukte i dag.
                 </p>
+
+
+
+
+                <table class="html-tagger-tabell">
+                <thead>
+                    <tr>
+                    <th>Tagg</th>
+                    <th>Forklaring</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td><strong>&lt;!DOCTYPE html&gt;</strong></td>
+                    <td>Deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;html&gt;</strong></td>
+                    <td>Den overordnede containeren for hele HTML-dokumentet.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;head&gt;</strong></td>
+                    <td>Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;title&gt;</strong></td>
+                    <td>Viser navnet på siden i nettleserens fane.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;body&gt;</strong></td>
+                    <td>Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;h1&gt;, &lt;h2&gt;, osv.</strong></td>
+                    <td>Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;p&gt;</strong></td>
+                    <td>Avsnitt som brukes for å gruppere tekst.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;a&gt;</strong></td>
+                    <td>Anker-tagg som brukes til å lage lenker. <code>href</code>-attributtet angir hvor lenken går.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;ul&gt;</strong> og <strong>&lt;li&gt;</strong></td>
+                    <td>En uordnet liste (<strong>ul</strong> står for "unordered list") og listeelementer (<strong>li</strong> står for "list item").</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;br&gt;</strong></td>
+                    <td>Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;hr&gt;</strong></td>
+                    <td>Horisontal linje som brukes til å visuelt dele opp innhold.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;img&gt;</strong></td>
+                    <td>Brukes for å vise bilder på nettsiden.</td>
+                    </tr>
+                    <tr>
+                    <td><strong>&lt;div&gt;</strong></td>
+                    <td>En container som brukes til å gruppere innhold og strukturere siden.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </article>
+            <article>
+
             </article>
 
            
