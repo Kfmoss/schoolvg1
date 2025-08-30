@@ -16,7 +16,8 @@
         <nav class="basicNav">
             <ul>
                 <li><a href="index.html"> <img src="img/Logo IM på hvit.jpg" alt="logo IM Åssiden" class="logo1"></a></li>
-                <li><a href="#">Main</a></li>
+                <li><a href="#tagger">Tagger</a></li>
+                <li><a href="#DOM">DOM</a></li>
                 <li><a href="#git">GIT</a></li>
                 <li><a href="#oppgaver">Oppgaver</a></li>
                 
@@ -116,7 +117,7 @@
                 <img class="bincode_img" src="img/bincode.png" alt="explain how the communication between human and machine works"> -->
 
             </article>
-            <article class="tagger" >
+            <article id="tagger" class="tagger" >
                 <h2>Grunnleggende HTML-tagger og deres funksjon</h2>
                 <h4 class="textspeech1"><i onclick="read_Tagg()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
                 <p style="padding: 1.5rem;">
@@ -192,7 +193,7 @@
                 </table>
 
             </article>
-            <article class="workflow_nettleser">
+            <article id="DOM"  class="workflow_nettleser">
                 <h2> Hva er en nettleser og hvordan fungerer?</h2>
                 <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
                 <p>
@@ -201,7 +202,7 @@
                     og viser den på dataskjermen. En nettleser består vanligvis av 
                     flere komponenter - funsjoner -  med ulike oppgaver. Den viktigste komponenten er gjengivelsesmotoren
                     (rendering engine), som har som formål å <strong>hente og tolke</strong>  HTML-kode. I denne prosessen
-                    bygger nettleseren en trestruktur kalt DOM (Document Object Model), som definerer hierarkiet
+                    bygger nettleseren en trestruktur kalt <strong>DOM</strong> (Document Object Model), som definerer hierarkiet
                     til elementene på en nettside.
                     Diagrammet nedenfor kan vise grafisk en oppsummering av prosessen som foregår når nettleseren kjøres.
                     <br>
@@ -232,15 +233,41 @@
             
             <div class="git" id="git">
                 <article>
-                    <h2>Introduksjon til GIT</h2>
+                    <h2>Introduksjon til GIT og GitHub</h2>
                     <h3>Hva er GIT?</h3>
                     <p>
-                        GIT er en distributed version control system (DVCS), det vil si en et program som hjelper deg 
-                        til å holde oversikt over filene og katalogen (directory) i prosjektet ditt. Det finnes flere andre DVCS som
-                        <a href="https://subversion.apache.org/">subversion</a>, <a href="https://www.perforce.com/products/helix-core">perforce</a> og andre. 
+                        Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
+                        Tenk på det som en "tidsmaskin" for koden din -
+                         du kan alltid gå tilbake til tidligere versjoner hvis noe går galt.
+                         Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
+                         ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
 
-    
                     </p>
+                    <h3>Hva er GitHub</h3>
+                    <p>
+                        GitHub er en nettbasert plattform som bruker Git. 
+                        Det er som en "sky-lagring" for kodeprosjektene dine, men med superkrefter 
+                        for samarbeid.
+                    </p>
+                    <h3>Hvorfor bruker vi Git og GitHub?</h3>
+                    <p> Med versjonskontroll kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
+                        til en tidligere versjon. Om du samarbeider med andre elever med andre elever/utviklere kan du 
+                        se hvem som har gjort hvilke endringer og når. <br> Flere elever kan jobbe på samme prosjekt samtidig
+                        siden github tilatter dere automatisk sammensmelting av endringer med Konfliktløsning når flere 
+                        endrer samme fil. GitHub er perfekt for persjonell utvikling siden plataformen viser arbeidshistoriken
+                        til potensielle arbeidsgivere. Github er i dag "standardverktøy" i IT-bransjen. Store og små bedrifter
+                        i både offentlig-og private sektor bruker GIT og GitHub, og noen av disse er:
+                        <ul>
+                            <li><p>Microsoft</p></li>
+                            <li><p>Google</p></li>
+                            <li>Meta(facebook, Instagram...)</li>
+                            <li>Netflix og andre</li>
+                        </ul>
+
+
+                    </p>
+                    <h3>Installasjon av Git</h3>
+                    <h4>For Windows</h4>
     
                 </article>
     
