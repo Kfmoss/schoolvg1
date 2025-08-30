@@ -376,6 +376,10 @@
     background-color: #f0f1f6;
     
 }
+.tagger p{
+    padding: .75rem 0 .75rem 0;
+    font-size: 1.25rem;
+}
 
 .tagg_beskrivelse{
     display: flex;
@@ -416,6 +420,25 @@
 }
 .html_innhold li{
     padding-left: 2rem;
+}
+.workflow_nettleser{
+        padding: .75rem 0 .75rem 0;
+    font-size: 1.25rem;
+
+}
+.workflow_nettleser figure{
+    display: flex;
+    justify-content: center;
+    padding: 1.75rem 0 0.75rem 0;
+
+}
+.workflow_nettleser figure img{
+    padding: 0 .25rem 0 .25rem;
+    width: 100%;
+}
+.fork_dom{
+    border: 1px solid black;
+    background-color: #E2E0C8;
 }
 
 .html-tagger-tabell {

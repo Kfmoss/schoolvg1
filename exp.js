@@ -48,6 +48,30 @@ function speak(){
   
 }
 
+function read_Tagg(){
+    let text = document.querySelector(".tagger").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+}
+function read_DOM(){
+    let text = document.querySelector(".workflow_nettleser").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+}
+function read_Fork_Dom(){
+        let text = document.querySelector(".fork_dom").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+}
+
 function textToSpeech(){
     let text = document.querySelector(".grunnHTML").textContent;
     console.log(text);
