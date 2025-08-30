@@ -14,7 +14,6 @@
     
     <div class="Basiccontainer">
         <nav class="basicNav">
-            <!-- <img src="img/Logo IM på hvit.jpg" alt="" class="logo1"> -->
             <ul>
                 <li><a href="index.html"> <img src="img/Logo IM på hvit.jpg" alt="logo IM Åssiden" class="logo1"></a></li>
                 <li><a href="#">Main</a></li>
@@ -101,6 +100,8 @@
                 <img src="img/ektetagg.png" alt="">
 
 
+
+
                 <!-- <h3><strong>PC-en din er bare en maskin.</strong></h3>
                 <p class="HvaerHTML2">
                     
@@ -116,7 +117,8 @@
 
             </article>
             <article class="tagger" >
-                <h2>Tagger</h2>
+                <h2>Grunnleggende HTML-tagger og deres funksjon</h2>
+                <h4 class="textspeech1"><i onclick="read_Tagg()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
                 <p style="padding: 1.5rem;">
                     HTML-taggene forteller nettleseren om innholdet og strukturen til de ulike 
                     elementene på nettsiden. At overskrifter får større skriftstørrelse, eller
@@ -126,10 +128,6 @@
                     påvirker nettsidens utseende, selv om enkelte eldre versjoner av HTML har støtte for dette direkte. 
                     For funksjonalitet benyttes et scriptingspråk, hvor JavaScript er det mest brukte i dag.
                 </p>
-
-
-
-
                 <table class="html-tagger-tabell">
                 <thead>
                     <tr>
@@ -194,7 +192,39 @@
                 </table>
 
             </article>
-            <article>
+            <article class="workflow_nettleser">
+                <h2> Hva er en nettleser og hvordan fungerer?</h2>
+                <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                <p>
+                    Det å oppsummere hele prosessen av en nettleser i bare noen få ord er ikke en easy-task, men vi kan si at
+                    en nettleser er et program som henter informasjon
+                    og viser den på dataskjermen. En nettleser består vanligvis av 
+                    flere komponenter - funsjoner -  med ulike oppgaver. Den viktigste komponenten er gjengivelsesmotoren
+                    (rendering engine), som har som formål å <strong>hente og tolke</strong>  HTML-kode. I denne prosessen
+                    bygger nettleseren en trestruktur kalt DOM (Document Object Model), som definerer hierarkiet
+                    til elementene på en nettside.
+                    Diagrammet nedenfor kan vise grafisk en oppsummering av prosessen som foregår når nettleseren kjøres.
+                    <br>
+                    <figure>
+                        <img style="border: 1px solid black;width:50%; " src="img/dom_bygging_forbedret.png" alt="">
+                    </figure>
+
+                </p>
+                <p>
+                    Diagrammet under viser et eksempel på DOM-hierarkiet av elementene.
+                    <figure>
+                        <img src="img/DOM1.png" alt="">
+                        <img src="img/DOM2.png" alt="">
+                        <figcaption class="fork_dom"> <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>  <strong>&lt;html&gt;</strong> er rotelementet i dokumentet. <br>
+                             Alle andre elementer er etterkommere av dette. <br> 
+                            &lt;html&gt; har to direkte barn: <strong>&lt;head&gt;</strong>  og <strong>&lt;body&gt;</strong>. <br> Head-elementet inneholder et title-element. Teksten "Grunnleggende HTML" er innholdet i title-elementet. <br>
+                         Body-elementet inneholder et h1-element (en overskrift). Teksten "Åssiden videregående skole" er innholdet i h1-elementet.
+                        </figcaption>
+                    </figure>
+                    <p  >Etter DOM-strukturen er opprettet, vil nettleseren vise elementene på skjermen.  </p>
+                    <img style="margin: .75rem 0 ; border: 1px solid black; width: 30%; " src="img/resDOM.png" alt="">
+                    
+                </p>
 
             </article>
 
@@ -219,6 +249,11 @@
             <div class="Oppgaver" id="oppgaver">
                 <article class="opp1">
                     <h2>Oppgaver</h2>
+                    <p>Du skal velge mellom oppgave A og oppgave B.
+                        Før du starter må du ha installert både Visual Studio Code og Git på PC-en, 
+                        og opprettet en GitHub-konto. Dette kan ta litt tid, så sørg for at du har alt 
+                        på plass så snart som mulig.</p>
+
                     <ul>
                         <li><h3>Oppgave 1</h3></li>
                         <li></li>
