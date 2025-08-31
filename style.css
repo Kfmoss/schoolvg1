@@ -3,7 +3,7 @@
     padding:0;
     margin: 0;
     scroll-behavior: smooth;
-   
+
 }
 /* ---------------------------------------------------main(index)------------------ */
 .main_maincontainer{
@@ -18,7 +18,7 @@
     font-family: "Liter", serif;
     line-height: 1.6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
 
 
 }
@@ -26,7 +26,7 @@
     grid-area: nav;
     background-color: rgb(227, 236, 233);
     text-align: center;
-    
+
 }
 .main_mainnav .main1 a{
     text-decoration: none;
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 
 .main_mainliks #logomain{
@@ -50,12 +50,12 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
     "box1"
     "box2";
     font-family: "Liter", serif;
     text-align: center;
-    
+
 }
 .listbox1{
     list-style: none;
@@ -140,7 +140,7 @@
 }
 .funksjoner div{
     margin:.5rem 15rem .5rem 15rem ;
-    
+
 }
 .callback{
     display: flex;
@@ -170,7 +170,7 @@
     padding: 2.5rem 0 2.5rem 1.5rem;
     border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
-    
+
 }
 .css-manipulering{
     display: grid;
@@ -193,7 +193,7 @@
     justify-content: center;
     padding: 1.5rem;
 
-    
+
 }
 .selektor .videoselektor{
     width: 35rem;
@@ -210,8 +210,8 @@
 }
 .selektor .selektor_ndla img:hover{
     opacity: 0.3;
- 
-  
+
+
 }
 
 #modernJS{
@@ -238,7 +238,7 @@
 .intro_manipulation img{
     width: 70%;
     align-items: center;
-    
+
 }
 .intro_manipulation h3{
     padding: .7rem 0 .7rem 0;
@@ -261,7 +261,7 @@
     list-style:none;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .footer_main ul a{
@@ -282,9 +282,9 @@
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "basicNav"
-    "basicsMain" 
+    "basicsMain"
     "emulator"
     "basicfooter";
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -310,12 +310,17 @@ body {
 
 /* Navigasjon */
 .basicNav {
+    display: flex;
     background: #005a9e;
     border-radius: 8px;
     margin-bottom: 2rem;
     box-shadow: 0 2px 8px rgba(0,90,158,0.08);
+    justify-content: center;
+    align-items: center;
 }
 .basicNav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -323,25 +328,30 @@ body {
     align-items: center;
 }
 .basicNav li {
-    margin: 0 1.2rem 0 0;
+    /* margin: 0 1.2rem 0 0; */
 }
 .basicNav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     padding: 0.7rem 1.1rem;
     border-radius: 6px;
     transition: background 0.2s;
+}
+.basicNav span{
+    color:#fff;
+    font-size: 2rem;
 }
 .basicNav a:hover, .basicNav a:focus {
     background: #003e6b;
 }
 .logo1 {
-    height: 38px;
+    /* height: 38px;
     border-radius: 6px;
     margin-right: 1rem;
-    vertical-align: middle;
+    vertical-align: middle; */
+    width: 100%;
 }
 
 /* Hovedinnhold */
@@ -541,14 +551,14 @@ a:hover, a:focus {
 .basicNav ul{
     display: flex;
     list-style: none;
-  
+
     align-items: center;
 }
 .basicNav ul li{
     padding-left: 3rem;
     padding-right: 3rem;
     font-size: 3rem;
-    
+
     color: rgb(55, 56, 56);
 }
 
@@ -613,7 +623,7 @@ a:hover, a:focus {
     flex-direction: column;
     padding: 1.75rem 0 .75rem 0;
     background-color: #f0f1f6;
-    
+
 }
 .tagger p{
     padding: .75rem 0 .75rem 0;
@@ -626,7 +636,7 @@ a:hover, a:focus {
     list-style: none;
     padding: .75rem 0 .75rem 0;
     font-size: 1.25rem;
-    
+
 }
 .tagg_beskrivelse li{
     padding-left: 1.2rem;
@@ -642,7 +652,7 @@ a:hover, a:focus {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    
+
 }
 .tagg_metafor li{
     padding: 3rem;
@@ -655,7 +665,7 @@ a:hover, a:focus {
 }
 .html_innhold{
     list-style: none;
-    
+
 }
 .html_innhold li{
     padding-left: 2rem;
@@ -723,7 +733,7 @@ a:hover, a:focus {
     font-family: "Liter", serif;
     font-style: normal;
     background-color: black;
-    
+
 }
 
 .hoved_containeromjs .header_omjs{
@@ -731,9 +741,9 @@ a:hover, a:focus {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "logo navi ham";
-    margin: 2.5rem;  
+    margin: 2.5rem;
     align-items: center;
 }
 .header_omjs .logo1{
@@ -741,12 +751,12 @@ a:hover, a:focus {
     display: flex;
     justify-content: center;
     width: 50%;
-} 
+}
 .header_omjs #ham1{
     grid-area:ham ;
     display: flex;
     justify-content: center;
-} 
+}
 
 .links_nav_omjs{
     grid-area: navi;
@@ -761,11 +771,11 @@ a:hover, a:focus {
     padding: 1.5rem;
     transition: 0.2s;
     margin:0 .5rem 0 .5rem;
-    
+
 }
 .links_nav_omjs li:hover{
     background-color: #E2E0C8;
-    box-shadow: .3rem .4rem grey; 
+    box-shadow: .3rem .4rem grey;
 }
 
 .links_nav_omjs li a{
