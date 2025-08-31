@@ -3,7 +3,7 @@
     padding:0;
     margin: 0;
     scroll-behavior: smooth;
-   
+
 }
 /* ---------------------------------------------------main(index)------------------ */
 .main_maincontainer{
@@ -18,7 +18,7 @@
     font-family: "Liter", serif;
     line-height: 1.6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
 
 
 }
@@ -26,7 +26,7 @@
     grid-area: nav;
     background-color: rgb(227, 236, 233);
     text-align: center;
-    
+
 }
 .main_mainnav .main1 a{
     text-decoration: none;
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 
 .main_mainliks #logomain{
@@ -50,12 +50,12 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
     "box1"
     "box2";
     font-family: "Liter", serif;
     text-align: center;
-    
+
 }
 .listbox1{
     list-style: none;
@@ -140,7 +140,7 @@
 }
 .funksjoner div{
     margin:.5rem 15rem .5rem 15rem ;
-    
+
 }
 .callback{
     display: flex;
@@ -170,7 +170,7 @@
     padding: 2.5rem 0 2.5rem 1.5rem;
     border: 1px solid rgb(27, 26, 26) ;
     margin-bottom: 0.5rem ;
-    
+
 }
 .css-manipulering{
     display: grid;
@@ -193,7 +193,7 @@
     justify-content: center;
     padding: 1.5rem;
 
-    
+
 }
 .selektor .videoselektor{
     width: 35rem;
@@ -210,8 +210,8 @@
 }
 .selektor .selektor_ndla img:hover{
     opacity: 0.3;
- 
-  
+
+
 }
 
 #modernJS{
@@ -238,7 +238,7 @@
 .intro_manipulation img{
     width: 70%;
     align-items: center;
-    
+
 }
 .intro_manipulation h3{
     padding: .7rem 0 .7rem 0;
@@ -261,7 +261,7 @@
     list-style:none;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .footer_main ul a{
@@ -282,14 +282,263 @@
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "basicNav"
-    "basicsMain" 
+    "basicsMain"
     "emulator"
     "basicfooter";
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Grunnleggende layout og bakgrunn */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.Basiccontainer {
+    max-width: 1100px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+}
+
+/* Navigasjon */
+.basicNav {
+    display: flex;
+    background: #005a9e;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,90,158,0.08);
+    justify-content: center;
+    align-items: center;
+}
+.basicNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.basicNav li {
+    /* margin: 0 1.2rem 0 0; */
+}
+.basicNav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.basicNav span{
+    color:#fff;
+    font-size: 2rem;
+}
+.basicNav a:hover, .basicNav a:focus {
+    background: #003e6b;
+}
+.logo1 {
+    /* height: 38px;
+    border-radius: 6px;
+    margin-right: 1rem;
+    vertical-align: middle; */
+    width: 100%;
+}
+
+/* Hovedinnhold */
+.basicsMain h1, .basicsMain h2, .basicsMain h3, .basicsMain h4 {
+    color: #005a9e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+.basicsMain h1 {
+    font-size: 2.1rem;
+}
+.basicsMain h2 {
+    font-size: 1.5rem;
+}
+.basicsMain h3 {
+    font-size: 1.2rem;
+}
+.basicsMain h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+article {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e3e8ee;
+}
+
+p, ul, ol {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+ul.html_innhold, ul.tagg_metafor {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+ul.html_innhold li, ul.tagg_metafor li {
+    margin-bottom: 0.5rem;
+}
+
+/* Bilder og media */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.basicmainpic1 {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+.tagg_metafor img {
+    width: 120px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+figure img {
+    margin-bottom: 0.5rem;
+}
+figcaption {
+    font-size: 0.98rem;
+    color: #444;
+    background: #f1f6fa;
+    border-left: 4px solid #005a9e;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+/* Tabell */
+.html-tagger-tabell {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.html-tagger-tabell th, .html-tagger-tabell td {
+    border: 1px solid #e3e8ee;
+    padding: 14px 18px;
+    text-align: left;
+}
+.html-tagger-tabell th {
+    background: #005a9e;
+    color: #fff;
+    font-size: 1.08em;
+    letter-spacing: 1px;
+}
+.html-tagger-tabell tr:nth-child(even) {
+    background: #f1f6fa;
+}
+.html-tagger-tabell tr:hover {
+    background: #e6f0fa;
+}
+.html-tagger-tabell strong {
+    color: #005a9e;
+}
+
+/* Oppgaver og lister */
+.oppgaverHTML ul, .useGitGitHub ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.oppgaverHTML li, .useGitGitHub li {
+    margin-bottom: 0.6rem;
+}
+.oppgaverHTML h4 {
+    margin-top: 1.2rem;
+    color: #003e6b;
+}
+
+/* Git seksjon */
+.git h2, .git h3, .git h4 {
+    color: #005a9e;
+}
+.git ul {
+    margin-left: 1.5rem;
+}
+.git li {
+    margin-bottom: 0.7rem;
+}
+
+/* Nøkkelord */
+.nøkleord {
+    background: #f1f6fa;
+    border-left: 5px solid #005a9e;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+.nøkleord h2 {
+    margin-top: 0;
+    color: #005a9e;
+}
+.nøkleord ul {
+    margin-left: 1.2rem;
+}
+
+/* Tekst-til-tale ikon */
+.textspeech1 i, .textspeech2 i {
+    color: #005a9e;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-right: 0.5rem;
+}
+.textspeech1 i:hover, .textspeech2 i:hover {
+    color: #003e6b;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .Basiccontainer {
+        padding: 1rem 0.5rem;
+    }
+    .basicmainpic1 {
+        max-height: 180px;
+    }
+    .html-tagger-tabell th, .html-tagger-tabell td {
+        padding: 8px 6px;
+    }
+    nav.basicNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tagg_metafor img {
+        width: 80px;
+    }
+}
+
+/* Ekstra: Knapper og lenker */
+a, a:visited {
+    color: #005a9e;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+a:hover, a:focus {
+    color: #003e6b;
+    text-decoration: none;
+}
 
 .basicNav{
     grid-area: basicNav;
@@ -302,14 +551,14 @@
 .basicNav ul{
     display: flex;
     list-style: none;
-  
+
     align-items: center;
 }
 .basicNav ul li{
     padding-left: 3rem;
     padding-right: 3rem;
     font-size: 3rem;
-    
+
     color: rgb(55, 56, 56);
 }
 
@@ -374,7 +623,7 @@
     flex-direction: column;
     padding: 1.75rem 0 .75rem 0;
     background-color: #f0f1f6;
-    
+
 }
 .tagger p{
     padding: .75rem 0 .75rem 0;
@@ -387,7 +636,7 @@
     list-style: none;
     padding: .75rem 0 .75rem 0;
     font-size: 1.25rem;
-    
+
 }
 .tagg_beskrivelse li{
     padding-left: 1.2rem;
@@ -403,7 +652,7 @@
     justify-items: center;
     justify-content: center;
     align-items: center;
-    
+
 }
 .tagg_metafor li{
     padding: 3rem;
@@ -416,7 +665,7 @@
 }
 .html_innhold{
     list-style: none;
-    
+
 }
 .html_innhold li{
     padding-left: 2rem;
@@ -484,7 +733,7 @@
     font-family: "Liter", serif;
     font-style: normal;
     background-color: black;
-    
+
 }
 
 .hoved_containeromjs .header_omjs{
@@ -492,9 +741,9 @@
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "logo navi ham";
-    margin: 2.5rem;  
+    margin: 2.5rem;
     align-items: center;
 }
 .header_omjs .logo1{
@@ -502,12 +751,12 @@
     display: flex;
     justify-content: center;
     width: 50%;
-} 
+}
 .header_omjs #ham1{
     grid-area:ham ;
     display: flex;
     justify-content: center;
-} 
+}
 
 .links_nav_omjs{
     grid-area: navi;
@@ -522,11 +771,11 @@
     padding: 1.5rem;
     transition: 0.2s;
     margin:0 .5rem 0 .5rem;
-    
+
 }
 .links_nav_omjs li:hover{
     background-color: #E2E0C8;
-    box-shadow: .3rem .4rem grey; 
+    box-shadow: .3rem .4rem grey;
 }
 
 .links_nav_omjs li a{
