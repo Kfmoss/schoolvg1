@@ -71,6 +71,40 @@ function read_Fork_Dom(){
     speechSynthesis.speak(lyd);
 
 }
+function read_git_intro(){
+    let text = document.querySelector(".intro_git").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+
+}
+function read_installGit(){
+    let text = document.querySelector(".install_git").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+}
+function read_installGitMac(){
+    let text = document.querySelector(".install_git_mac").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+}
+function read_oppgaver(){
+    let text = document.querySelector(".HTMLoppgaver").textContent;
+    console.log(text);
+    const lyd = new SpeechSynthesisUtterance(text);
+    lyd.lang = "nb-NO";
+    speechSynthesis.speak(lyd);
+
+}
+
 
 function textToSpeech(){
     let text = document.querySelector(".grunnHTML").textContent;
@@ -79,6 +113,7 @@ function textToSpeech(){
     lyd.lang = "nb-NO";
     speechSynthesis.speak(lyd);
 }
+
 
 
 async function transUK(){

@@ -231,64 +231,76 @@
            
             
             <div class="git" id="git">
-                <article>
-                    <h2>Introduksjon til GIT og GitHub</h2>
-                    <h3>Hva er GIT?</h3>
-                    <p>
-                        Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
-                        Tenk på det som en "tidsmaskin" for koden din – du kan alltid gå tilbake til tidligere versjoner hvis noe går galt.
-                        Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
-                        ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
-                    </p>
-                    <h3>Hva er GitHub</h3>
-                    <p>
-                        GitHub er en nettbasert plattform som bruker Git. 
-                        Det er som en "skylagring" for kodeprosjektene dine, men med superkrefter 
-                        for samarbeid.
-                    </p>
-                    <h3>Hvorfor bruker vi Git og GitHub?</h3>
-                    <p> Med et versjonskontrollsystem kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
-                        til en tidligere versjon. Om du samarbeider med andre elever/utviklere kan du 
-                        se hvem som har gjort hvilke endringer og når. <br> Flere elever kan jobbe på samme prosjekt samtidig,
-                        siden GitHub tillater dere automatisk sammenslåing av endringer med konfliktløsning når flere 
-                        endrer samme fil. GitHub er perfekt for personlig utvikling siden plattformen viser arbeidshistorikken
-                        til potensielle arbeidsgivere. GitHub er i dag "standardverktøy" i IT-bransjen. Store og små bedrifter
-                        i både offentlig og privat sektor bruker Git og GitHub, og noen av disse er:
+                <article class="git_github">
+                    <div class="intro_git">
+
+                        <h2>Introduksjon til GIT og GitHub</h2>
+                        <h4 class="textspeech1"><i onclick="read_git_intro()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h3>Hva er GIT?</h3>
+                        <p>
+                            Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
+                            Tenk på det som en "tidsmaskin" for koden din – du kan alltid gå tilbake til tidligere versjoner hvis noe går galt.
+                            Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
+                            ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
+                        </p>
+                        <h3>Hva er GitHub</h3>
+                        <p>
+                            GitHub er en nettbasert plattform som bruker Git. 
+                            Det er som en "skylagring" for kodeprosjektene dine, men med superkrefter 
+                            for samarbeid.
+                        </p>
+                        <h3>Hvorfor bruker vi Git og GitHub?</h3>
+                        <p> Med et versjonskontrollsystem kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
+                            til en tidligere versjon. Om du samarbeider med andre elever/utviklere kan du 
+                            se hvem som har gjort hvilke endringer og når. <br> Flere elever kan jobbe på samme prosjekt samtidig,
+                            siden GitHub tillater dere automatisk sammenslåing av endringer med konfliktløsning når flere 
+                            endrer samme fil. GitHub er perfekt for personlig utvikling siden plattformen viser arbeidshistorikken
+                            til potensielle arbeidsgivere. GitHub er i dag "standardverktøy" i IT-bransjen. Store og små bedrifter
+                            i både offentlig og privat sektor bruker Git og GitHub, og noen av disse er:
+                            <ul>
+                                <li><p>Microsoft</p></li>
+                                <li><p>Google</p></li>
+                                <li>Meta (Facebook, Instagram ...)</li>
+                                <li>Netflix og andre</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="install_git">
+
+                        <h3>Installasjon av Git</h3>
+                        <h4 class="textspeech1"><i onclick="read_installGit()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4>For Windows</h4>
                         <ul>
-                            <li><p>Microsoft</p></li>
-                            <li><p>Google</p></li>
-                            <li>Meta (Facebook, Instagram ...)</li>
-                            <li>Netflix og andre</li>
+                            <li><p>Gå til <a href="https://git-scm.com/downloads/win">https://git-scm.com/downloads/win</a></p> </li>
+                            <li><p>Klikk og last ned <strong>Git for Windows/x64 Setup.</strong></p></li>
+                            <li><p>Kjør installasjonsfilen (.exe)</p></li>
+                            <li><p>og følg instruksjonene.</p></li>
+                            <li><p>Etter installasjonen er ferdig, åpne Command Prompt eller PowerShell og kjør "git --version"</p></li>
+                            <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
+                            <li><iframe width="420" height="315"
+                                    src="https://www.youtube.com/embed/JNWXQskz4Uk"
+                                    frameborder="0"
+                                    allowfullscreen>
+                            </iframe>
+                            </li>
                         </ul>
-                    </p>
-                    <h3>Installasjon av Git</h3>
-                    <h4>For Windows</h4>
-                    <ul>
-                        <li><p>Gå til <a href="https://git-scm.com/downloads/win">https://git-scm.com/downloads/win</a></p> </li>
-                        <li><p>Klikk og last ned <strong>Git for Windows/x64 Setup.</strong></p></li>
-                        <li><p>Kjør installasjonsfilen (.exe)</p></li>
-                        <li><p>og følg instruksjonene.</p></li>
-                        <li><p>Etter installasjonen er ferdig, åpne Command Prompt eller PowerShell og kjør "git --version"</p></li>
-                        <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
-                        <li><iframe width="420" height="315"
-                                src="https://www.youtube.com/embed/JNWXQskz4Uk"
-                                frameborder="0"
-                                allowfullscreen>
-                        </iframe>
-                        </li>
-                    </ul>
-                    <h4>For macOS</h4>
-                    <ul>
-                        <li><p>Kjør brew install git i terminalen</p></li>
-                        <li><p>Etter at Git er ferdig installert, kjør "git --version"</p> </li>
-                        <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
-                        <li><iframe width="420" height="315"
-                                src="https://www.youtube.com/embed/9GZmaxaQV0c"
-                                frameborder="0"
-                                allowfullscreen>
-                        </iframe>
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="install_git_mac">
+                        <h4>For macOS</h4>
+                        <h4 class="textspeech1"><i onclick="read_installGitMac()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <ul>
+                            <li><p>Kjør brew install git i terminalen</p></li>
+                            <li><p>Etter at Git er ferdig installert, kjør "git --version"</p> </li>
+                            <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
+                            <li><iframe width="420" height="315"
+                                    src="https://www.youtube.com/embed/9GZmaxaQV0c"
+                                    frameborder="0"
+                                    allowfullscreen>
+                            </iframe>
+                            </li>
+                        </ul>
+
+                    </div>
                     <h3>Opprett en GitHub-konto</h3>
                     <h4>Steg 1 </h4>
                     <ul><p>Gå til <a href="https://github.com/">https://github.com/</a></p><li></li>
@@ -341,65 +353,69 @@
                         <li><p>Deretter får du to lister med kommandoer. Du skal bare bruke 3 av disse 
                     </ul>
                 </article>
-                <article id="oppgaver" class="oppgaverHTML">
-                    <h2>Oppgaver</h2>
-                    <h3>Arbeidsmåte og levering</h3>
-                    <p>I dette prosjektet skal du lære om grunnleggende
-                         konsepter i HTML. Dette danner et viktig fundament for 
-                         videre arbeid med webutviklingsprosjekter. Det er også en 
-                         fordel å bli godt kjent med PC-en din og funksjonene den 
-                         tilbyr. Dere skal jobbe i par, noe som gir mulighet til 
-                         samarbeid og erfaringsdeling. Prosjektet leveres likevel 
-                         individuelt i Teams. <br>
-                         Dette prosjektet blir vurdert som enten godkjent 
-                         eller ikke godkjent. Selv om du ikke får karakter på 
-                         akkurat dette, er det viktig å ta det seriøst. Det du 
-                         lærer her skal du bruke i senere prosjekter hvor du får
-                          karakter, og det gir deg et godt grunnlag for mer 
-                          avanserte oppgaver. Konseptene du øver på nå er også 
-                          nyttige videre på VG2.
-                        .<br>
-                        <strong>Vurderingsform : Godkjent/Ikke godkjent</strong> <br>
-                        <strong>Frist for innlevering: 04.sept kl.15</strong> <br>
-                        <strong></strong> </p>
-                    <h3>Lag din egen nettside</h3>
-                    <p>I denne oppgaven skal du bruke HTML-tagger til å lage en 
-                        egen artikkel om et tema du velger.
-                        Det er ingen begrensning på hvor mye du kan skrive, 
-                        men husk å forklare tankene og meningene dine tydelig. 
-                        Du kan også bruke bilder, videoer og lenker til ressurser 
-                        på internett for å gjøre innholdet mer spennende.
-                        Hvis du allerede kan litt HTML og CSS, kan du prøve deg 
-                        på Oppgave B. Dersom dette er første gang du koder i HTML, 
-                        holder det at du leverer Oppgave A.</p>
-                    <p>
-                      Dere skal i tillegg skrive en kort logg (rapport) der
-                       du beskriver arbeidsprosessen i prosjektet. Her kan 
-                       du også fortelle hva du har lært og hvor vanskelig 
-                       du synes prosjektet var. I tillegg skal du fylle ut og levere et KI-skjema, der du forklarer hvordan du har brukt KI i arbeidet ditt.
-                    </p>
+                <div class="HTMLoppgaver">
 
-                    <h4>Oppgave A - Lag en enkel nettside om ett av disse temaene:</h4>
-                    <ul>
-                        <li><p>Jeg som IM-elev på Åssiden videregående skole</p></li>
-                        <li><p>Mine planer etter VG2</p></li>
-                        <li><p>Demokrati og ytringsfrihet på skolen</p></li>
-                        <li><p>Falske nyheter</p></li>
-                        <li><p>PC-hardware</p></li>
-                        <li><p>Personvern i sosiale medier</p></li>
-                    </ul>
-                    <h4>Oppgave B - Lag en nettside om ett av temaene fra Oppgave A,
-                         men med mer innhold og funksjonalitet: </h4>
-
-                    <ul>
-                        <li><p>Bruk bilder, videoer eller andre medier som HTML støtter.</p></li>
-                        <li><p>Lag et enkelt kontaktskjema ved å bruke <form>-taggen.</p></li>
-                        <li><p>Det er ikke krav om CSS, men du kan bruke det om du ønsker (CSS teller ikke i vurderingen). </p></li>
-                        <li><p>Publiser nettsiden på <strong><a href="https://vercel.com/">Vercel</a></strong>, slik at alle med lenken kan se den.</p></li>
-                    </ul>
-
-
-                </article>
+                    <article id="oppgaver" class="oppgaverHTML">
+                        <h2>Oppgaver</h2>
+                        <h4 class="textspeech1"><i onclick="read_oppgaver()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h3>Arbeidsmåte og levering</h3>
+                        <p>I dette prosjektet skal du lære om grunnleggende
+                             konsepter i HTML. Dette danner et viktig fundament for 
+                             videre arbeid med webutviklingsprosjekter. Det er også en 
+                             fordel å bli godt kjent med PC-en din og funksjonene den 
+                             tilbyr. Dere skal jobbe i par, noe som gir mulighet til 
+                             samarbeid og erfaringsdeling. Prosjektet leveres likevel 
+                             individuelt i Teams. <br>
+                             Dette prosjektet blir vurdert som enten godkjent 
+                             eller ikke godkjent. Selv om du ikke får karakter på 
+                             akkurat dette, er det viktig å ta det seriøst. Det du 
+                             lærer her skal du bruke i senere prosjekter hvor du får
+                              karakter, og det gir deg et godt grunnlag for mer 
+                              avanserte oppgaver. Konseptene du øver på nå er også 
+                              nyttige videre på VG2.
+                            .<br>
+                            <strong>Vurderingsform : Godkjent/Ikke godkjent</strong> <br>
+                            <strong>Frist for innlevering: 04.sept kl.15</strong> <br>
+                            <strong></strong> </p>
+                        <h3>Lag din egen nettside</h3>
+                        <p>I denne oppgaven skal du bruke HTML-tagger til å lage en 
+                            egen artikkel om et tema du velger.
+                            Det er ingen begrensning på hvor mye du kan skrive, 
+                            men husk å forklare tankene og meningene dine tydelig. 
+                            Du kan også bruke bilder, videoer og lenker til ressurser 
+                            på internett for å gjøre innholdet mer spennende.
+                            Hvis du allerede kan litt HTML og CSS, kan du prøve deg 
+                            på Oppgave B. Dersom dette er første gang du koder i HTML, 
+                            holder det at du leverer Oppgave A.</p>
+                        <p>
+                          Dere skal i tillegg skrive en kort logg (rapport) der
+                           du beskriver arbeidsprosessen i prosjektet. Her kan 
+                           du også fortelle hva du har lært og hvor vanskelig 
+                           du synes prosjektet var. I tillegg skal du fylle ut og levere et KI-skjema, der du forklarer hvordan du har brukt KI i arbeidet ditt.
+                        </p>
+    
+                        <h4>Oppgave A - Lag en enkel nettside om ett av disse temaene:</h4>
+                        <ul>
+                            <li><p>Jeg som IM-elev på Åssiden videregående skole</p></li>
+                            <li><p>Mine planer etter VG2</p></li>
+                            <li><p>Demokrati og ytringsfrihet på skolen</p></li>
+                            <li><p>Falske nyheter</p></li>
+                            <li><p>PC-hardware</p></li>
+                            <li><p>Personvern i sosiale medier</p></li>
+                        </ul>
+                        <h4>Oppgave B - Lag en nettside om ett av temaene fra Oppgave A,
+                             men med mer innhold og funksjonalitet: </h4>
+    
+                        <ul>
+                            <li><p>Bruk bilder, videoer eller andre medier som HTML støtter.</p></li>
+                            <li><p>Lag et enkelt kontaktskjema ved å bruke <form>-taggen.</p></li>
+                            <li><p>Det er ikke krav om CSS, men du kan bruke det om du ønsker (CSS teller ikke i vurderingen). </p></li>
+                            <li><p>Publiser nettsiden på <strong><a href="https://vercel.com/">Vercel</a></strong>, slik at alle med lenken kan se den.</p></li>
+                        </ul>
+    
+    
+                    </article>
+                </div>
             </div>
         </main>
     </div>
