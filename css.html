@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS 1 – Grunnleggende CSS</title>
+  <meta name="description" content="Lærenettside som oppsummerer presentasjonen om grunnleggende CSS: inline, internal, external, klasser og id-er, selektorgruppering, kjeding, spesifisering m.m." />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --panel: #11172b;
+      --ink: #e8eefc;
+      --muted: #a9b3c7;
+      --accent: #7aa2ff;
+      --accent-2: #3bd9c7;
+      --code-bg: #0f1428;
+      --border: #23304f;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height:1.6; color:var(--ink); background:linear-gradient(180deg,#0a0f1e 0%, #0e1530 100%);
+    }
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px);
+      background:rgba(11,16,32,0.7); border-bottom:1px solid var(--border);
+    }
+    .wrap{display:grid; grid-template-columns: 280px 1fr; gap:24px; max-width:1200px; margin:0 auto; padding:24px;}
+    .brand{display:flex; align-items:center; gap:16px; padding:14px 24px;}
+    .brand h1{font-size:1.2rem; margin:0; letter-spacing:.3px}
+    .brand small{color:var(--muted)}
+    nav{
+      position:sticky; top:72px; align-self:start; background:var(--panel);
+      border:1px solid var(--border); border-radius:16px; padding:16px; max-height:calc(100vh - 96px); overflow:auto;
+    }
+    nav h2{font-size:.95rem; margin:6px 0 8px; color:var(--muted); font-weight:600}
+    nav a{display:block; padding:8px 10px; border-radius:10px; color:var(--ink); text-decoration:none; font-size:.95rem}
+    nav a:hover{background:rgba(122,162,255,.12)}
+    main{min-width:0}
+    section{
+      background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:24px; margin-bottom:20px;
+      box-shadow: 0 10px 30px rgba(5,10,30,0.25);
+    }
+    h2{margin-top:0}
+    .lead{color:var(--muted)}
+    .pill{display:inline-block; padding:2px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); font-size:.8rem}
+    .grid{display:grid; gap:16px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width: 900px){.wrap{grid-template-columns:1fr}.hide-sm{display:none} nav{position:relative; top:0; max-height:none}}
+    pre, code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+    pre{background:var(--code-bg); padding:14px 16px; border:1px solid var(--border); border-radius:12px; overflow:auto}
+    .tip{border-left:3px solid var(--accent); padding:8px 12px; background:rgba(122,162,255,.08); border-radius:8px}
+    .warn{border-left:3px solid #ff9e64; padding:8px 12px; background:rgba(255,158,100,.08); border-radius:8px}
+    .kbd{font-weight:600; background:rgba(255,255,255,.06); border:1px solid var(--border); padding:.1rem .4rem; border-radius:6px}
+    .callout{display:flex; gap:14px; align-items:flex-start}
+    .callout .icon{font-size:1.2rem}
+    .badge{background:rgba(59,217,199,.15); color:var(--accent-2); border:1px solid rgba(59,217,199,.3); padding:.15rem .5rem; border-radius:999px; font-size:.75rem}
+    footer{color:var(--muted); text-align:center; padding:24px 16px}
+    .hr{height:1px; background:var(--border); margin:16px 0}
+    a.inline{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand wrap" style="padding-top:10px;padding-bottom:10px">
+      <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));filter:hue-rotate(10deg)"></div>
+      <div>
+        <h1>CSS 1 – Grunnleggende CSS</h1>
+        <small>Åssiden Videregående skole - September 2025</small>
+      </div>
+      <div class="hide-sm" style="margin-left:auto"><span class="pill">Lærenettside</span>
+      <a style="text-decoration: none; color: #e8eefc;" href="index.html">Tilbake til hovedmenyen</a></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav aria-label="Innholdsfortegnelse">
+      <h2>Innhold</h2>
+      <a href="#intro">1. Introduksjon</a>
+      <a href="#grunnleggende">2. Grunnleggende CSS</a>
+      <a href="#inline">– Inline CSS</a>
+      <a href="#internal">– Intern CSS</a>
+      <a href="#external">– Ekstern CSS</a>
+      <a href="#hvorfor-ekstern">Hvorfor ekstern CSS?</a>
+      <div class="hr"></div>
+      <a href="#class-id">3. Class- og ID-selektorer</a>
+      <a href="#class">– Klasse (.<em>navn</em>)</a>
+      <a href="#id">– ID (#<em>navn</em>)</a>
+      <a href="#gruppering">– Selektorgruppering</a>
+      <a href="#kjeding">– Selektorkjeding</a>
+      <a href="#type">– Type-selektor</a>
+      <a href="#spesifisering">– Selektor-spesifisering</a>
+      <a href="#slekt">– Slekttre-/descendant-selektor</a>
+    </nav>
+
+    <main>
+      <section id="intro">
+        <h2>1. Introduksjon</h2>
+        <p class="lead">Når vi arbeider med CSS (<em>Cascading Style Sheets</em>), kan vi plassere stilreglene våre på tre forskjellige steder: <strong>inline</strong>, <strong>intern</strong> og <strong>ekstern</strong>. Denne siden oppsummerer presentasjonen og gir små kodeeksempler underveis.</p>
+        <div class="callout tip"><div class="icon">💡</div><div>Best praksis er å holde HTML ren og legge mest mulig stil i en <strong>ekstern</strong> CSS-fil.</div></div>
+      </section>
+
+      <section id="grunnleggende">
+        <h2>2. Grunnleggende CSS</h2>
+        <p>De tre plasseringene for CSS:</p>
+        <ul>
+          <li><a class="inline" href="#inline">Inline</a> – stil direkte på et enkelt HTML‑element.</li>
+          <li><a class="inline" href="#internal">Intern</a> – stil i en <code>&lt;style&gt;</code>-tagg i <code>&lt;head&gt;</code>.</li>
+          <li><a class="inline" href="#external">Ekstern</a> – stil i en separat <code>.css</code>-fil koblet inn med <code>&lt;link&gt;</code>.</li>
+        </ul>
+      </section>
+
+      <section id="inline">
+        <h3>2.1 Inline CSS</h3>
+        <p>Inline CSS brukes når vi skriver stilregler direkte på et element. Dette kan bli tungvint på større sider, og det overstyrer ofte eksterne regler.</p>
+        <pre><code>&lt;h1 style="color: teal; margin-bottom: .5rem;"&gt;Hei verden&lt;/h1&gt;</code></pre>
+        <div class="callout warn"><div class="icon">⚠️</div><div>Bruk sparsommelig – inline-regler er vanskelige å vedlikeholde og overstyre.</div></div>
+      </section>
+
+      <section id="internal">
+        <h3>2.2 Intern CSS</h3>
+        <p>Intern CSS plasseres i dokumentets <code>&lt;head&gt;</code> innenfor en <code>&lt;style&gt;</code>-tagg.</p>
+        <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    body { font-family: system-ui; }
+    h1 { font-size: 2rem; }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        <p>Regler her kan overstyre eksterne regler dersom selektorene er like.</p>
+      </section>
+
+      <section id="external">
+        <h3>2.3 Ekstern CSS</h3>
+        <p>Koble en separat CSS-fil i <code>&lt;head&gt;</code> for ryddig og gjenbrukbar stil.</p>
+        <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+      </section>
+
+      <section id="hvorfor-ekstern">
+        <h3>Hvorfor eksternt stilark?</h3>
+        <ul>
+          <li>Holder HTML renere og mer lesbar.</li>
+          <li>Enklere å gjenbruke stil på tvers av flere sider.</li>
+          <li>Færre konflikter enn med inline stil.</li>
+        </ul>
+      </section>
+
+      <section id="class-id">
+        <h2>3. Class- og ID-selektorer</h2>
+        <p>Vi kan målrette spesifikke elementer ved å tildele <em>klasser</em> og <em>id-er</em> i HTML. De har ulike bruksområder:</p>
+      </section>
+
+      <section id="class" class="grid two">
+        <div>
+          <h3>3.1 Klasse-selektor <code>.klasse</code></h3>
+          <ul>
+            <li>Gjenbrukbar – et element kan ha flere klasser.</li>
+            <li>I CSS: <code>.kort</code>. I HTML: <code>class="kort"</code> (uten punktum).</li>
+          </ul>
+          <pre><code>/* CSS */
+.kort { padding: 1rem; border-radius: .75rem; }
+
+/* HTML */
+&lt;div class="kort"&gt;Innhold&lt;/div&gt;</code></pre>
+        </div>
+        <div>
+          <h3>3.2 ID-selektor <code>#id</code></h3>
+          <ul>
+            <li>Unik per side – bruk på ett element.</li>
+            <li>I CSS: <code>#hero</code>. I HTML: <code>id="hero"</code> (uten #).</li>
+          </ul>
+          <pre><code>/* CSS */
+#hero { scroll-margin-top: 80px; }
+
+/* HTML */
+&lt;section id="hero"&gt;...&lt;/section&gt;</code></pre>
+        </div>
+      </section>
+
+      <section id="gruppering">
+        <h3>3.3 Selektorgruppering</h3>
+        <p>Unngå repetisjon ved å gi flere selektorer samme regler ved hjelp av komma.</p>
+        <pre><code>h1, h3 { color: rebeccapurple; }</code></pre>
+      </section>
+
+      <section id="kjeding">
+        <h3>3.4 Selektorkjeding (målrett spesifikt element)</h3>
+        <p>Når du må style én bestemt lenke inne i en overskrift med en klasse:</p>
+        <pre><code>/* Påvirker bare &lt;a&gt; inne i &lt;h3 class="enklasse"&gt; */
+h3.enklasse a { text-decoration: underline; }</code></pre>
+      </section>
+
+      <section id="type">
+        <h3>3.5 Type-selektor</h3>
+        <p>Bruk HTML-taggen som selektor for å style alle forekomster av den typen.</p>
+        <pre><code>p { line-height: 1.7; }</code></pre>
+      </section>
+
+      <section id="spesifisering">
+        <h3>3.6 Selektor-spesifisering</h3>
+        <p>Har du en klasse på mange elementer, men vil endre én bestemt <code>&lt;p&gt;</code> med klassen? Spesifiser typen + klassen:</p>
+        <pre><code>/* Påvirker bare &lt;p&gt; som har klassen .info */
+p.info { font-style: italic; }</code></pre>
+      </section>
+
+      <section id="slekt">
+        <h3>3.7 Slekttre-/descendant-selektor</h3>
+        <p>Målrett elementer ut fra hvor de ligger i HTML-strukturen, uten ekstra klasser eller id-er.</p>
+        <pre><code>/* Endre farge på lenker i menyen i header */
+header nav ul li a { color: cornflowerblue; }</code></pre>
+      </section>
+
+      <section>
+        <h2>Oppsummering</h2>
+        <ul>
+          <li>Foretrekk ekstern CSS for orden og gjenbruk.</li>
+          <li>Bruk klasser for gjenbruk, ID for unike ankre.</li>
+          <li>Grupper, kjed og spesifiser selektorer for presis styling – uten overflødige klasser.</li>
+        </ul>
+        <p><span class="badge">Tips</span> Lag en egen <code>styles.css</code> og hold inline-stil til et minimum.</p>
+      </section>
+
+      <footer>
+        Bygget fra presentasjonen «CSS 1 – Grunnleggende CSS». © Åssiden vgs
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
+
