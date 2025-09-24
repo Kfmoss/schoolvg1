@@ -810,3 +810,44 @@ a:hover, a:focus {
     background-color: #93e4c1;
     font-size: 1.2rem;
 }
+
+/* ------------------------------------- CSS ----------------------------------------------------------- */
+
+.css_container{
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav_css ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items:center;
+}
+.nav_css ul li{
+    padding: 2.25rem ;
+
+}
+.nav_css ul li a{
+    text-decoration: none;
+    color:black;
+}
+.nav_css ul img{
+    width:15rem;
+    border-radius: 5px;
+
+}
+
+.main_css{
+    margin: 0.75rem 2.125rem 0.75rem 2.125rem;
+}
+
+
+
+
+.footer_css{
+
+    background-color: #222;
+}
+
