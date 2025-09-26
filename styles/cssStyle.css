@@ -1,11 +1,11 @@
 :root{
-      --bg: #0b1020;
-      --panel: #11172b;
-      --ink: #e8eefc;
+      --bg: #313d65;
+      --panel: #24346a;
+      --ink: #f1f3f7;
       --muted: #a9b3c7;
       --accent: #7aa2ff;
       --accent-2: #3bd9c7;
-      --code-bg: #0f1428;
+      --code-bg: #4b588d;
       --border: #23304f;
     }
     *{box-sizing:border-box}
@@ -51,3 +51,5 @@
     footer{color:var(--muted); text-align:center; padding:24px 16px}
     .hr{height:1px; background:var(--border); margin:16px 0}
     a.inline{color:var(--accent)}
+    .ndla_css_velgere{text-decoration: none; color: white; transition:0.3s ease-in-out;}
+    .ndla_css_velgere:hover{color:red;}
