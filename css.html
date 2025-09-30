@@ -32,7 +32,7 @@
       <a href="#external">– Ekstern CSS</a>
       <a href="#hvorfor-ekstern">Hvorfor ekstern CSS?</a>
       <div class="hr"></div>
-      <a href="#class-id">3. Class- og ID-selektorer</a>
+      <a href="#class-id">3. CSS-selektorer</a>
       <a href="#class">– Klasse (.<em>navn</em>)</a>
       <a href="#id">– ID (#<em>navn</em>)</a>
       <a href="#gruppering">– Selektorgruppering</a>
@@ -46,12 +46,24 @@
       <section id="intro">
         
         <h2>1. Introduksjon</h2>  <h4 id="btn1" class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader"></i></h4>
-        <p class="lead">Når vi arbeider med CSS (<em>Cascading Style Sheets</em>), kan vi plassere stilreglene våre på tre forskjellige steder: <strong>inline</strong>, <strong>intern</strong> og <strong>ekstern</strong>. Denne siden oppsummerer presentasjonen og gir små kodeeksempler underveis.</p>
+        <p class="lead">
+          Når vi lager nettsider, er HTML grunnmuren som bygger opp innholdet – tekst, bilder, 
+          overskrifter og lenker. Men uten CSS blir nettsiden likevel ganske kjedelig og utydelig. 
+          CSS (Cascading Style Sheets) er språket vi bruker for å bestemme hvordan en nettside ser ut: 
+          farger, skrifttyper, plassering av elementer og hvordan siden oppfører seg på ulike skjermer.
+
+          Å lære CSS handler derfor ikke bare om “pynt”, men om kommunikasjon og tilpasning. En god nettside skal ikke bare 
+          fungere, den skal være forståelig, brukervennlig og tilpasset den gruppen mennesker den er laget for. I dette prosjektet skal dere derfor jobbe med hvordan dere kan bruke CSS til å gjøre en idé tydeligere og enklere å oppleve.
+        </p>
         <div class="callout tip"><div class="icon">💡</div><div>Best praksis er å holde HTML ren og legge mest mulig stil i en <strong>ekstern</strong> CSS-fil.</div></div>
       </section>
 
       <section id="grunnleggende">
         <h2>2. Grunnleggende CSS</h2>
+        <p>
+           Når vi arbeider med CSS (<em>Cascading Style Sheets</em>), kan vi plassere stilreglene våre på tre forskjellige steder: <strong>inline</strong>, <strong>intern</strong> og <strong>ekstern</strong>. 
+          Denne siden oppsummerer presentasjonen og gir små kodeeksempler underveis.
+        </p>
         <p>De tre plasseringene for CSS:</p>
         <ul>
           <li><a class="inline" href="#inline">Inline</a> – stil direkte på et enkelt HTML‑element.</li>
@@ -98,20 +110,43 @@
       </section>
 
       <section id="class-id">
-        <h2>3. Class- og ID-selektorer</h2>
-        <p>Vi kan målrette spesifikke elementer ved å tildele <em>klasser</em> og <em>id-er</em> i HTML. De har ulike bruksområder:</p>
+        <h2>3. CSS-selektorer (CSS-velgere)</h2>
+        <p>En CSS-selektor er starten på en CSS-regel. Ordet selektor betyr egentlig 
+          «velger». Den brukes til å peke ut hvilke deler av en nettside (HTML-elementer) 
+          som skal få en bestemt stil. Når du lager en regel i CSS, sier selektoren altså
+           til nettleseren: «Dette er de elementene du skal endre stilen på.»</p>
+
+        <div class="main_velgere" style="display:flex; justify-content: center;">
+
+          <img src="img/Group 2.png" alt="">
+        </div>
       </section>
 
+      <section id="id" class="id_og_class">
+        <h3>3.1 ID-selektor</h3>
+        <p>En ID-selektor i CSS brukes når du vil gi en spesiell stil til ett bestemt element på nettsiden. 
+          Hvert HTML-element kan få et eget «navneskilt» som kalles en id. Dette navneskiltet skal være unikt, 
+          altså at det ikke brukes på flere elementer samtidig.
+        </p>
+        <img src="img/id_css.png" alt="">
+
+      </section>
+      <section id="">
+        
+      </section>
+
+
       <section id="class" class="grid two">
+        
         <div>
           <h3>3.1 Klasse-selektor <code>.klasse</code></h3>
-          <ul>
-            <li>Gjenbrukbar – et element kan ha flere klasser.</li>
-            <li>I CSS: <code>.kort</code>. I HTML: <code>class="kort"</code> (uten punktum).</li>
+         
+          <ul>  
+            <li><p>Gjenbrukbar – et element kan ha flere klasser.</p></li>
+            <li><p>I CSS: <code>.kort</code>. I HTML: <code>class="kort"</code> (uten punktum).</p> </li>
           </ul>
-          <pre><code>/* CSS */
+          <pre><code>/* CSS */ 
 .kort { padding: 1rem; border-radius: .75rem; }
-
 /* HTML */
 &lt;div class="kort"&gt;Innhold&lt;/div&gt;</code></pre>
         </div>
@@ -128,6 +163,7 @@
 &lt;section id="hero"&gt;...&lt;/section&gt;</code></pre>
         </div>
       </section>
+
 
       <section id="gruppering">
         <h3>3.3 Selektorgruppering</h3>
