@@ -33,8 +33,8 @@
       <a href="#hvorfor-ekstern">Hvorfor ekstern CSS?</a>
       <div class="hr"></div>
       <a href="#class-id">3. CSS-selektorer</a>
-      <a href="#class">– Klasse (.<em>navn</em>)</a>
-      <a href="#id">– ID (#<em>navn</em>)</a>
+      <a href="#class">– Klasse-selektor (.<em>navn</em>)</a>
+      <a href="#id">– ID-selektor (#<em>navn</em>)</a>
       <a href="#gruppering">– Selektorgruppering</a>
       <a href="#kjeding">– Selektorkjeding</a>
       <a href="#type">– Type-selektor</a>
@@ -117,14 +117,18 @@
            til nettleseren: «Dette er de elementene du skal endre stilen på.»</p>
 
         <div class="main_velgere" style="display:flex; justify-content: center;">
+          <input class="tagg_selektor" type="checkbox" id="zoomCheck">
+          <label for="zoomCheck">
+            <img src="img/Group 2.svg" alt="">
 
-          <img src="img/Group 2.png" alt="">
+          </label>
+
         </div>
       </section>
 
       <section id="id" class="id_og_class">
         <h3>3.1 ID-selektor</h3>
-        <p>En ID-selektor i CSS brukes når du vil gi en spesiell stil til ett bestemt element på nettsiden. 
+        <p>En  <strong>ID-selektor</strong> i CSS brukes når du vil gi en spesiell stil til ett bestemt element på nettsiden. 
           Hvert HTML-element kan få et eget «navneskilt» som kalles en id. Dette navneskiltet skal være unikt, 
           altså at det ikke brukes på flere elementer samtidig.
         </p>
@@ -132,10 +136,40 @@
           sette et nummertegn (#) foran. På den måten forteller du nettleseren: «Jeg vil at akkurat dette 
           elementet, med dette navnet, skal få den stilen jeg beskriver her.»
         </p>
-        <img src="img/id_css.png" alt="">
+
+        <div class="main_velgere_id">
+          <input class="id_selektor" type="checkbox" id="zoomCheck_id">
+          <label for="zoomCheck_id">
+            <img src="img/id_css.svg" alt="">
+
+          </label>
+
+        </div>
 
       </section>
-      <section id="">
+      <section id="class">
+        <h3> 3.2 Klasse-selektor</h3>
+        <p>En <strong>class-selektor</strong> i CSS bruker du når du vil gi flere elementer 
+          på en nettside samme utseende eller stil. Det er altså en <i>gruppe-etikett</i> 
+          du kan sette på elementer som skal se like ut. Et eksempel kan være 
+          Hvis du har mange knapper som alle skal ha samme farge og form, kan du gi dem en felles klasse.
+          Du kan bruke samme klasse på så mange elementer du vil, noe som gjør det enklere å holde designet 
+          konsistent og ryddig.
+        </p>
+        <p>
+          Når du lager en klasse i CSS, må du alltid bruke punktum (.) foran navnet på klassen. 
+          Hvis du har en klasse som heter "boks", så må du skrive et punktum foran navnet når du refererer 
+          til den i CSS. 
+        </p>
+
+        <div class="main_velgere_class">
+          <input class="class_selektor" type="checkbox" id="zoomCheck_class">
+          <label for="zoomCheck_class">
+            <img src="img/class_css.svg" alt="">
+          </label>
+          
+
+        </div>
 
       </section>
 
@@ -143,28 +177,34 @@
       <section id="class" class="grid two">
         
         <div>
-          <h3>3.1 Klasse-selektor <code>.klasse</code></h3>
-         
+          <h3>3.1 Klasse-selektor <code>.klasse</code></h3> 
           <ul>  
             <li><p>Gjenbrukbar – et element kan ha flere klasser.</p></li>
-            <li><p>I CSS: <code>.kort</code>. I HTML: <code>class="kort"</code> (uten punktum).</p> </li>
+            <li><p>I CSS: <code>.i1</code>. I HTML: <code>class="i1"</code> (uten punktum).</p> </li>
           </ul>
           <pre><code>/* CSS */ 
-.kort { padding: 1rem; border-radius: .75rem; }
+.i1{
+    font-size: 2.125rem;
+    color:blue;
+    font-style: italic;
+  }
+
 /* HTML */
-&lt;div class="kort"&gt;Innhold&lt;/div&gt;</code></pre>
+&lt;li class="i1"&gt;en bok&lt;/li&gt;</code></pre>
         </div>
         <div>
           <h3>3.2 ID-selektor <code>#id</code></h3>
           <ul>
-            <li>Unik per side – bruk på ett element.</li>
-            <li>I CSS: <code>#hero</code>. I HTML: <code>id="hero"</code> (uten #).</li>
+            <li><p>Unik per side – bruk på ett element.</p></li>
+            <li>I CSS: <code>#i3</code>. I HTML: <code>id="i3"</code> (uten #).</li>
           </ul>
           <pre><code>/* CSS */
-#hero { scroll-margin-top: 80px; }
-
+#i3{
+    font-size: 3.45rem;
+    color:chocolate;
+  }  
 /* HTML */
-&lt;section id="hero"&gt;...&lt;/section&gt;</code></pre>
+&lt;li id="i3"&gt;...&lt;/li&gt;</code></pre>
         </div>
       </section>
 
