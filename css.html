@@ -102,9 +102,9 @@
       <section id="hvorfor-ekstern">
         <h3>Hvorfor eksternt stilark?</h3>
         <ul>
-          <li>Holder HTML renere og mer lesbar.</li>
-          <li>Enklere å gjenbruke stil på tvers av flere sider.</li>
-          <li>Færre konflikter enn med inline stil.</li>
+          <li><p>Holder HTML renere og mer lesbar.</p></li>
+          <li><p>Enklere å gjenbruke stil på tvers av flere sider.</p></li>
+          <li><p>Færre konflikter enn med inline stil.</p></li>
         </ul>
 
       </section>
@@ -211,8 +211,17 @@
 
       <section id="gruppering">
         <h3>3.3 Selektorgruppering</h3>
-        <p>Unngå repetisjon ved å gi flere selektorer samme regler ved hjelp av komma.</p>
-        <pre><code>h1, h3 { color: rebeccapurple; }</code></pre>
+        <p>I stedet for å skrive de samme stilene for hvert enkelt element,
+           kan du gruppere selektorene ved å skille dem med komma. Da får 
+           alle elementene i gruppen samme utseende.
+        </p>
+        <p>
+          Hvis du vil at både overskrifter og avsnitt skal ha samme skriftfarge, 
+          trenger du ikke skrive to regler. 
+          Du kan samle dem i én.
+        </p>
+
+        <pre><code>h1, p { color: rebeccapurple; }</code></pre>
       </section>
 
       <section id="kjeding">
@@ -242,12 +251,12 @@ p.info { font-style: italic; }</code></pre>
 header nav ul li a { color: cornflowerblue; }</code></pre>
       </section>
 
-      <section>
+      <section id="Oppsummering">
         <h2>Oppsummering</h2>
         <ul>
-          <li>Foretrekk ekstern CSS for orden og gjenbruk.</li>
-          <li>Bruk klasser for gjenbruk, ID for unike ankre.</li>
-          <li>Grupper, kjed og spesifiser selektorer for presis styling – uten overflødige klasser.</li>
+          <li><p>Foretrekk ekstern CSS for orden og gjenbruk.</p></li>
+          <li><p>Bruk klasser for gjenbruk, ID for unike ankre.</p></li>
+          <li><p>Grupper, kjed og spesifiser selektorer for presis styling – uten overflødige klasser.</p></li>
         </ul>
         <p><span class="badge">Tips</span> Lag en egen <code>styles.css</code> og hold inline-stil til et minimum.</p>
         <p> Vil du vite mer om velgere?  klikk her <i class="fa-solid fa-arrow-right"></i> <a class="ndla_css_velgere"  href="https://ndla.no/nb/r/konseptutvikling-og-programmering-im-ikm-vg1/css-velgere/d67dfcb36d" target="https://ndla.no/nb/r/konseptutvikling-og-programmering-im-ikm-vg1/css-velgere/d67dfcb36d">CSS-Velgere</a> </p>
