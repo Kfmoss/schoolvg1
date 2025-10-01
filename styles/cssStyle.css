@@ -53,3 +53,62 @@
     a.inline{color:var(--accent)}
     .ndla_css_velgere{text-decoration: none; color: white; transition:0.3s ease-in-out;}
     .ndla_css_velgere:hover{color:red;}
+
+    .tagg_selektor[type=checkbox]{
+      display: none;
+    }
+    .main_velgere{
+      display:flex;
+      justify-content: center;
+
+    }
+    .main_velgere img{
+      transition: transform 0.25s ease;
+      cursor:zoom-in;
+    }
+    .tagg_selektor[type=checkbox]:checked ~ label > img {
+      transform: scale(1.75);
+      cursor: zoom-out;
+    }
+
+
+    .id_selektor[type=checkbox]{
+      display: none;
+    }
+    .id_selektor[type=checkbox]:checked ~ label > img {
+      transform: scale(1.75);
+      cursor: zoom-out;
+    }
+    .main_velgere_id{
+      display:flex;
+      justify-content: center;
+
+    }
+
+    .main_velgere_id img{
+
+      transition: transform 0.25s ease;
+      cursor:zoom-in;
+
+    }
+    .class_selektor[type=checkbox]{
+      display: none;
+
+    }
+    .class_selektor[type=checkbox]:checked ~ label > img {
+      transform: scale(1.75);
+      cursor: zoom-out;
+    }
+
+    .main_velgere_class{
+      display: flex;
+      justify-content: center;
+    }
+    .main_velgere_class img{
+      transition: transform 0.25s ease;
+      cursor:zoom-in;
+
+    }
+
+
+    
