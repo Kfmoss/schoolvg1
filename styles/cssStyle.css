@@ -157,8 +157,23 @@
     }
     .wrap a{
       font-size: 1rem;
+    
     }
+    .html_code{
+      display: flex;
+      justify-content: center;
+    }
+    .html_code a{
+      color: #0a0f1e;
+      padding: 0 1.2rem 0 1.2rem;
+   
 
+
+    }
+    .html_code button{
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
 
 
 
