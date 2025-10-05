@@ -25,27 +25,28 @@
   <div class="wrap">
     <nav aria-label="Innholdsfortegnelse">
       <h2>Innhold</h2>
-      <a href="#intro">1. Introduksjon</a>
-      <a href="#grunnleggende">2. Grunnleggende CSS</a>
-      <a href="#inline">– Inline CSS</a>
-      <a href="#internal">– Intern CSS</a>
-      <a href="#external">– Ekstern CSS</a>
+      <a href="#intro">Introduksjon</a>
+      <a href="#grunnleggende">Grunnleggende CSS</a>
+      <a href="#inline">Inline CSS</a>
+      <a href="#internal">Intern CSS</a>
+      <a href="#external">Ekstern CSS</a>
       <a href="#hvorfor-ekstern">Hvorfor ekstern CSS?</a>
       <div class="hr"></div>
-      <a href="#class-id">3. CSS-selektorer</a>
-      <a href="#class">– Klasse-selektor (.<em>navn</em>)</a>
-      <a href="#id">– ID-selektor (#<em>navn</em>)</a>
-      <a href="#gruppering">– Selektorgruppering</a>
-      <a href="#kjeding">– Selektorkjeding</a>
-      <a href="#type">– Type-selektor</a>
-      <a href="#spesifisering">– Selektor-spesifisering</a>
-      <a href="#slekt">– Slekttre-/descendant-selektor</a>
+      <a href="#class-id">CSS-selektorer</a>
+      <a href="#class">Klasse-selektor (.<em>navn</em>)</a>
+      <a href="#id">ID-selektor (#<em>navn</em>)</a>
+      <a href="#gruppering">Selektorgruppering</a>
+      <a href="#kjeding">Selektorkjeding</a>
+      <a href="#type">Type-selektor</a>
+      <a href="#spesifisering">Selektor-spesifisering</a>
+      <a href="#slekt">Slekttre-/descendant-selektor</a>
+      <a href="#oppgave1">Oppgaver</a>
     </nav>
 
     <main>
       <section id="intro">
         
-        <h2>1. Introduksjon</h2>  <h4 id="btn1" class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader"></i></h4>
+        <h2>Introduksjon</h2>  <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p class="lead">
           Når vi lager nettsider, er HTML grunnmuren som bygger opp innholdet – tekst, bilder, 
           overskrifter og lenker. Men uten CSS blir nettsiden likevel ganske kjedelig og utydelig. 
@@ -59,7 +60,7 @@
       </section>
 
       <section id="grunnleggende">
-        <h2>2. Grunnleggende CSS</h2>  <h4 id="btn1" class="textspeech1"><i onclick="speak_grunnleggende()" class="fa-solid fa-book-open-reader"></i></h4>
+        <h2>Grunnleggende CSS</h2>  <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>
            Når vi arbeider med CSS (<em>Cascading Style Sheets</em>), kan vi plassere stilreglene våre på tre forskjellige steder: <strong>inline</strong>, <strong>intern</strong> og <strong>ekstern</strong>. 
           Denne siden oppsummerer presentasjonen og gir små kodeeksempler underveis.
@@ -73,14 +74,14 @@
       </section>
 
       <section id="inline">
-        <h3>2.1 Inline CSS</h3>
+        <h3>Inline CSS</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>Inline CSS brukes når vi skriver stilregler direkte på et element. Dette kan bli tungvint på større sider, og det overstyrer ofte eksterne regler.</p>
         <pre><code>&lt;h1 style="color: teal; margin-bottom: .5rem;"&gt;Hei verden&lt;/h1&gt;</code></pre>
         <div class="callout warn"><div class="icon">⚠️</div><div>Bruk sparsommelig – inline-regler er vanskelige å vedlikeholde og overstyre.</div></div>
       </section>
 
       <section id="internal">
-        <h3>2.2 Intern CSS</h3>
+        <h3>Intern CSS</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>Intern CSS plasseres i dokumentets <code>&lt;head&gt;</code> innenfor en <code>&lt;style&gt;</code>-tagg.</p>
         <pre><code>&lt;head&gt;
   &lt;style&gt;
@@ -92,7 +93,7 @@
       </section>
 
       <section id="external">
-        <h3>2.3 Ekstern CSS</h3>
+        <h3>Ekstern CSS</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>Koble en separat CSS-fil i <code>&lt;head&gt;</code> for ryddig og gjenbrukbar stil.</p>
         <pre><code>&lt;head&gt;
   &lt;link rel="stylesheet" href="styles.css"&gt;
@@ -100,7 +101,7 @@
       </section>
 
       <section id="hvorfor-ekstern">
-        <h3>Hvorfor eksternt stilark?</h3>
+        <h3>Hvorfor eksternt stilark?</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <ul>
           <li><p>Holder HTML renere og mer lesbar.</p></li>
           <li><p>Enklere å gjenbruke stil på tvers av flere sider.</p></li>
@@ -110,7 +111,7 @@
       </section>
 
       <section id="class-id">
-        <h2>3. CSS-selektorer (CSS-velgere)</h2>
+        <h2>CSS-selektorer (CSS-velgere)</h2> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>En CSS-selektor er starten på en CSS-regel. Ordet selektor betyr egentlig 
           «velger». Den brukes til å peke ut hvilke deler av en nettside (HTML-elementer) 
           som skal få en bestemt stil. Når du lager en regel i CSS, sier selektoren altså
@@ -127,7 +128,7 @@
       </section>
 
       <section id="id" class="id_og_class">
-        <h3>3.1 ID-selektor</h3>
+        <h3>ID-selektor</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>En  <strong>ID-selektor</strong> i CSS brukes når du vil gi en spesiell stil til ett bestemt element på nettsiden. 
           Hvert HTML-element kan få et eget «navneskilt» som kalles en id. Dette navneskiltet skal være unikt, 
           altså at det ikke brukes på flere elementer samtidig.
@@ -148,7 +149,7 @@
 
       </section>
       <section id="class">
-        <h3> 3.2 Klasse-selektor</h3>
+        <h3>Klasse-selektor</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>En <strong>class-selektor</strong> i CSS bruker du når du vil gi flere elementer 
           på en nettside samme utseende eller stil. Det er altså en <i>gruppe-etikett</i> 
           du kan sette på elementer som skal se like ut. Et eksempel kan være 
@@ -177,7 +178,7 @@
       <section id="class" class="grid two">
         
         <div>
-          <h3>3.1 Klasse-selektor <code>.klasse</code></h3> 
+          <h3>Klasse-selektor <code>.klasse</code></h3> 
           <ul>  
             <li><p>Gjenbrukbar – et element kan ha flere klasser.</p></li>
             <li><p>I CSS: <code>.i1</code>. I HTML: <code>class="i1"</code> (uten punktum).</p> </li>
@@ -193,7 +194,7 @@
 &lt;li class="i1"&gt;en bok&lt;/li&gt;</code></pre>
         </div>
         <div>
-          <h3>3.2 ID-selektor <code>#id</code></h3>
+          <h3>ID-selektor <code>#id</code></h3>
           <ul>
             <li><p>Unik per side – bruk på ett element.</p></li>
             <li>I CSS: <code>#i3</code>. I HTML: <code>id="i3"</code> (uten #).</li>
@@ -210,7 +211,7 @@
 
 
       <section id="gruppering">
-        <h3>3.3 Selektorgruppering</h3>
+        <h3>Selektorgruppering</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>I stedet for å skrive de samme stilene for hvert enkelt element,
            kan du gruppere selektorene ved å skille dem med komma. Da får 
            alle elementene i gruppen samme utseende.
@@ -218,41 +219,55 @@
         <p>
           Hvis du vil at både overskrifter og avsnitt skal ha samme skriftfarge, 
           trenger du ikke skrive to regler. 
-          Du kan samle dem i én.
+          Du kan samle dem i én. Dette gjør at du unngår gjentakelse, reduserer antall linjer med kode og gjør det lettere å 
+          oppdatere designet senere. 
+          Hvis du for eksempel vil endre fargen på overskriftene, trenger du bare å gjøre det på ett sted i stedet for flere.
         </p>
 
         <pre><code>h1, p { color: rebeccapurple; }</code></pre>
+        <pre><code>#i2, .nav{ background-color: "red"}</code></pre>
       </section>
 
       <section id="kjeding">
-        <h3>3.4 Selektorkjeding (målrett spesifikt element)</h3>
+        <h3>Selektorkjeding (målrett spesifikt element)</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+        <p>
+          Selektorkjeding i CSS betyr at du kombinerer flere selektorer for å målrette et mer spesifikt element.
+          Dette brukes når du vil style bare et bestemt element i en bestemt sammenheng.
+        </p>
+
+        <pre><code>article p {color: gray; }</code></pre>
+         <p>Her betyr article p at bare avsnitt <strong>&lt;p &gt;</strong> som ligger inni et <strong>&lt;article&gt;</strong>-element får grå tekst. 
+          Avsnitt utenfor article blir ikke påvirket.</p>
         <p>Når du må style én bestemt lenke inne i en overskrift med en klasse:</p>
         <pre><code>/* Påvirker bare &lt;a&gt; inne i &lt;h3 class="enklasse"&gt; */
+
 h3.enklasse a { text-decoration: underline; }</code></pre>
       </section>
 
       <section id="type">
-        <h3>3.5 Type-selektor</h3>
+        <h3>Type-selektor</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+        <p>Type-selektoren velger elementer etter HTML-navn, som &lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, &lt;a&gt; osv.
+            Den brukes når du vil  <strong>gi samme stil til alle elementer av en bestemt type.</strong></p>
         <p>Bruk HTML-taggen som selektor for å style alle forekomster av den typen.</p>
         <pre><code>p { line-height: 1.7; }</code></pre>
       </section>
 
       <section id="spesifisering">
-        <h3>3.6 Selektor-spesifisering</h3>
+        <h3>Selektor-spesifisering</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>Har du en klasse på mange elementer, men vil endre én bestemt <code>&lt;p&gt;</code> med klassen? Spesifiser typen + klassen:</p>
         <pre><code>/* Påvirker bare &lt;p&gt; som har klassen .info */
 p.info { font-style: italic; }</code></pre>
       </section>
 
       <section id="slekt">
-        <h3>3.7 Slekttre-/descendant-selektor</h3>
+        <h3>Slekttre-/descendant-selektor</h3> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <p>Målrett elementer ut fra hvor de ligger i HTML-strukturen, uten ekstra klasser eller id-er.</p>
         <pre><code>/* Endre farge på lenker i menyen i header */
 header nav ul li a { color: cornflowerblue; }</code></pre>
       </section>
 
       <section id="Oppsummering">
-        <h2>Oppsummering</h2>
+        <h2>Oppsummering</h2> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
         <ul>
           <li><p>Foretrekk ekstern CSS for orden og gjenbruk.</p></li>
           <li><p>Bruk klasser for gjenbruk, ID for unike ankre.</p></li>
@@ -260,6 +275,87 @@ header nav ul li a { color: cornflowerblue; }</code></pre>
         </ul>
         <p><span class="badge">Tips</span> Lag en egen <code>styles.css</code> og hold inline-stil til et minimum.</p>
         <p> Vil du vite mer om velgere?  klikk her <i class="fa-solid fa-arrow-right"></i> <a class="ndla_css_velgere"  href="https://ndla.no/nb/r/konseptutvikling-og-programmering-im-ikm-vg1/css-velgere/d67dfcb36d" target="https://ndla.no/nb/r/konseptutvikling-og-programmering-im-ikm-vg1/css-velgere/d67dfcb36d">CSS-Velgere</a> </p>
+      </section>
+      <section id="oppgave1">
+        <h3> Hva skal du lære om ?</h3>
+        <ul class="læringsmål" style="list-style: none;">
+          <li><p>Bruke type-, klasse- og ID-selektorer riktig.</p></li>
+          <li><p>Strukturere HTML/CSS ryddig (eksternt, internt og inline CSS).</p></li>
+          <li><p>Øve på versjonskontroll (GitHub).</p></li>
+          <li><p>Reflektere over egen læring og valg.</p></li>
+
+          
+          
+        </ul>
+
+        <h2>Oppgave A – «Remake» av en dårlig nettside</h2>
+        <p>Velg én av de sidene i listen (dårligste nettsider ever) og lag en <strong>forenklet</strong> versjon som gjenskaper stil og struktur. 
+        Bruk ekstern stilark(obligatorisk), internt og inline-style. Bruk klasser og ID-er i CSS.</p>
+
+        <ul>
+          <h3>Dårligste nettsuder ever made</h3>
+          <li><a href="https://www.007museum.com/">nettside 1</a></li>
+          <li><a href="https://www.vortex.com/">nettside 2</a></li>
+          <li><a href="https://www.art.yale.edu/">nettside 3</a></li>
+        </ul>
+        <div class="html_code">
+          <a href="oppgaver/nettside1.html" download> 
+            <button>last ned HTML-fil til nettside 1</button>
+          </a>
+          <a href="oppgaver/nettside2.html" download>
+            <button>last ned HTML-fil til nettside 2</button>
+  
+          </a>
+          <a href="oppgaver/nettside3.html" download>
+            <button>last ned HTML-fil til nettside 3</button>
+          </a>
+
+        </div>
+
+        <h2>Oppgave B</h2>
+        <h3>Del 1</h3>
+        <ul>
+          <li>spill CSS Dinner <a href="https://flukeout.github.io/">https://flukeout.github.io/</a>. Prøv å nå nivå 32</li>
+          <li>Test deg med <a href="https://flexboxfroggy.com/">flexboxfroggy</a>. Prøv å løse alle oppgavene.</li>
+        </ul>
+        <h3>Del 2</h3>
+        <ul>
+          <li>Lag en bedre versjon av nettsiden. Her kan du bruke float eller flex/grid om du har erfaring med disse.</li>
+          <li>Forbedre typografi, kontrast, spacing, navigasjon og lesbarhet. Du kan bruke bilder eller videorer hentet fra internett også.</li>
+          
+        </ul>
+        <h2>Innlevering og vurderingskriterier</h2>
+
+        <h3>Om innlevering</h3>
+
+        <p>Opprett en nytt GitHub-repo. Her skal du pushe arbeidet ditt - gjelder oppgave A og B</p>
+        <p>Du skal levere :</p>
+        <ul style="list-style: none;">
+          <li><a href="Refleksjonsnotat.docx">Refleksjonsnotat i <strong>PDF</strong> </a>.Du kan også levere en lydfil.</li>
+          <li><a href="KI-skjema.docx">KI-skjema i <strong>PDF</strong></a>. Du kan også levere en lydfil.</li>
+          <li><p>Lenken til GitHub-repoet ditt.</p></li>
+          <li><ul style="list-style: none;">
+            <li><pre><code>git init</code></pre></li>
+            <li><pre><code>git add .</code></pre></li>
+            <li><pre><code>git branch -M main</code></pre></li>
+            <li><pre><code>git remote add origin "url - til - ditt - repo" </code></pre></li>
+            <li><pre><code>git commit -m "oppgave A/B"</code></pre></li>
+            <li><pre><code>git push -u origin main</code></pre></li>
+          </ul></li>
+        </ul>
+
+        <h3>Vurderingskriterier</h3>
+        <p>Vurderingsform: Godkjent/ikke godkjent</p>
+
+
+
+
+        
+
+
+
+
+
       </section>
 
       <footer>
