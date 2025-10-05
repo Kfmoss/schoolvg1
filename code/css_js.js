@@ -2,17 +2,6 @@ let isReading = false;
 let listenersAdded = false;
 
 
-// function main_speech(){
-//     document.querySelectorAll('i').forEach(x =>{
-//         x.addEventListener('click', function(){
-//             const container = x.closest('section');
-//             if(container){ const selector = container.id; console.log(selector) }
-//         })
-//     })
-  
-
-// }
-
 
 function main_speech() {
     if (listenersAdded) return;
@@ -48,6 +37,13 @@ function main_speech() {
 
 
 }
+
+
+const btn = document.getElementById('themeToggle');
+btn.addEventListener('click', () => {
+document.body.classList.toggle('light-mode');
+});
+
 
 
 // function speak_grunnleggende() {
