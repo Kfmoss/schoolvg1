@@ -208,6 +208,14 @@
       color: #ffff;
 
     }
+    #basicsCSS{
+      list-style: none;
+    }
+    #basicsCSS li{
+      display: flex;
+      justify-content: center;
+    }
+    
 
 .theme-toggle-btn {
   background: var(--accent);
