@@ -230,9 +230,10 @@
     #basicsCSS{
       list-style: none;
     }
-    #basicsCSS li{
+    #basicsCSS #css_video{
       display: flex;
       justify-content: center;
+      
     }
     .sk .sk1{
       color: rgb(237, 232, 232);
@@ -246,6 +247,9 @@
       background-color: #cbcbcd;
       
 
+    }
+    #css_video{
+      width: 100%;
     }
     
 
