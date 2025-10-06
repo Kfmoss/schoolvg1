@@ -114,15 +114,17 @@
 
       <section id="class-id">
         <h2>CSS-selektorer (CSS-velgere)</h2> <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-        <p>En CSS-selektor er starten på en CSS-regel. Ordet selektor betyr egentlig 
+        <p>
+          En CSS-selektor er starten på en CSS-regel. Ordet selektor betyr egentlig 
           «velger». Den brukes til å peke ut hvilke deler av en nettside (HTML-elementer) 
           som skal få en bestemt stil. Når du lager en regel i CSS, sier selektoren altså
-           til nettleseren: «Dette er de elementene du skal endre stilen på.»</p>
+           til nettleseren: «Dette er de elementene du skal endre stilen på.»
+        </p>
 
         <div class="main_velgere" style="display:flex; justify-content: center;">
           <input class="tagg_selektor" type="checkbox" id="zoomCheck">
           <label for="zoomCheck">
-            <img src="img/Group 2.svg" alt="">
+            <img id="pic1" src="img/Group 2.svg" alt="">
 
           </label>
 
@@ -143,8 +145,7 @@
         <div class="main_velgere_id">
           <input class="id_selektor" type="checkbox" id="zoomCheck_id">
           <label for="zoomCheck_id">
-            <img src="img/id_css.svg" alt="">
-
+            <img id="pic2" src="img/id_css.svg" alt="">
           </label>
 
         </div>
@@ -168,7 +169,7 @@
         <div class="main_velgere_class">
           <input class="class_selektor" type="checkbox" id="zoomCheck_class">
           <label for="zoomCheck_class">
-            <img src="img/class_css.svg" alt="">
+            <img id="pic3" src="img/class_css.svg" alt="">
           </label>
           
 
@@ -344,9 +345,9 @@ header nav ul li a { color: cornflowerblue; }</code></pre>
   
         <p>Opprett en nytt GitHub-repo. Her skal du pushe arbeidet ditt - gjelder oppgave A og B</p>
         <p>Du skal levere :</p>
-        <ul>
-          <li><a href="Refleksjonsnotat.docx">Refleksjonsnotat i <strong>PDF</strong> </a>.Du kan også levere en lydfil.</li>
-          <li><a href="KI-skjema.docx">KI-skjema i <strong>PDF</strong></a>. Du kan også levere en lydfil.</li>
+        <ul class="sk">
+          <li><a class="sk1" href="Refleksjonsnotat.docx">Refleksjonsnotat i <strong>PDF</strong> </a>.Du kan også levere en lydfil.</li>
+          <li><a class="sk1" href="KI-skjema.docx">KI-skjema i <strong>PDF</strong> </a>. Du kan også levere en lydfil.</li>
           <li><p>Lenken til GitHub-repoet ditt.</p></li>
           <li><ul style="list-style: none;">
             <li><pre><code>git init</code></pre></li>
