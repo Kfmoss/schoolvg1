@@ -251,6 +251,10 @@
     #css_video{
       width: 100%;
     }
+
+    .a1{
+      color:#ffff;
+    }
     
 
 .theme-toggle-btn {
@@ -278,6 +282,9 @@ body.light-mode {
   --border: #d1d5db;
   background: linear-gradient(180deg, #f6f8fa 0%, #e5e7eb 100%);
   color: var(--ink);
+  .a1{
+      color:#212020;
+  }
 }
 
 
