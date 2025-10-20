@@ -1,28 +1,70 @@
+body.light-mode {
+    --text-primary:#ffff;
+    --nav-colorBackground:#5273dd;
+    --beside-menu-colorBackground: #ca3267;
+    --text-besidemenu:#000;
+    --main-colorBackground:#220994;
+    
+    
+}
+
+
+:root{
+    --text-primary: #000;
+    --nav-colorBackground:rgba(200,200, 200, 0.4);
+    --main-colorBackground: #a2afd4;
+    --beside-menu-colorBackground: #05339C;
+    --text-besidemenu:#ffff;
+
+}
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+html{
+    background-color: var(--main-colorBackground);
 
+}
 .Main_container{
     margin: 0.2rem;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: auto;
     grid-template-areas: 
     "nav nav"
     "tab main"
     "tab main"
-    "footer footer";
-    
+    "footer footer";    
 
 }
 
 .main_nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     grid-area: nav;
-    background-color: rgba(200,200, 200, 0.4);
-    padding: ;
+    background-color: var(--nav-colorBackground);
+    padding:1.125rem ;
+    position: sticky;
+    z-index: 99;
+}
+.main_nav img{
+    width: 18rem;
+}
+.list_nav li{
+    padding: 0 1rem;
+}
+.list_nav button{
+    font-size: 1.25rem;
+}
+
+.main_nav li span{
+    font-size: 1.25rem;
+}
+.main_nav a{
+    text-decoration: none;
+    color: var(--text-primary);
 
 }
 .main_nav .list_nav{
@@ -30,4 +72,26 @@
     list-style: none;
 }
 
+.beside_nav{
+    grid-area: tab;
+    color: var(--text-primary);
 
+}
+.beside_nav .list1{
+    
+    list-style: none;
+    background-color:var(--beside-menu-colorBackground) ;
+    color: var(--text-besidemenu);
+    text-align: center;
+}
+.beside_nav .list1 li{
+    padding: 1.25rem 0 1.25rem 0;
+}
+
+.mainSite{
+    grid-area: main;
+    background-color: var(--main-colorBackground);
+}
+.mainSite .topics{
+    list-style: none;
+}
