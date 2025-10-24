@@ -1,292 +1,147 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/styles/">
-  <title>Nettverk – VG1 IM</title>
-  <meta name="description" content="Læringsside for VG1 IM om sporing på nett, VPN og personvern – med oppgaver, ordliste og kilder." />
-  <style>
-    :root{
-      --bg: #f8fafc; /* slate-50 */
-      --surface: #ffffff;
-      --text: #0f172a; /* slate-900 */
-      --muted: #475569; /* slate-600 */
-      --border: #e2e8f0; /* slate-200 */
-      --accent1: #fde68a; /* yellow-200 */
-      --accent2: #bbf7d0; /* green-200 */
-      --ring: #94a3b8; /* slate-400 */
-      --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(15,23,42,.06);
-      --radius: 16px;
-      --radius-lg: 20px;
-    }
-    html{scroll-behavior:smooth}
-    body{margin:0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", Arial, sans-serif; color:var(--text); background:linear-gradient(#f8fafc, #fff)}
-    .container{max-width:1100px; margin-inline:auto; padding:0 16px}
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(6px);
-      background-color: rgba(255,255,255,.7); border-bottom:1px solid var(--border)
-    }
-    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    nav a{color:var(--text); text-decoration:none; font-size:14px; padding:6px 8px; border-radius:10px}
-    nav a:hover, nav a:focus{outline:none; background:#eef2ff}
-    .hero{padding:56px 0}
-    .grid{display:grid; gap:24px}
-    @media (min-width: 880px){ .grid-2{grid-template-columns: 1fr 1fr} }
-    h1{font-size: clamp(28px, 4vw, 48px); line-height:1.1; margin:0}
-    h2{font-size: clamp(22px, 3vw, 32px); margin:0 0 8px}
-    h3{font-size: 20px; margin:0 0 8px}
-    p{margin:10px 0}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#0f172a; color:#fff; font-size:14px}
-    .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
-    section{scroll-margin-top:96px; padding:48px 0}
-    .intro-accent span{padding:0 6px; border-radius:12px}
-    .accent1{background:var(--accent1)}
-    .accent2{background:var(--accent2)}
-    .muted{color:var(--muted)}
-    .list{padding-left:18px}
-    .list li{margin:6px 0}
-    .kilder{columns:1}
-    @media (min-width:720px){ .kilder{columns:2; column-gap:18px} }
-    .kilder a{break-inside:avoid; display:inline-block; margin:6px 0}
-    a.inline{display:inline-flex; align-items:center; gap:6px; text-decoration:underline; text-underline-offset:3px}
-    .btn{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); border-radius:14px; padding:8px 12px; text-decoration:none; color:inherit}
-    .btn:hover{background:#f1f5f9}
-    .badge{display:inline-flex; align-items:center; gap:6px; font-size:14px; background:#eef2ff; padding:6px 10px; border-radius:999px}
-    details{border:1px dashed var(--border); border-radius:12px; padding:10px 12px}
-    summary{cursor:pointer; font-weight:600}
-    footer{border-top:1px solid var(--border); padding:28px 0; text-align:center; color:var(--muted); font-size:14px}
-    /* Back to top */
-    #toTop{position:fixed; right:16px; bottom:16px; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:#fff; box-shadow:var(--shadow); display:none}
-    #toTop:focus{outline:3px solid var(--ring)}
-    /* Simple icon style */
-    .icon{width:20px; height:20px; vertical-align:middle}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/nettverkCss.css">
+    <title>Nettverk</title>
 </head>
 <body>
-  <header>
-    <div class="container topbar">
-      <div class="brand">
-        <!-- shield icon -->
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Datasikkerhet & sporing – VG1 IM</span>
-      </div>
-      <nav aria-label="Hovedmeny">
-        <a href="#intro">Intro</a>
-        <a href="#sporing">Sporing</a>
-        <a href="#vpn">VPN</a>
-        <a href="#oppgaver">Oppgaver</a>
-        <a href="#ordliste">Ordliste</a>
-        <a href="#kilder">Kilder</a>
-      </nav>
+    <div class="Main_container">
+        <nav class="main_nav">
+            <img src="/img/Logo IM på hvit.jpg" alt="logo">
+            <ul class="list_nav" >
+                
+                <li><button id="toggle" type="button">Bytt bakgrunnsfarge</button></li>
+                <li><button id="backMain"><span><a href="/index.html">Tilbake til hovedsiden</a></span></button></li>
+            </ul>
+
+        </nav>
+        <nav class="beside_nav">
+            <ul class="list1">
+                <li><a href="#nettverk">Hva er et nettverk</a></li>
+                <li><a href="#tema2">IP-adresse</a></li>
+                <li><a href="#tema3">Brannmur</a></li>
+                <li><a href="#tema4">Prokoller</a></li>
+                <li><a href="#tema5">Porter</a></li>
+                <li><a href="#tema6">Tjenester</a></li>
+                <li><a href="#tema7">DHCP</a></li>
+            </ul>
+        </nav>
+        <main class="mainSite">
+            <section id="info">
+                <article>
+
+                    <h2>
+                        Hvorfor skal du lære om nettverk? 
+                    </h2>
+                    <p>
+                        Mennesker og bedrifter trenger en kommunikasjonsmetode for
+                        å gjennomføre mange oppgaver – fra å sende bilder og meldinger 
+                        til å kjøpe og selge varer eller bestille time hos legen. 
+                        
+                        Ifølge 
+                        Statistisk sentralbyrå bruker ni av ti personer i alderen 9–79 år 
+                        internett en gjennomsnittsdag. Den gjennomsnittlige tiden 
+                        befolkningen bruker på internett, fortsetter å øke markant på 
+                        alle ukedager. 98 prosent har tilgang til internett hjemme, og 
+                        dette har ligget på samme høye nivå de siste fire årene.
+                        <br><br>
+                        Du som IM-elev skal lære om grunnleggende konsepter, teknologier og komponenter
+                         som skal hjelpe deg å forstå hvordan et nettverk fungerer.
+                        <br>
+                        For å forstå hvordan et nettverk fungerer, 
+                        må vi kjenne til de viktigste byggesteinene som sørger for 
+                        sikker og effektiv kommunikasjon. I dette prosjektet skal du lære om 
+                        sentrale elementer som brannmur, porter, 
+                        P-adresser, protokoller og tjenester som DNS. Sammen utgjør disse 
+                        grunnlaget for hvordan data flyttes, beskyttes og finner veien dit 
+                        de skal i et nettverk.
+                    </p>
+                </article>
+
+                <div class="img_info">
+                    <img id="pic1" src="/img/betal1.png" alt="">
+                    <img id="pic2" src="/img/nettverpic_1.webp" alt="">
+                 
+
+
+                </div>
+
+
+            </section>
+            <section id="nettverk">
+                <article>
+                    <h2>Hva er et nettverk?</h2>
+                    <p> Mye av det vi bruker datamaskiner og annet digitalt utstyr til, krever
+                        at vi har tilgang til internett. Men hva er Internett?
+                        Internett er 
+                        smarttelefoner og andre digitale enheter som er 
+                        koblet sammen gjennom et kommunikasjonsnett. Internett
+                         kan også defineres som et «nettverk av nettverk» fordi
+                          mange lokale nettverk, for eksempel hjemmenettverk, 
+                          skolenettverk eller bedriftsnettverk, er knyttet sammen til større nettverk som igjen er knyttet sammen til et verdensomspennende nett. 
+                          Det er dette verdensomspennende nettet vi kaller internett. Gjennom internett kan datamaskiner i Norge kommunisere med datamaskiner hvor 
+                          som helst i verden, for eksempel i Australia eller Japan.
+                    </p>
+                    <p>Det er flere type nettverk og noen av disse er:</p>
+                    <ul class="type_nettverk">
+                        <li><p>LAN (Local Area Network)
+                            <br>
+                            <br>
+                            <p></p>
+                        </p></li>
+                        <li><p>WLAN (Wireless LAN)</p></li>
+                        <li><p>WAN (Wide Area Network)</p></li>
+                        <li><p>VPN (Virtual Private Network)</p></li>
+                    </ul>
+
+                </article>
+                <div class="media_nettverk">
+                    <img id="pic1_nettverk" src="/img/ip1.gif" alt="">
+
+
+                </div>
+            </section>
+            <section id="tema2">
+                <h2>IPAdresse</h2>
+                <p>En IP-adresse (Internet Protocol-adresse) er en unik 
+                    identifikator som brukes for å finne og kommunisere med 
+                    enheter på et nettverk, 
+                    som for eksempel internett. </p>
+
+
+            </section>
+            <section id="tema3">
+                <h2>Brannmur</h2>
+                <p>En brannmur (firewall på engelsk) er et sikkerhetssystem som beskytter datamaskiner og nettverk mot uønsket eller skadelig trafikk fra internett eller andre nettverk. En brannmur fungerer som en digital dørvakt. Den bestemmer hvilken datatrafikk som får komme inn og gå ut av nettverket ditt, 
+                    basert på forhåndsdefinerte regler. </p>
+            </section>
+            <section id="tema4">
+                <h2>Protokoller</h2>
+            </section>
+            <section id="tema5">
+                <h2>Porter</h2>
+
+            </section>
+            <section id="tema6">
+                <h2>Tjenester</h2>
+
+            </section>
+            <section id="tema7">
+                <h2>DHCP</h2>
+
+            </section>
+
+
+        </main>
+
     </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="intro" class="hero">
-      <div class="container grid grid-2">
-        <div>
-          <h1 class="intro-accent">Forstå <span class="accent1">sporing</span> og <span class="accent2">personvern</span></h1>
-          <p class="muted">Alle som bruker nettet legger igjen spor. I dette læringsløpet ser vi hvordan sporing skjer, hva <strong>VPN</strong> gjør – og du løser praktiske oppgaver med <strong>Tor</strong> og <strong>WhatsMyIP</strong>.</p>
-          <div class="" style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap">
-            <span class="pill">🌐 Nettvett</span>
-            <span class="pill">🔒 Kryptering</span>
-            <span class="pill">📘 VG1 IM</span>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h3>Læringsmål</h3>
-            <ul class="list muted">
-              <li>Forklare hvordan sporing på nett foregår.</li>
-              <li>Forklare hva en VPN er og hvordan den beskytter trafikk.</li>
-              <li>Gjennomføre et mini-eksperiment med Tor vs. vanlig nettleser.</li>
-              <li>Bruke kilder og levere en logg med bilder og forklaringer.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SPORING -->
-    <section id="sporing">
-      <div class="container">
-        <div style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px">
-          <div class="badge">🌍 Datasikkerhet og sporing</div>
-        </div>
-        <div class="card">
-          <p><strong>IP-adressen</strong> er ofte det tydeligste sporet på nett. Tjenester kan se en grov lokasjon og internettleverandør. Når du logger inn eller oppgir kontaktinfo i konkurranser/undersøkelser, kan IP kobles til <em>deg</em> som person. Dette muliggjør målrettede annonser – og i verste fall svindel.</p>
-          <p>Mange nettsteder krever samtykke til datadeling. De samarbeider med tredjeparter som kan motta data for analyse, annonsering eller drift. Vær kritisk og les vilkår.</p>
-          <div class="grid grid-2" style="margin-top:12px">
-            <div class="card">
-              <h3>Les mer</h3>
-              <ul class="list">
-                <li><a class="inline" href="https://www.datatilsynet.no/regelverk-og-verktoy/rapporter-og-utredninger/personopplysninger-og-det-digitale-annonsemarkedet/" target="_blank" rel="noreferrer noopener">Datatilsynet: personopplysninger og annonsemarkedet ↗</a></li>
-                <li><a class="inline" href="https://ndla.no/r/teknologiforstaelse-im-ikm-vg1/hvordan-spores-vi-pa-nett/65c1a779fb" target="_blank" rel="noreferrer noopener">NDLA: Hvordan spores vi på nett? ↗</a></li>
-                <li><a class="inline" href="http://www.norskkalender.no/" target="_blank" rel="noreferrer noopener">norskkalender.no (samtykke-eksempel) ↗</a></li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Aktuelt</h3>
-              <ul class="list">
-                <li><a class="inline" href="https://www.nrk.no/nyheter/google-far-2_5-milliardar-kroner-i-bot-1.16812959" target="_blank" rel="noreferrer noopener">NRK: Google får 2,5 mrd i bot ↗</a></li>
-                <li><a class="inline" href="https://www.nrk.no/nyheter/google-far-bot-pa-1_5-milliarder-1.15651098" target="_blank" rel="noreferrer noopener">NRK: Google får bot på 1,5 mrd ↗</a></li>
-                <li><a class="inline" href="https://www.tv2.no/direkte/jpybz/siste-nytt/67224f42df85c702e434023a/google-domt-til-a-betale-bot-pa-22-kvintillioner-kroner" target="_blank" rel="noreferrer noopener">TV2: Google dømt til bot (artikkelhenvisning) ↗</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VPN -->
-    <section id="vpn">
-      <div class="container">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
-          <div class="badge">🔐 Hva er VPN?</div>
-        </div>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Kort forklart</h3>
-            <ul class="list muted">
-              <li>Krypterer all trafikk mellom deg og VPN-endepunktet.</li>
-              <li>Gjør det tryggere å bruke åpne nett (f.eks. på kafé/skole).</li>
-              <li>Kan få det til å se ut som du er i et annet land.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Se video</h3>
-            <p class="muted">Kort intro til VPN (YouTube)</p>
-            <a class="btn" href="https://www.youtube.com/watch?v=R-JUOpCgTZc" target="_blank" rel="noreferrer noopener">▶️ Åpne video</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPPGAVER -->
-    <section id="oppgaver">
-      <div class="container">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
-          <div class="badge">✅ Oppgaver og levering</div>
-        </div>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Krav til levering</h3>
-            <ul class="list muted">
-              <li>Frist: <strong>onsdag kl. 15:30</strong>.</li>
-              <li>Lever selv om du ikke er helt ferdig. Mappen lukkes automatisk.</li>
-              <li>Ikke levert = registrert fravær.</li>
-              <li>Vurderingskriterier: frist, <em>bilder</em> + <em>forklarende tekst</em>.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Tips til loggen</h3>
-            <ul class="list muted">
-              <li>Bruk skjermbilder (IP-visning, nettleservalg, Tor-ikon osv.).</li>
-              <li>Forklar kort hva du gjorde, hvorfor – og hva du fant ut.</li>
-              <li>Lenk kilder du brukte underveis.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid grid-2" style="margin-top:12px">
-          <div class="card">
-            <h3>Oppgave 1 – Refleksjon</h3>
-            <ol class="list">
-              <li>Hva tenker du om egen nettbruk etter å ha sett video/lesestoff?</li>
-              <li>Hva mener du med begrepet <em>personopplysninger</em>?</li>
-            </ol>
-          </div>
-          <div class="card">
-            <h3>Oppgave 2 – Tor-eksperiment</h3>
-            <ol class="list">
-              <li>Installer <a class="inline" href="https://www.torproject.org/" target="_blank" rel="noreferrer noopener">Tor-nettleseren ↗</a>.</li>
-              <li>Surf med både Tor og vanlig nettleser (f.eks. Chrome).</li>
-              <li>Bruk <a class="inline" href="https://www.whatsmyip.org/" target="_blank" rel="noreferrer noopener">WhatsMyIP ↗</a> og «More info About You». Svar på:
-                <ul class="list">
-                  <li>Hvordan er IP-ene forskjellige?</li>
-                  <li>Hvilke regioner tilhører de?</li>
-                  <li>Hvorfor blir resultatene slik?</li>
-                </ul>
-              </li>
-              <li>Beskriv fordeler/ulemper ved Tor vs. Chrome.</li>
-            </ol>
-          </div>
-        </div>
-
-        <details style="margin-top:12px">
-          <summary>Bonus: Slik lagrer du gode skjermbilder</summary>
-          <p class="muted">Windows: Win + Shift + S → lim inn i dokumentet. macOS: Shift + Cmd + 4. Husk å gi filene navn som sier hva bildet viser.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ORDLISTE -->
-    <section id="ordliste">
-      <div class="container">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
-          <div class="badge">📖 Ordliste</div>
-        </div>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:18px">
-          <div class="card"><h4>VPN</h4><p class="muted">En teknologi som lager en <strong>kryptert</strong> og sikker forbindelse mellom enheten din og internett. Skjuler trafikk og kan få det til å se ut som du er et annet sted.</p></div>
-          <div class="card"><h4>Endepunkt</h4><p class="muted">En spesifikk adresse (URL) i et API der man kan sende eller motta data.</p></div>
-          <div class="card"><h4>HTTP</h4><p class="muted">Regelsett for hvordan nettleser og webserver snakker sammen.</p></div>
-          <div class="card"><h4>HTTPS</h4><p class="muted">En kryptert utgave av HTTP som beskytter kommunikasjonen og bekrefter hvem serveren er.</p></div>
-          <div class="card"><h4>Kryptering</h4><p class="muted">Metode for å gjøre data uleselig for andre ved hjelp av algoritmer og nøkler.</p></div>
-          <div class="card"><h4>GDPR</h4><p class="muted">EUs regelverk for personvern (personvernforordningen).</p></div>
-          <div class="card"><h4>Behandling av personopplysninger</h4><p class="muted">All bruk av personopplysninger som innsamling, lagring, utlevering osv.</p></div>
-          <div class="card"><h4>Profilering</h4><p class="muted">Analyse/forutsigelse av personlige aspekter for målretting.</p></div>
-          <div class="card"><h4>Sensitive personopplysninger</h4><p class="muted">Særlige kategorier som helse, religion, seksuell orientering m.m. – krever ekstra vern.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- KILDER -->
-    <section id="kilder">
-      <div class="container">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
-          <div class="badge">📂 Kilder og ressurser</div>
-        </div>
-        <div class="card">
-          <div class="kilder">
-            <a class="inline" href="https://www.datatilsynet.no/regelverk-og-verktoy/rapporter-og-utredninger/personopplysninger-og-det-digitale-annonsemarkedet/" target="_blank" rel="noreferrer noopener">Datatilsynet: personopplysninger og annonsemarkedet ↗</a>
-            <a class="inline" href="https://ndla.no/r/teknologiforstaelse-im-ikm-vg1/hvordan-spores-vi-pa-nett/65c1a779fb" target="_blank" rel="noreferrer noopener">NDLA: Hvordan spores vi på nett? ↗</a>
-            <a class="inline" href="http://www.norskkalender.no/" target="_blank" rel="noreferrer noopener">norskkalender.no (samtykke-eksempel) ↗</a>
-            <a class="inline" href="https://www.nrk.no/nyheter/google-far-2_5-milliardar-kroner-i-bot-1.16812959" target="_blank" rel="noreferrer noopener">NRK: Google får 2,5 mrd i bot ↗</a>
-            <a class="inline" href="https://www.nrk.no/nyheter/google-far-bot-pa-1_5-milliarder-1.15651098" target="_blank" rel="noreferrer noopener">NRK: Google får bot på 1,5 mrd ↗</a>
-            <a class="inline" href="https://www.tv2.no/direkte/jpybz/siste-nytt/67224f42df85c702e434023a/google-domt-til-a-betale-bot-pa-22-kvintillioner-kroner" target="_blank" rel="noreferrer noopener">TV2: Google dømt til bot (artikkelhenvisning) ↗</a>
-            <a class="inline" href="https://www.youtube.com/watch?v=R-JUOpCgTZc" target="_blank" rel="noreferrer noopener">YouTube: Hva er VPN? ↗</a>
-            <a class="inline" href="https://www.torproject.org/" target="_blank" rel="noreferrer noopener">Tor Project ↗</a>
-            <a class="inline" href="https://www.whatsmyip.org/" target="_blank" rel="noreferrer noopener">WhatsMyIP ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    Laget for <strong>VG1 Informasjonsteknologi og medieproduksjon</strong>. Oppdatert for hjemmeoppgaven 7. mai 2025.
-  </footer>
-
-  <button id="toTop" aria-label="Til toppen">↑</button>
-
-  <script>
-    // "Til toppen"-knapp
-    const toTop = document.getElementById('toTop');
-    const onScroll = () => { toTop.style.display = window.scrollY > 500 ? 'block' : 'none'; };
-    window.addEventListener('scroll', onScroll, { passive:true });
-    toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-    // Fokus-stil for tastaturnavigasjon
-    function handleFirstTab(e){
-      if(e.key === 'Tab'){
-        document.body.classList.add('user-is-tabbing');
-        window.removeEventListener('keydown', handleFirstTab);
-      }
-    }
-    window.addEventListener('keydown', handleFirstTab);
-  </script>
+    
 </body>
+<script src="/code/nettverk.js"></script>
 </html>
+
+
