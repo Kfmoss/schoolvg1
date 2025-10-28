@@ -55,7 +55,7 @@ article p{
 }
 article h2{
     padding: .5rem .7rem;
-    border: 1px solid var(--border-beside-menu);
+    /* border: 1px solid var(--border-beside-menu); */
 
 }
 .type_nettverk h3{
