@@ -1,9 +1,8 @@
 body.light-mode {
     --text-primary-menu:#0f0f0f;
     --text-primary:#222121;
-    --nav-colorBackground:#eef0f7;
+    --nav-colorBackground: rgba(242, 243, 247, 0.721);
     --beside-menu-colorBackground: #f4f5f8;
-    /* --text-besidemenu:#000; */
     --main-colorBackground: #992db1;
     --bg-section:#ffff;
     --border-beside-menu:#000;
@@ -19,7 +18,7 @@ body.light-mode {
     --color-backgroundH3: rgba(91, 129, 226, 0.467);
     --text-primary-menu:#0000; 
     --text-primary: #ffff;
-    --nav-colorBackground:rgba(255, 255, 255, .7);
+    --nav-colorBackground:rgba(220, 158, 219, 0.7);
     --main-colorBackground: #992db1;
     --beside-menu-colorBackground: #4f4fb3;
     --text-besidemenu:#ffff;
@@ -55,7 +54,6 @@ article p{
 }
 article h2{
     padding: .5rem .7rem;
-    /* border: 1px solid var(--border-beside-menu); */
 
 }
 .type_nettverk h3{
@@ -67,7 +65,16 @@ article h2{
 
 }
 .pic_nettverk img{
-    width: 40%;
+    width: 25rem;
+    border: 2px solid #000;
+}
+.pic_wifi_nettverk{
+    display: flex;
+    justify-content: center;
+}
+.pic_wifi_nettverk img{
+    width: 25rem;
+    border:2px solid #000; ;
 }
 .pic_brannmur{
     display: flex;
@@ -100,6 +107,8 @@ article h2{
     background-color: var(--nav-colorBackground);
     padding:1.125rem ;
     z-index: 99;
+    position:sticky;
+    top:0.2rem;
 }
 .main_nav img{
     width: 18rem;
@@ -211,9 +220,8 @@ article h2{
     grid-area: tab;
     color: var(--text-primary);
     background-color: var(--main-colorBackground);
-    margin:2.5rem;
-    
-
+    /* margin:2.5rem; */
+    margin: 2.5rem 0 0 30%;
 }
 .beside_nav .list1{
     
@@ -222,7 +230,7 @@ article h2{
     text-align: center;
     margin-top:1rem ;
     position: sticky;
-    top: 2.5rem;
+    top: 12.5rem;
     border: solid 2px var(--border-beside-menu);
     border-radius: 8px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -236,14 +244,8 @@ article h2{
     outline: 0;
 
 }
-.beside_nav .list1 a{
-    background-color: rgb(19, 21, 111);
-    padding: .5rem .9rem;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
-}
+
+
 .beside_nav .list1 a:hover{
     background: none;
 }
@@ -251,8 +253,22 @@ article h2{
 
 .beside_nav .list1 li{
     padding: 1.25rem 0 1.25rem 0;
+    background-color: rgb(19, 21, 111);
+    padding: .5rem .9rem;
+    margin: .5rem; 
+    border-radius: 6px;
+    transition: 300ms;
     
 }
+.beside_nav .list1 li:hover{
+    background-color: #ffff;
+   a{
+    color: #000;
+    font-weight: 600;
+   }
+
+}
+
 .beside_nav .list1 li a{
     
     color: var(--text-besidemenu);
@@ -274,7 +290,7 @@ article h2{
     display: flex;
     flex-direction: column;
     font-size: var(--size-text-section);
-    margin: 1rem 1.25rem 2rem 1.25rem;
+    margin: 1rem 10.25rem 2rem 7.25rem;
     padding: 1rem;
     border: 2px solid var(--border-beside-menu);
     border-radius: 8px;
