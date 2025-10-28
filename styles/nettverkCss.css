@@ -8,6 +8,7 @@ body.light-mode {
     --bg-section:#ffff;
     --border-beside-menu:#000;
     --textcolor-backToMain:#000;
+    --color-backgroundH3: rgba(175, 175, 27, 0.467);
 
     
     
@@ -15,6 +16,7 @@ body.light-mode {
 
 
 :root{
+    --color-backgroundH3: rgba(91, 129, 226, 0.467);
     --text-primary-menu:#0000; 
     --text-primary: #ffff;
     --nav-colorBackground:rgba(255, 255, 255, .7);
@@ -51,6 +53,44 @@ html{
 article p{
     padding: 1rem 0;
 }
+article h2{
+    padding: .5rem .7rem;
+    border: 1px solid var(--border-beside-menu);
+
+}
+.type_nettverk h3{
+    background-color:var(--color-backgroundH3);
+}
+.pic_nettverk{
+    display: flex;
+    justify-content: center;
+
+}
+.pic_nettverk img{
+    width: 40%;
+}
+.pic_brannmur{
+    display: flex;
+    justify-content:space-around;
+}
+.pic_brannmur #pic1_mur, .pic_brannmur iframe{
+    padding: .5rem;
+} 
+.pic_brannmur #pic1_mur{
+    width: 40%;
+}
+.pic_brannmur iframe{
+    width:45rem ;
+}
+.list_ipAdress{
+    list-style: none;
+}
+
+.list_ipAdress h3{
+    background-color:var(--color-backgroundH3);
+
+}
+
 
 .main_nav{
     display: flex;
@@ -217,6 +257,9 @@ article p{
     
     color: var(--text-besidemenu);
     text-decoration: none;
+}
+.textspeech1{
+    padding: 0.5rem;
 }
 
 .mainSite{

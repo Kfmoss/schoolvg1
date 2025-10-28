@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/nettverkCss.css">
+     <link rel="shortcut icon" href="/img/comp.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nettverk</title>
 </head>
 <body>
@@ -26,15 +28,20 @@
                 <li><a href="#tema5">Porter</a></li>
                 <li><a href="#tema6">Tjenester</a></li>
                 <li><a href="#tema7">DHCP</a></li>
+                <li><a href="#tema8">DNS-server</a></li>
+                <li><a href="#tema9">Komponenter</a></li>
+
             </ul>
         </nav>
         <main class="mainSite">
             <section id="info">
+                
                 <article>
 
                     <h2>
                         Hvorfor skal du lære om nettverk? 
                     </h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
                     <p>
                         Mennesker og bedrifter trenger en kommunikasjonsmetode for
                         å gjennomføre mange oppgaver – fra å sende bilder og meldinger 
@@ -73,6 +80,7 @@
             <section id="nettverk">
                 <article>
                     <h2>Hva er et nettverk?</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
                     <p> Mye av det vi bruker datamaskiner og annet digitalt utstyr til, krever
                         at vi har tilgang til internett. Men hva er Internett?
                         Internett er 
@@ -86,14 +94,50 @@
                     </p>
                     <p>Det er flere type nettverk og noen av disse er:</p>
                     <ul class="type_nettverk">
-                        <li><p>LAN (Local Area Network)
-                            <br>
-                            <br>
-                            <p></p>
+                        <li><h3>LAN (Local Area Network)</h3>
+
+                            <p>Et lokal datanettverk består vanligvis av to eller flere datamaskiner
+                                som er koblet sammen via kabler. Formålet til et LAN er å overføre, utveksle eller dele
+                                datapakker.Et datanettverk bygges ved hjelp av maskinvare som f.eks. PC-er, 
+                                rutere, svitsjer, tilgangspunkter og kabler. Samt programvare (f.eks. operativsystemer 
+                                eller forretningsapplikasjoner).
+                            </p>
+                           
+                            <div class="pic_nettverk">
+                                 <img src="/img/Local-Area-Network.jpg" alt="">
+
+                            </div>
                         </p></li>
-                        <li><p>WLAN (Wireless LAN)</p></li>
-                        <li><p>WAN (Wide Area Network)</p></li>
-                        <li><p>VPN (Virtual Private Network)</p></li>
+                        <li><h3>WLAN (Wireless LAN)</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sit blanditiis esse 
+                            voluptatibus voluptates recusandae quam harum dignissimos eum, in, ea rerum cumque 
+                            voluptas laudantium ipsum quibusdam sapiente repudiandae? Illum ab a magni 
+                            nostrum excepturi expedita ratione modi quidem doloribus facere in, impedit 
+                            inventore iste fuga dolorum accusamus sed rerum. Ducimus illo eligendi nisi 
+                            debitis! Vitae, consequuntur. Maxime eligendi dolores ipsa, molestiae ut 
+                            accusantium repellendus temporibus voluptatum quam, corporis suscipit fugiat 
+                            ex ipsam quasi? Maiores praesentium incidunt architecto sequi numquam voluptas 
+                            necessitatibus expedita inventore distinctio sit iste beatae ullam tempora perspiciatis,
+                             voluptate quibusdam sed facere. Non voluptates officiis ad perspiciatis!</p></li>
+
+                        <li><h3>WAN (Wide Area Network)</h3> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Hic ratione repellendus, nemo ex modi possimus eveniet rem dicta
+                          cumque, iste aut est nostrum repudiandae numquam temporibus, 
+                          sunt excepturi! Accusantium eligendi dolor nemo at qui
+                           consectetur aspernatur quaerat temporibus nostrum tempore 
+                           labore aut dignissimos dolore, architecto ea. Amet distinctio 
+                           commodi laborum.</li>
+                            
+                        <li><h3>VPN (Virtual Private Network)</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quia ullam,
+                                 placeat tempore repellendus cumque officia maiores aut voluptate.
+                                  Esse quia atque ea ullam est fugit libero! Earum sunt accusamus 
+                                  nisi ut aliquid esse rem dolores, distinctio voluptate excepturi
+                                   corrupti expedita. Voluptatem possimus beatae eligendi ab aperiam 
+                                   nam eos placeat.</p>
+                        
+                        </li>
                     </ul>
 
                 </article>
@@ -104,33 +148,113 @@
                 </div>
             </section>
             <section id="tema2">
-                <h2>IPAdresse</h2>
-                <p>En IP-adresse (Internet Protocol-adresse) er en unik 
-                    identifikator som brukes for å finne og kommunisere med 
-                    enheter på et nettverk, 
-                    som for eksempel internett. </p>
+                <Article>
+                    <h2>IPAdresse</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                    <p>En IP-adresse (Internet Protocol-adresse) er en unik 
+                        identifikator som brukes for å finne og kommunisere med 
+                        enheter på et nettverk, 
+                        som for eksempel internett. </p>
+                    <ul class="list_ipAdress">
+                        <li><h3>Offentlig IP-adresse</h3>
+                        <p> Denne adressen er din offentlige
+                             «hjemmeadresse» på internett, og er 
+                             synlig for alle enheter på nettet. 
+                             Internettleverandøren din gir deg en 
+                             offentlig IP-adresse.</p></li>
+                        <li><h3>Privat IP-adresse</h3>
+                        <p>Når en enhet kobles til en ruter, 
+                            får den tildelt en privat IP-adresse. 
+                            Denne adressen er bare synlig for andre 
+                            enheter på samme lokale nettverk.</p></li>
+                        <li><h3>IPv4 og IPv6</h3>
+                        <p></p></li>
+
+                    </ul>
+
+                </Article>
 
 
             </section>
             <section id="tema3">
-                <h2>Brannmur</h2>
-                <p>En brannmur (firewall på engelsk) er et sikkerhetssystem som beskytter datamaskiner og nettverk mot uønsket eller skadelig trafikk fra internett eller andre nettverk. En brannmur fungerer som en digital dørvakt. Den bestemmer hvilken datatrafikk som får komme inn og gå ut av nettverket ditt, 
-                    basert på forhåndsdefinerte regler. </p>
+                <article>
+                    <h2>Brannmur</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                    <p>En brannmur (firewall på engelsk) er et sikkerhetssystem som beskytter datamaskiner og nettverk mot uønsket eller skadelig trafikk fra internett eller andre nettverk. En brannmur fungerer som en digital dørvakt. Den bestemmer hvilken datatrafikk som får komme inn og gå ut av nettverket ditt, 
+                        basert på forhåndsdefinerte regler. </p>
+                    <p>En brannmur er et program som kan beskytte datamaskinen mot 
+                        at noen med uærlige hensikter får tilgang til datafilene dine 
+                        eller legger inn et spionprogram eller virus på datamaskinen din. 
+                        Forskjellige typer programmer, som e-post, nettlesere eller 
+                        nettverkspill, kommuniserer på litt forskjellige måter på internett,
+                         gjennom såkalte porter. En IP-adressekan I tillegg til selve adressen 
+                         også ha med en port. Porten angis ved å sette et kolon og portnummeret 
+                         etter selve adressen. Et eksempel er https://www.mywonderfulclass.com:80 . 
+                        En brannmur kan være med og begrense hvilke porter som skal være åpne på maskinen,
+                         og hvilke programmer som skal få lov å snakke gjennom disse portene. Et nettverk 
+                         inneholder ofte flere brannmur. Du har gjerne en brannmur installert på datamaskinen din.
+                          På ruteren I hjemmenettverket som du kobler deg til internett via, fins  det også
+                           en brannmur. Ofte er disse brannmurene stilt inn slik at de er svært
+                            strenge med hvilke programmer og andre datamaskiner forsøker å sende
+                             data til datamaskinen din, sier brannmuren fra og spør om du vil 
+                             godkjenne kommunikasjon fra denne datamaskinen. Hvis du svarer "ja"
+                              , kan brannmuren også huske at du stoler på denne matamaskinen til
+                               neste gang.  </p>
+                    <div class="pic_brannmur">
+                        <img id="pic1_mur" src="/img/GetImage.png" alt="">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/kDEX1HXybrU" frameborder="0"></iframe>
+
+                    </div>
+
+                </article>
             </section>
             <section id="tema4">
-                <h2>Protokoller</h2>
+
+                <article>
+                    <h2>Protokoller</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+
+                </article>
             </section>
             <section id="tema5">
-                <h2>Porter</h2>
+                <article>
+                    <h2>Porter</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+
+                </article>
 
             </section>
             <section id="tema6">
-                <h2>Tjenester</h2>
+                <article>
+                    <h2>Tjenester</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+
+                </article>
 
             </section>
             <section id="tema7">
-                <h2>DHCP</h2>
+                <article>
+                    <h2>DHCP</h2>
 
+                </article>
+
+            </section>
+
+            <section id="tema8">
+                <article>
+                    <h2>DNS-server</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+
+                </article>
+
+            </section>
+
+            <section id="tema9">
+                <article>
+
+                    <h2>Komponenter</h2>
+                    <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                </article>
             </section>
 
 
