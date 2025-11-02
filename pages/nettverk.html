@@ -29,7 +29,7 @@
                 <li><a href="#tema6">Tjenester</a></li>
                 <li><a href="#tema7">DHCP</a></li>
                 <li><a href="#tema8">DNS-server</a></li>
-                <li><a href="#tema9">Komponenter</a></li>
+                <li><a href="#tema9">Windows-kommander</a></li>
                 <li><a href="#tema10">Mini-Oppgaver</a></li>
 
             </ul>
@@ -93,9 +93,13 @@
                           Det er dette verdensomspennende nettet vi kaller internett. Gjennom internett kan datamaskiner i Norge kommunisere med datamaskiner hvor 
                           som helst i verden, for eksempel i Australia eller Japan.
                     </p>
+                    <div class="media_nettverk">
+                        <img id="pic1_nettverk" src="/img/ip1.gif" alt="">
+                        <img id="pic2_nettverk" src="/img/network-8398641_1280.jpg" alt="">
+                </div>
                    
                     <ul class="type_nettverk">
-                        <li><h3>LAN (Local Area Network)</h3>
+                        <li id="lan"><h3>LAN (Local Area Network)</h3>
 
                             <p>Et lokal datanettverk består vanligvis av to eller flere datamaskiner
                                 som er koblet sammen via kabler. Formålet til et LAN er å overføre, utveksle eller dele
@@ -109,40 +113,56 @@
 
                             </div>
                         </p></li>
-                        <li><h3>WLAN (Wireless LAN)</h3>
-                        <p>Digital Utstyr har ofte egen komponent, et <strong>nettverkskort</strong>, som gjør 
-                        at det kan kobles opp mot et nettverkav andre enheter. Dette nettverket kalles digitale nerverket</p>
-                        <div class="pic_wifi_nettverk">
+                        <li id="wlan"> 
+                            <article>
+
+                                <h3>WLAN (Wireless LAN)</h3>
+                      
+                                <p>Digital Utstyr har ofte egen komponent, et <strong>nettverkskort</strong>, som gjør 
+                                    at det kan kobles opp mot et nettverkav andre enheter. Dette nettverket kalles digitale nerverket</p>
+                            </article> 
+                            <div class="pic_wifi_nettverk">
                             <img src="/img/secure-wifi-router-1.jpg" alt="">
-                        </div></li>
+                            </div>
+                        </li>
 
                         <li><h3>WAN (Wide Area Network)</h3> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Hic ratione repellendus, nemo ex modi possimus eveniet rem dicta
-                          cumque, iste aut est nostrum repudiandae numquam temporibus, 
-                          sunt excepturi! Accusantium eligendi dolor nemo at qui
-                           consectetur aspernatur quaerat temporibus nostrum tempore 
-                           labore aut dignissimos dolore, architecto ea. Amet distinctio 
-                           commodi laborum.</li>
+                            <p>
+                                Et WAN (Wide Area Network) er et datanettverk som kan koble sammen datamaskiner 
+                                og mindre nettverk over store avstander – for eksempel mellom byer, land eller til 
+                                og med kontinenter.Et WAN bruker ofte offentlige linjer, som 
+                                internettkabler, satellitter eller mobilnett, for å sende data
+                                 mellom stedene. På den måten kan bedrifter eller organisasjoner 
+                                 ha kontorer i forskjellige land, men likevel være koblet sammen som
+                                  om de var på samme nettverk. Det største og mest kjente eksemplet
+                                   på et WAN er <strong>internett.</strong> Internett kobler sammen milliarder av 
+                                   datamaskiner og nettverk over hele verden, slik at vi kan sende
+                                    meldinger, se videoer og finne informasjon uansett hvor vi
+                                     befinner oss.
+
+                            </p>
+</li>
                             
                         <li><h3>VPN (Virtual Private Network)</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quia ullam,
-                                 placeat tempore repellendus cumque officia maiores aut voluptate.
-                                  Esse quia atque ea ullam est fugit libero! Earum sunt accusamus 
-                                  nisi ut aliquid esse rem dolores, distinctio voluptate excepturi
-                                   corrupti expedita. Voluptatem possimus beatae eligendi ab aperiam 
-                                   nam eos placeat.</p>
+                            <p>VPN (Virtual Private Network) betyr «virtuelt privat nettverk». 
+                                Det er en teknologi som gjør at du kan koble deg sikkert til internett,
+                                 selv om du bruker et usikret nettverk – for eksempel et offentlig
+                                  Wi-Fi på en kafé eller flyplass. Når du bruker en VPN, blir
+                                   dataene du sender og mottar kryptert. Det betyr at informasjonen blir gjort om til en kode 
+                                   som er uleselig for andre. Bare datamaskinen din og VPN-serveren har «nøkkelen» til å lese 
+                                   innholdet. Dette hindrer hackere, internettleverandører eller andre i å se hva du gjør på nettet.
+                                   I tillegg lager VPN-en en «tunnel» mellom datamaskinen din og VPN-serveren. Du kan tenke på 
+                                   tunnelen som en usynlig og beskyttet vei der dataene dine reiser trygt. Selv om dataene går 
+                                   gjennom internett, er de skjult for andre som prøver å se inn.</p>
+                            <div class="video-ip">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/_ghJAFXPblo?si=RGzs6zYroKCEqPBd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                         
                         </li>
                     </ul>
 
                 </article>
-                <div class="media_nettverk">
-                    <img id="pic1_nettverk" src="/img/ip1.gif" alt="">
 
-
-
-                </div>
             </section>
             <section id="tema2">
                 <Article>
@@ -252,8 +272,20 @@
                 <article>
                     <h2>Porter</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                    <p>En port er som en dør eller inngang i datamaskinen din som brukes for å 
+                        sende og motta informasjon over et nettverk. Når datamaskinen din kobler
+                         seg til internett, må den vite hvilket program dataene skal sendes til – og 
+                         det er portene som hjelper til med det.
+                         Hver port har et nummer (for eksempel port 80 eller port 443), 
+                         og forskjellige programmer bruker forskjellige portnumre for å 
+                         kommunisere.</p>
 
                 </article>
+                <div class="video-ip">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/g2fT-g9PX9o?si=i3H6kWNZfITE6L4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <br>
+                <p>vil du vite mer om porter? klikk <strong><a href="https://ndla.no/nb/r/driftsstotte-im-itk-vg2/tcp-udp-og-porter/d7acb2196e">Her</a></strong> </p>
 
             </section>
             <section id="tema6">
@@ -269,6 +301,9 @@
                     <h2>DHCP</h2>
 
                 </article>
+                <div class="video-ip">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/e6-TaH5bkjo?si=BRdmRLl6IZyJZXso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
             </section>
 
@@ -284,12 +319,20 @@
             <section id="tema9">
                 <article>
 
-                    <h2>Komponenter</h2>
+                    <h2>Windows-kommander</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
                 </article>
+                <div class="video-ip">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jfq_BYhxvy0?si=1g6jruwcquhEvz0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
             <section id="tema10">
                 <h2>Mini-oppgaver</h2>
+
+                <div class="video-ip">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Snkqk-S5oQg?si=4R5T4pEpM_Fu4Luw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
 
             </section>

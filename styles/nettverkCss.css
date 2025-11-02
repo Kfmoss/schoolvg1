@@ -301,11 +301,16 @@ article h2{
 }
 .media_nettverk{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
 }
 #pic1_nettverk{
-    width: 35rem;
+    width: 50%;
     border: solid 2px black;
+}
+#pic2_nettverk{
+        width:50%;
+    border: solid 2px black;
+
 }
 #info .img_info{
     display: flex;
