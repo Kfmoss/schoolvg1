@@ -59,6 +59,14 @@ article h2{
 .type_nettverk h3{
     background-color:var(--color-backgroundH3);
 }
+.type_protokoll{
+    list-style: none;
+
+}
+.type_protokoll h3{
+    background-color:var(--color-backgroundH3);
+
+}
 .pic_nettverk{
     display: flex;
     justify-content: center;
