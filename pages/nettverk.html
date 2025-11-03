@@ -37,7 +37,7 @@
         <main class="mainSite">
             <section id="info">
                 
-                <article>
+                <article id="nettverk1">
 
                     <h2>
                         Hvorfor skal du lære om nettverk? 
@@ -265,9 +265,17 @@
                 <article>
                     <h2>Protokoller</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                    <p> Et internettprotokoll (ofte forkortet IP, fra Internet Protocol) er et <strong>regelsett</strong>  som brukes for å sende og motta data over internett eller andre nettverk. 
+                    Internettprotokollen sørger for at data (for eksempel en nettside, e-post, video osv.) kan sendes fra én datamaskin til en annen på riktig måte og til riktig sted.
+                    Hver enhet som er koblet til internett får en <strong>IP-adresse</strong>, som fungerer som en slags "adresse" — omtrent som et telefonnummer eller gateadresse for datamaskiner.</p>
                     <ul class="type_protokoll">
                         <li>
                             <h3>TCP-IP</h3>
+                            <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
+                            <p>TCP-protokollen (Transmission Control Protocol) er en av de viktigste protokollene på internett, og den samarbeider tett med IP — derfor snakker man ofte om TCP/IP.
+                                Mens IP tar seg av adressering (å sende data til riktig sted), sørger TCP for at dataene faktisk kommer fram riktig, komplett og i riktig rekkefølge.
+                                
+                            </p>
                             <div class="video-ip">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/CRdL1PcherM?si=14oi2-te6hkiTCAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -275,6 +283,18 @@
                         </li>
                         <li>
                             <h3>HTTP og HTTPS</h3>
+                            <p>HTTP står for HyperText Transfer Protocol
+                                Det er protokollen som brukes til å overføre nettsider og data mellom en nettleser og en webserver. HTTP er ukryptert, som betyr at alt du sender og mottar er i klartekst.
+                                Alle dataene du sender – som brukernavn, passord, eller søkeord – kan leses av hvem som helst som har tilgang til nettverket (f.eks. på et offentlig Wi-Fi).
+                                 Med HTTP vet du ikke sikkert hvem du snakker med.
+                                En nettside kan late som den er “din bank”, men egentlig være en kopi laget for å stjele data. Hvorfor bruker vi det fortsatt? Før i tiden krevde HTTPS dyre SSL-sertifikater og mer oppsett.
+                                Det var mer styr for små nettsider, så mange valgte bare HTTP.
+                                (Nå finnes gratis sertifikater, som Let’s Encrypt, så dette er mindre problem nå.)
+                            </p>
+                            
+                            <p>HTTPS betyr HyperText Transfer Protocol Secure.
+                                Det er samme protokoll som HTTP, men med et viktig tillegg: kryptering via SSL/TLS. Fordelen med HTTPS er at ingen kan lese dataene mens de sendes 
+                                (for eksempel passord, kortinformasjon eller meldinger). Selv om noen <strong>"sniffer"</strong>nettet ditt (f.eks. på et offentlig Wi-Fi), vil de bare se uleselig data.</p>
                             <div class="video-ip">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/hExRDVZHhig?si=8AFclPnxxsxjRLW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
