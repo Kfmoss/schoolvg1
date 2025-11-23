@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Uke 48 – CSS3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --accent-strong: rgba(56, 189, 248, 0.25);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 1.25rem;
+      --radius-md: 0.75rem;
+      --shadow-soft: 0 18px 35px rgba(15, 23, 42, 0.65);
+      --shadow-subtle: 0 10px 25px rgba(15, 23, 42, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.7),
+        transparent
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: conic-gradient(
+        from 210deg,
+        rgba(56, 189, 248, 0.2),
+        rgba(79, 70, 229, 0.6),
+        rgba(56, 189, 248, 0.3)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 35px rgba(56, 189, 248, 0.25);
+    }
+
+    .logo-mark span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #e0f2fe;
+    }
+
+    .logo-text-main {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .logo-text-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+    }
+
+    .nav-links a span {
+      font-size: 0.9em;
+      opacity: 0.75;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+      border-color: rgba(56, 189, 248, 0.65);
+      background: radial-gradient(circle at top, #0b1120, #020617);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 1.5rem auto 1rem;
+      padding: 1.5rem 1.5rem 1.25rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 1.5rem;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #0f172a, #020617 50%, #000 100%);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(56, 189, 248, 0.18), transparent 50%),
+        radial-gradient(circle at 90% 15%, rgba(129, 140, 248, 0.18), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .hero-content,
+    .hero-side {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9);
+      font-size: 0.75rem;
+      color: #e0f2fe;
+      margin-bottom: 0.7rem;
+    }
+
+    .pill span {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 2.7vw, 2.3rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.03em;
+      color: #f9fafb;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.3);
+    }
+
+    .toc-card {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: linear-gradient(to bottom right, #020617, #020617, #020617);
+      padding: 0.9rem;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .toc-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .toc-list li a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: #d1d5db;
+      padding: 0.15rem 0.2rem;
+      border-radius: 0.5rem;
+      transition: background 0.14s ease-out, color 0.14s ease-out, transform 0.12s;
+    }
+
+    .toc-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 20%, rgba(148, 163, 184, 0.9), transparent);
+    }
+
+    .toc-list li a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
+      transform: translateX(1px);
+    }
+
+    .toc-sub {
+      margin-left: 1rem;
+      border-left: 1px dashed rgba(55, 65, 81, 0.8);
+      padding-left: 0.65rem;
+      margin-top: 0.15rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    .badge strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+      gap: 1.5rem;
+    }
+
+    .content-main {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .section-card {
+      border-radius: var(--radius-md);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      padding: 1.1rem 1.1rem 1.2rem;
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+    }
+
+    .section-card::before {
+      content: "";
+      position: absolute;
+      inset-inline: 0.75rem;
+      top: 0;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(56, 189, 248, 0.4),
+        transparent
+      );
+      opacity: 0.75;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .section-card h2,
+    .section-card h3 {
+      margin: 0.1rem 0 0.5rem;
+      letter-spacing: -0.02em;
+      color: #e5e7eb;
+    }
+
+    .section-card h2 {
+      font-size: 1.15rem;
+    }
+
+    .section-card h3 {
+      font-size: 1rem;
+    }
+
+    .section-card p {
+      margin: 0.35rem 0;
+      font-size: 1.2rem;
+      color: #d1d5db;
+    }
+
+    .section-card ul,
+    .section-card ol {
+      margin: 0.4rem 0 0.4rem 1.1rem;
+      padding-left: 0.2rem;
+      font-size: 1.2rem;
+      color: #d1d5db;
+    }
+
+    .section-card li {
+      margin-bottom: 0.25rem;
+    }
+
+    .note {
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.75rem;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+    }
+
+    .note strong {
+      color: #e5e7eb;
+    }
+
+    .flex-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+    }
+
+    .flex-table th,
+    .flex-table td {
+      border: 1px solid rgba(55, 65, 81, 0.8);
+      padding: 0.4rem 0.55rem;
+      text-align: left;
+    }
+
+    .flex-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .minioppgave-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .minioppgave-label span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+    }
+
+    .minioppgave-card {
+      border-radius: var(--radius-md);
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(37, 99, 235, 0.6);
+      padding: 0.85rem 0.9rem 0.9rem;
+      margin-top: 0.35rem;
+    }
+
+    .minioppgave-card h3 {
+      margin-top: 0;
+    }
+
+    .minioppgave-card ul,
+    .minioppgave-card ol {
+      margin-top: 0.3rem;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .sidebar-card {
+      border-radius: var(--radius-md);
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      padding: 0.9rem 0.9rem 1rem;
+      box-shadow: var(--shadow-subtle);
+      font-size: 0.88rem;
+      color: #d1d5db;
+    }
+
+    .sidebar-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.95rem;
+      letter-spacing: -0.02em;
+      color: #e5e7eb;
+    }
+
+    .pill-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.18rem 0.55rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .pill-soft strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 1em;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 0.35rem;
+      padding: 0.08rem 0.3rem;
+      border: 1px solid rgba(30, 64, 175, 0.65);
+      color: #bae6fd;
+    }
+
+    pre {
+      margin: 0.5rem 0;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.7rem;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 1);
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-inner span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .dot-soft {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 20%, rgba(148, 163, 184, 0.9), transparent);
+    }
+    .eksempel1{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .eksempel1 img{
+        cursor: zoom-in;
+        transition: tansform .5s ease;
+    }
+    .flex-start{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .flex-start img{
+        width: 45%;
+    }
+    .center{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .center img{
+        width: 45%;
+        height: auto;
+    }
+    .flex-end{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .flex-end img{
+        width: 45%;
+        height: auto;
+    }
+    .example3{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .example3 img{
+        width: 45%;
+        height: auto;
+    }
+    .me{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .me img{
+        width: 45%;
+        height: auto;
+    }
+    .me2{
+        padding: 1.5rem 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .me2 img{
+        width: 50%;
+        height: auto;
+
+    }
+
+    input[type=checkbox]{
+        display: none;
+    }
+    input[type=checkbox]:checked ~ label > img{
+        transform: scale(1.7);
+        cursor:zoom-out;
+        z-index: 999;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 1.25rem;
+      }
+      .content {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="header-inner">
+        <div class="logo-area">
+          <div class="logo-mark">
+            <span>48</span>
+          </div>
+          <div>
+            <div class="logo-text-main">Fag: konseptutvikling og programmering</div>
+            <div class="logo-text-title">Uke 48 – CSS3, Flexbox &amp; Grid</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#intro"><span>●</span>Oversikt</a>
+          <a href="#flexbox"><span>●</span>Flexbox</a>
+          <a href="#minioppgaver"><span>●</span>Minioppgaver</a>
+          <a href="#grid"><span>●</span>Grid</a>
+          <a href="#oppgaver"><span>●</span>Oppgave A &amp; B</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="intro">
+        <div class="hero-content">
+          <div class="pill">
+            <span>Prosjekt</span> Uke 48 · CSS3, Flexbox &amp; Grid
+          </div>
+          <h1>
+            Utforsk <span>Flexbox</span> &amp; <span>Grid</span> i moderne webutvikling
+          </h1>
+          <p class="hero-subtitle">
+            I dette prosjektet skal du lære hvordan Flexbox og Grid brukes for å bygge tydelige,
+            responsive layouts – verktøy som er helt sentrale i dagens webutvikling.
+          </p>
+          <div class="hero-meta">
+            <span><span class="tag-dot"></span>CSS3 · Flexbox · Grid</span>
+            <span>Levering: 27. november kl. 15.00</span>
+            <span>Format: Rapport</span>
+          </div>
+          <p class="hero-subtitle">
+            Å lære deg disse teknikkene gir deg en stor fordel, siden de gjør det enklere å både
+            definere plasseringen av HTML-elementer på skjermen og å style dem på en effektiv måte.
+          </p>
+        </div>
+
+        <aside class="hero-side">
+          <div class="toc-card">
+            <div class="toc-title">Innhold</div>
+            <ul class="toc-list">
+              <li><a href="#intro"><span class="toc-bullet"></span>Introduksjon</a></li>
+              <li><a href="#flexbox"><span class="toc-bullet"></span>CSS-egenskaper for Flexbox</a></li>
+              <li>
+                <a href="#minioppgaver"><span class="toc-bullet"></span>Minioppgaver</a>
+                <ul class="toc-list toc-sub">
+                  <li><a href="#minioppgave-1">Minioppgave 1</a></li>
+                  <li><a href="#minioppgave-2">Minioppgave 2</a></li>
+                  <li><a href="#minioppgave-3">Minioppgave 3</a></li>
+                  <li><a href="#minioppgave-4">Minioppgave 4</a></li>
+                  <li><a href="#minioppgave-5">Minioppgave 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#grid"><span class="toc-bullet"></span>Grid</a></li>
+              <li><a href="#oppgaver"><span class="toc-bullet"></span>Oppgave A &amp; B</a></li>
+              <li><a href="#vurdering"><span class="toc-bullet"></span>Vurderingskriterier</a></li>
+            </ul>
+            <div class="badge">
+              <span class="dot-soft"></span>
+              <span><strong>Tips:</strong> bruk denne siden som prosjektoversikt mens du jobber.</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="content">
+        <div class="content-main">
+          <!-- FLEXBOX TEORI -->
+          <article class="section-card" id="flexbox">
+            <div class="section-label">Teori</div>
+            <h2>CSS-egenskaper for Flexbox</h2>
+            <p>
+              Flexbox og Grid er beslektede teknikker som brukes til å styre hvordan elementer
+              plasseres i forhold til hverandre på en nettside.
+            </p>
+            <p>
+              <strong>Flexbox</strong> bruker vi gjerne når vi skal plassere elementene i én dimensjon –
+              altså ved siden av hverandre eller under hverandre.
+            </p>
+            <p>
+              <strong>Grid</strong> brukes ofte når vi skal plassere elementer både ved siden av og under
+              hverandre i et todimensjonalt rutenett.
+            </p>
+            <p>
+              En <strong>flexbox</strong> inneholder <em>flex-items</em>. Når et HTML-element settes til å være
+              en flexbox, kan vi kontrollere hvordan elementene inni dette elementet skal utformes, og
+              hvordan de skal plasseres i forhold til hverandre.
+            </p>
+            <p>
+              Vi bruker CSS-egenskapen <code>display: flex;</code> for å si at et HTML-element skal være en
+              flexbox. Alle elementene som ligger inni en flexbox blir automatisk flex-items.
+            </p>
+            <div class="note">
+              <strong>Eksempel (forenklet):</strong><br />
+              Sett en container til <code>display: flex;</code>, og plasser tre bokser inni – disse blir da
+              flex-items som du kan styre med flere egenskaper som <code>justify-content</code>,
+              <code>align-items</code> og <code>flex</code>.
+            </div>
+            <div class="eksempel1">
+                <input type="checkbox" id="zoom_img">
+                <label for="zoom_img">
+                    <img src="/img/css3-example1.png" alt="">
+
+                    <img src="/img/css3-example1a.png" alt="">
+                </label>
+            </div>
+          </article>
+
+          <!-- JUSTIFY-CONTENT OG ALIGN-ITEMS -->
+          <article class="section-card">
+            <div class="section-label">Teori</div>
+            <h2>Justify-content og align-items</h2>
+            <p>
+              Egenskapen <code>justify-content</code> brukes til å styre hvordan flex-items fordeles langs
+              hovedaksen i flexcontaineren (for eksempel horisontalt hvis raden går fra venstre til høyre).
+            </p>
+            <p>
+              Egenskapen <code>align-items</code> brukes til å justere hvordan elementene plasseres på
+              tvers av hovedaksen. Vi unngår ofte å si «vertikalt» og «horisontalt» i Flexbox-sammenheng,
+              fordi retningen kan endres med <code>flex-direction</code>.
+            </p>
+            <p>
+              Så lenge elementene ligger på rad etter hverandre, kan vi bruke <code>align-items</code> til å
+              justere om elementene:
+            </p>
+            <ul>
+              <li>strekker seg ut over hele høyden</li>
+              <li>ligger i toppen</li>
+              <li>ligger på midten</li>
+              <li>ligger nederst</li>
+            </ul>
+
+            <table class="flex-table">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>Resultat for flex-items</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>align-items: stretch;</code> (standard)</td>
+                  <td>Elementene trekker seg over hele høyden</td>
+                </tr>
+                <tr>
+                  <td><code>align-items: flex-start;</code></td>
+                  <td>Elementene plasseres i toppen</td>
+                </tr>
+                <tr>
+                  <td><code>align-items: center;</code></td>
+                  <td>Elementene plasseres på midten</td>
+                </tr>
+                <tr>
+                  <td><code>align-items: flex-end;</code></td>
+                  <td>Elementene plasseres i bunnen</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="note">
+              <strong>Husk:</strong> Hvis du endrer <code>flex-direction</code> til <code>column</code>, vil
+              «retningen» til <code>justify-content</code> og <code>align-items</code> byttes om.
+            </div>
+            <div class="eksempel2">
+                <h3><code>align-items: flex-start</code></h3>
+                <div class="flex-start">
+           
+                    <img src="/img/Bilde18.png" alt="">
+                    <img src="/img/css3-exempel2_align-items_flexstart-view.png" alt="">
+  
+
+                </div>
+                <h3><code>align-items: flex-start</code></h3>
+                <div class="center">
+
+                    <img src="/img/css3-example2-align-center.png" alt="">
+                    <img src="/img/css3-example2-align-flexend.png" alt="">
+
+                </div>
+                <h3><code>align-items: flex-end</code></h3>
+                <div class="flex-end">
+
+                    <img src="/img/flex-end.png" alt="">
+                    <img src="/img/flex-end-view.png" alt="">
+
+                </div>
+            </div>
+          </article>
+
+          <!-- HVORDAN ELEMENTENE STREKKER SEG UT -->
+          <article class="section-card">
+            <div class="section-label">Teori</div>
+            <h2>Hvordan elementene i en flexbox strekker seg ut</h2>
+            <p>
+              En viktig egenskap ved Flexbox er at vi kan styre hvordan elementene inni flexboxen
+              fordeler plassen mellom seg.
+            </p>
+            <p>
+              Husk at elementene som ligger inni en flexbox kalles <strong>flex-items</strong>. På disse
+              kan vi sette CSS-egenskapen <code>flex</code> med verdier som avgjør størrelsesforholdet
+              mellom elementene.
+            </p>
+            <p>
+              Hvis disse elementene har lik <code>flex</code>-verdi, blir de like store. Ulike verdier gir
+              ulike forhold, for eksempel:
+            </p>
+            <pre><code>.elem1 { flex: 1; }
+.elem2 { flex: 2; }
+.elem3 { flex: 7; }</code></pre>
+            <p>
+              I dette tilfellet vil <code>.elem3</code> ta mest plass, siden den har høyest flex-verdi.
+            </p>
+            <h3><code>Flex-items</code></h3>
+
+            <div class="example3">
+                <img src="/img/Bilde16.png" alt="">
+                <img src="/img/Bilde17.png" alt="">
+
+
+            </div>
+          </article>
+
+
+          <!-- MIDTSTILLING -->
+          <article class="section-card">
+            <div class="section-label">Teori</div>
+            <h2>Midtstille elementer med Flexbox</h2>
+            <p>
+              Å midtstille innhold på nettsider er ofte et estetisk og praktisk ønske. Med Flexbox har
+              vi en enkel oppskrift for å plassere innholdet helt i midten:
+            </p>
+            <ol>
+              <li>Definer et element som en flexbox med <code>display: flex;</code>.</li>
+              <li>Sett <code>align-items: center;</code>.</li>
+              <li>Sett <code>justify-content: center;</code>.</li>
+              <li>Det du legger i flexboxen vil nå være midstilt.</li>
+              <li>
+                Hvis du skal midstille noe som består av flere elementer, kan du samle dem i et eget
+                HTML-element (for eksempel en <code>&lt;div&gt;</code>) som du midtstiller.
+              </li>
+            </ol>
+            <div class="note">
+              <strong>Ekstra tips:</strong> hvis du vil midtstille teksten inni et element, kan du i tillegg
+              bruke <code>text-align: center;</code> på det elementet.
+            </div>
+            <h3><code>Midtstille elementer</code></h3>
+            <div class="me">
+                <img src="/img/Bilde14.png" alt="">
+                <img src="/img/Bilde15.png" alt="">
+                
+
+            </div>
+            <div class="me2">
+
+                <img  src="/img/Bilde19.png" alt="">
+            </div>
+          </article>
+
+          <!-- FLEX-DIRECTION: COLUMN -->
+          <article class="section-card">
+            <div class="section-label">Teori</div>
+            <h2>Flex-direction: column og menyer</h2>
+            <p>
+              Mange nettsider har en meny (navigasjon) som inneholder lenker til andre sider. Denne
+              ligger ofte inni et <code>&lt;nav&gt;</code>-element.
+            </p>
+            <p>
+              Med Flexbox kan vi enkelt styre hvordan menyen skal se ut – for eksempel om lenkene
+              skal ligge ved siden av hverandre eller under hverandre.
+            </p>
+            <p>
+              Hvis vi vil strekke menypunktene over hele bredden, kan vi gi hvert menypunkt
+              <code>flex: 1;</code>. For å legge menypunktene under hverandre, kan vi bruke:
+            </p>
+            <pre><code>.meny {
+  display: flex;
+  flex-direction: column;
+}</code></pre>
+            <p>
+              Da vil hvert meny-element legge seg under det forrige, fortsatt kontrollert av de
+              samme Flexbox-prinsippene.
+            </p>
+          </article>
+
+          <!-- MINI OPPGAVER -->
+          <article class="section-card" id="minioppgaver">
+            <div class="section-label">Oppgaver</div>
+            <h2>Minioppgaver – Flexbox og CSS</h2>
+
+            <!-- Minioppgave 1 -->
+            <div id="minioppgave-1" class="minioppgave-card">
+              <div class="minioppgave-label">
+                <span></span>Minioppgave 1 – Introduksjon &amp; justify-content
+              </div>
+              <ol>
+                <li>
+                  Opprett et Word-dokument og lag en rapport (logg med tekst og bilder) hvor du
+                  dokumenterer alle oppgavene i dette prosjektet. Du skal levere samme dokument på
+                  fredag 27. November.
+                </li>
+                <li>
+                  Lag et HTML-dokument som inneholder flere forskjellige HTML-elementer. Dette kan
+                  inkludere elementer som <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>,
+                  <code>&lt;div&gt;</code>, lister, bilder eller tekst. Strukturer dokumentet slik at det
+                  har et tydelig layout med en container som inneholder flere elementer.
+                </li>
+                <li>
+                  Opprett en ekstern CSS-fil for å style HTML-dokumentet. I CSS-filen skal du bruke
+                  <code>justify-content</code> for å styre hvordan innholdet plasseres i en container
+                  med <code>display: flex;</code>.
+                </li>
+                <li>
+                  Test alle verdiene for <code>justify-content</code> i en av containerne dine:
+                  <code>flex-start</code>, <code>flex-end</code>, <code>center</code>,
+                  <code>space-between</code>, <code>space-around</code> og <code>space-evenly</code>.
+                </li>
+                <li>
+                  Forklar kort i rapporten hvordan de ulike verdiene påvirker plasseringen av
+                  innholdet.
+                </li>
+              </ol>
+            </div>
+
+            <!-- Minioppgave 2 -->
+            <div id="minioppgave-2" class="minioppgave-card">
+              <div class="minioppgave-label">
+                <span></span>Minioppgave 2 – Flex-forhold
+              </div>
+              <ol>
+                <li>
+                  Bruk HTML-dokumentet ditt og sett verdiene for CSS-egenskapen
+                  <code>flex</code> på tre elementer:
+                  <ul>
+                    <li><code>.elem1</code> til <code>1</code></li>
+                    <li><code>.elem2</code> til <code>2</code></li>
+                    <li><code>.elem3</code> til <code>7</code></li>
+                  </ul>
+                </li>
+                <li>
+                  Beskriv i rapporten hvilket resultat du får. Hvordan fordeler plassen seg mellom
+                  elementene?
+                </li>
+              </ol>
+            </div>
+
+            <!-- Minioppgave 3 -->
+            <div id="minioppgave-3" class="minioppgave-card">
+              <div class="minioppgave-label">
+                <span></span>Minioppgave 3 – Midtstille med tekst
+              </div>
+              <p>
+                Du har et HTML-dokument med en overskrift «tittle1» og ønsker å legge til avsnittet
+                «undertext1» under denne overskriften.
+              </p>
+              <ol>
+                <li>Bruk CSS-koden fra eksempelet for midtstilling (display: flex osv.).</li>
+                <li>
+                  Forklar kort hva du har gjort for å få avsnittet til å ligge under overskriften og
+                  hvordan det er midtstilt. Ta gjerne skjermbilder av koden din og legg i rapporten.
+                </li>
+              </ol>
+              <div class="note">
+                <strong>Hint:</strong> Pakk både overskriften og avsnittet inn i et nytt element som
+                du midtstiller. Innholdet inni dette elementet er ikke automatisk midtstilt – bruk
+                f.eks. <code>text-align: center;</code> dersom du ønsker det.
+              </div>
+            </div>
+
+            <!-- Minioppgave 4 -->
+            <div id="minioppgave-4" class="minioppgave-card">
+              <div class="minioppgave-label">
+                <span></span>Minioppgave 4 – Bildegalleri med hover-effekt
+              </div>
+              <p>
+                Lag en del av en nettside som kan brukes til å vise frem bilder med tilhørende
+                beskrivende tekst.
+              </p>
+              <p>
+                Tanken er at brukeren skal kunne se mer informasjon om de ulike objektene ved å føre
+                musepekeren over dem (hover-effekt). Du velger selv hvilke bilder du vil bruke.
+              </p>
+            </div>
+
+            <!-- Minioppgave 5 -->
+            <div id="minioppgave-5" class="minioppgave-card">
+              <div class="minioppgave-label">
+                <span></span>Minioppgave 5 – Lær Flexbox gjennom spill
+              </div>
+              <p>
+                I denne oppgaven skal dere bruke et interaktivt spill for å mestre CSS Flexbox – et
+                verktøy som gjør det mye enklere å lage fleksible, responsive design på nettet.
+              </p>
+              <p>
+                Gå til <a href="https://codingfantasy.com/" target="_blank" rel="noreferrer">https://codingfantasy.com/</a>,
+                velg vanskelighetsgrad og spill.
+              </p>
+              <p>
+                Målet er at du klarer å slå <strong>level 24</strong>. Noter gjerne i rapporten hvordan
+                spillet hjelper deg å forstå Flexbox.
+              </p>
+              <div class="note">
+                <strong>Hvorfor lære gjennom spill?</strong> Når vi spiller for å lære, blir vi mer
+                engasjert, og vi lærer ofte raskere og bedre enn når vi bare leser teori. Spillet gir
+                deg direkte tilbakemeldinger og konkrete, visuelle eksempler.
+              </div>
+            </div>
+          </article>
+
+          <!-- GRID -->
+          <article class="section-card" id="grid">
+                <div class="section-label">Teori</div>
+                <h2>CSS Grid – Neste steg</h2>
+                <p>
+                    I moderne webutvikling er det en stor fordel å bruke <strong>grid</strong> og
+                    <strong>flexbox</strong> sammen for å lage fleksible og responsive nettsider.
+                    En <strong>responsiv</strong> nettside tilpasser HTML-elementene til forskjellige
+                    skjermstørrelser – fra mobil til store skjermer.
+                </p>
+                <p>
+                    Kildekode til eksemplene i denne delen finner du her:
+                    <a href="https://github.com/Kfmoss/GRID-uke45.git" target="_blank" rel="noreferrer">
+                    https://github.com/Kfmoss/GRID-uke45.git
+                    </a>.
+                </p>
+
+                <h3>Hva er et grid?</h3>
+                <p>
+                    Et <strong>grid-layout</strong> lager et rutenett der HTML-elementer kan ligge både
+                    ved siden av hverandre og over/under hverandre. Rutene i et grid er
+                    fleksible – innhold kan strekke seg over flere ruter.
+                </p>
+                <p>
+                    Et HTML-element som utformes som et rutenett kalles et <strong>grid</strong>, og
+                    elementene inni kalles <strong>grid-items</strong>.
+                </p>
+
+                <div class="note">
+                    <strong>Husk:</strong> Flexbox er ofte best når du skal styre én retning (rad eller
+                    kolonne), mens Grid er perfekt når du vil styre både rader <em>og</em> kolonner
+                    samtidig.
+                </div>
+
+                <h3>Aktivere Grid med <code>display: grid;</code></h3>
+                <p>
+                    For at et element skal bli et grid, må du gi det
+                    <code>display: grid;</code> i CSS. Først da vil egenskaper som
+                    <code>grid-template-columns</code> og <code>grid-template-rows</code> ha effekt.
+                </p>
+
+                <pre><code>.maincontainer {
+display: grid;
+}</code></pre>
+
+                <h3>Definere kolonner og rader</h3>
+                <p>
+                    Et rutenett består av <strong>kolonner</strong> og <strong>rader</strong>:
+                </p>
+                <ul>
+                    <li><code>grid-template-columns</code> – styrer bredden på kolonnene.</li>
+                    <li><code>grid-template-rows</code> – styrer høyden på radene.</li>
+                </ul>
+                <p>
+                    En måte å definere et grid på, er å liste opp flere lengdeverdier. Disse
+                    verdiene tilsvarer bredden på kolonnene (eller høyden på radene).
+                </p>
+
+                <pre><code>.maincontainer {
+display: grid;
+width: 100%;
+height: 100vh; /* tar hele høyden til vinduet */
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 30% 70%;
+}</code></pre>
+
+                <p>
+                    I eksemplet over:
+                </p>
+                <ul>
+                    <li>
+                    <code>1fr 2fr 1fr</code> deler containeren i tre kolonner, der den
+                    midterste er dobbelt så bred som de to på sidene.
+                    </li>
+                    <li>
+                    <code>30% 70%</code> gjør at første rad får 30&nbsp;% av høyden, og andre rad
+                    70&nbsp;%. Når du bruker prosent, er høyden alltid proporsjonal med størrelsen
+                    på containeren. :contentReference[oaicite:4]{index=4}
+                    </li>
+                </ul>
+
+                <div class="note">
+                    <strong>Begreper:</strong> <code>fr</code> betyr <em>fractional unit</em> (en
+                    del av tilgjengelig plass). Prosent (%) er alltid relativt til størrelsen på
+                    grid-containeren.
+                </div>
+
+                <h3>Grid-items og områder</h3>
+                <p>
+                    Hvert element inni grid-containeren blir et <strong>grid-item</strong>. Med
+                    CSS kan vi bestemme hvilke ruter hvert element skal ligge i, og hvor mange
+                    ruter det skal strekke seg over.
+                </p>
+
+                <pre><code>&lt;div class="maincontainer"&gt;
+&lt;section class="sec0"&gt;...&lt;/section&gt;
+&lt;section class="sec1"&gt;...&lt;/section&gt;
+&lt;section class="sec2"&gt;...&lt;/section&gt;
+&lt;section class="sec3"&gt;...&lt;/section&gt;
+&lt;section class="sec4"&gt;...&lt;/section&gt;
+&lt;section class="sec5"&gt;...&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre><code>.sec0 { display: flex; background-color: cadetblue; }
+.sec1 { display: flex; background-color: coral; }
+.sec2 { display: flex; background-color: cornflowerblue; }
+.sec3 { display: flex; background-color: rgb(223, 10, 205); }
+.sec4 { display: flex; background-color: rgb(181, 235, 190); }
+.sec5 { display: flex; background-color: rgb(143, 133, 125); }</code></pre>
+
+                <p>
+                    Hvert <code>section</code>-element blir et grid-item. I eksempelet i PDF-en
+                    brukes både Grid og Flexbox: Grid til å lage selve rutenettet, og Flexbox
+                    inni rutene for å styre innholdet. :contentReference[oaicite:5]{index=5}
+                </p>
+
+                <h3>Grid i nettaviser</h3>
+                <p>
+                    Mange nettaviser bruker Grid for å utforme forsiden. Hver nyhetssak er en
+                    lenke som inneholder bilde, overskrift og eventuell ingress. Grid brukes til
+                    å styre hvor mye plass hver sak tar i bredden og høyden. :contentReference[oaicite:6]{index=6}
+                </p>
+                <p>
+                    Vi kan definere klasser som sier hvor mange kolonner og rader en sak skal
+                    strekke seg over:
+                </p>
+
+                <pre><code>.one-column  { grid-column: span 1; }
+.two-columns { grid-column: span 2; }
+.three-columns { grid-column: span 3; }
+
+/* tilsvarende for rader */
+.one-row   { grid-row: span 1; }
+.two-rows  { grid-row: span 2; }
+.three-rows { grid-row: span 3; }</code></pre>
+
+                <p>
+                    På denne måten kan forsiden bygges opp som et rutenett der noen saker får
+                    mer plass (for eksempel toppsaker), mens andre blir mindre.
+                </p>
+
+                <h3>Tekst nederst og bilde i bakgrunnen</h3>
+                <p>
+                    I eksemplet med nettaviser gjenstår det å:
+                </p>
+                <ul>
+                    <li>flytte teksten ned til venstre i hver rute</li>
+                    <li>legge et bilde bak teksten</li>
+                </ul>
+                <p>
+                    Dette kan løses ved å definere hver rute som et flex-item, og flytte teksten
+                    ned med <code>align-items: flex-end;</code> og litt <code>padding</code>.
+                    Bildet kan legges inn enten som bakgrunnsbilde eller et vanlig
+                    <code>&lt;img&gt;</code>-element som plasseres bak teksten med absolutt
+                    posisjonering. :contentReference[oaicite:7]{index=7}
+                </p>
+
+                <pre><code>.news-item {
+display: flex;              /* bruker flex inni grid-ruta */
+align-items: flex-end;      /* tekst ned i bunnen */
+padding-left: 1rem;
+padding-bottom: 1rem;
+background-size: cover;
+background-position: center;
+}</code></pre>
+
+                <div class="note">
+                    <strong>Oppsummert:</strong> Bruk Grid til å lage rutenettet (layouten) for
+                    siden, og Flexbox inni rutene for å plassere tekst og annet innhold på en
+                    fleksibel måte.
+                </div>
+            </article>
+
+
+          <!-- OPPGAVER A/B -->
+          <article class="section-card" id="oppgaver">
+            <div class="section-label">Prosjekt</div>
+            <h2>Hovedoppgaver – velg A eller B</h2>
+            <p>
+              Du skal velge mellom <strong>Oppgave A</strong> og <strong>Oppgave B</strong>. Selv om begge
+              er ganske like, er fokuset litt forskjellig:
+            </p>
+
+            <h3>Oppgave A – Fiks en eksisterende nettside</h3>
+            <p>
+              Du skal levere en rapport (logg med tekst og bilder) som viser hva du har gjort og hva du
+              har lært. Den samme rapporten brukes til å dokumentere alle minioppgavene om Flexbox og Grid.
+            </p>
+            <ul>
+              <li>
+                På onsdag kl. 08:00 vil du få en nettside som skal «fikses» ved hjelp av Flexbox.
+              </li>
+              <li>Du skal dokumentere alt du har gjort i rapporten.</li>
+              <li>
+                Forklar hvordan du har brukt de ulike CSS-egenskapene (for eksempel
+                <code>display: flex;</code>, <code>justify-content</code>, <code>align-items</code>,
+                <code>flex</code>, <code>grid-template</code> osv.).
+              </li>
+            </ul>
+
+            <h3>Oppgave B – Lag en ny nettside fra bunnen</h3>
+            <p>
+              I Oppgave B skal du lage en nettside ved hjelp av både Grid og Flexbox. Et foreslått tema
+              er en <strong>klesnettbutikk</strong>.
+            </p>
+            <ul>
+              <li>Lag layouten ved hjelp av Grid (for eksempel produktoversikt, toppmeny, footer).</li>
+              <li>Bruk Flexbox til å justere innhold inni seksjonene (kort, menyer, knapper osv.).</li>
+              <li>
+                Dokumenter hele prosessen i det samme Word-dokumentet (rapporten) med tekst, kodeutdrag
+                og skjermbilder.
+              </li>
+            </ul>
+          </article>
+
+          <!-- VURDERING -->
+          
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="pill-soft">
+              <span class="dot-soft"></span>
+              <span><strong>Logg alt</strong> – tekst &amp; bilder</span>
+            </div>
+            <h3>Rapport – hva skal med?</h3>
+            <ul>
+              <li>Skjermbilder av kode og nettsiden din.</li>
+              <li>Korte forklaringer til hva du har gjort.</li>
+              <li>
+                Refleksjon rundt hvordan Flexbox og Grid hjelper deg å bygge layouten.
+              </li>
+              <li>
+                Lenke til GitHub-repositoryet ditt (husk at det må være oppdatert).
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>CSS-stikkord til prosjektet</h3>
+            <ul>
+              <li><code>display: flex;</code> &amp; <code>display: grid;</code></li>
+              <li><code>justify-content</code> og <code>align-items</code></li>
+              <li><code>flex</code> for størrelse og forhold</li>
+              <li><code>flex-direction: row/column;</code></li>
+              <li><code>grid-template-columns</code> og rader</li>
+              <li>responsiv design (prosent, fr-enheter, media queries)</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Tips til vurderingen</h3>
+            <ul>
+              <li>Vis at du forstår begrepene – ikke bare at koden «funker».</li>
+              <li>Bruk fagord som flexbox, grid, container, flex-items osv.</li>
+              <li>Forklar hvorfor du har valgt en løsning, ikke bare hva du gjorde.</li>
+              <li>Øv litt på å presentere prosjektet muntlig på forhånd.</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>
+          <span class="dot-soft"></span>
+          Uke 48 – CSS3 · Flexbox &amp; Grid
+        </span>
+        <span>IM VG1 - Informasjonsteknologi og mediekommunikasjon. Åssiden VGS.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
