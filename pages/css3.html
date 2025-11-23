@@ -1082,18 +1082,177 @@
 
           <!-- GRID -->
           <article class="section-card" id="grid">
-            <div class="section-label">Teori</div>
-            <h2>Grid – neste steg</h2>
-            <p>
-              På onsdag skal dere få oppgaver og viktig informasjon om CSS Grid. Læreren vil
-              forklare med eksempler hvordan dere kan bruke Grid i CSS for å lage moderne og
-              oversiktlige nettsider.
-            </p>
-            <p>
-              Grid og Flexbox brukes ofte sammen: Grid for den overordnede strukturen, og Flexbox
-              for å justere innhold inni hver «rute».
-            </p>
-          </article>
+                <div class="section-label">Teori</div>
+                <h2>CSS Grid – Neste steg</h2>
+                <p>
+                    I moderne webutvikling er det en stor fordel å bruke <strong>grid</strong> og
+                    <strong>flexbox</strong> sammen for å lage fleksible og responsive nettsider.
+                    En <strong>responsiv</strong> nettside tilpasser HTML-elementene til forskjellige
+                    skjermstørrelser – fra mobil til store skjermer.
+                </p>
+                <p>
+                    Kildekode til eksemplene i denne delen finner du her:
+                    <a href="https://github.com/Kfmoss/GRID-uke45.git" target="_blank" rel="noreferrer">
+                    https://github.com/Kfmoss/GRID-uke45.git
+                    </a>.
+                </p>
+
+                <h3>Hva er et grid?</h3>
+                <p>
+                    Et <strong>grid-layout</strong> lager et rutenett der HTML-elementer kan ligge både
+                    ved siden av hverandre og over/under hverandre. Rutene i et grid er
+                    fleksible – innhold kan strekke seg over flere ruter.
+                </p>
+                <p>
+                    Et HTML-element som utformes som et rutenett kalles et <strong>grid</strong>, og
+                    elementene inni kalles <strong>grid-items</strong>.
+                </p>
+
+                <div class="note">
+                    <strong>Husk:</strong> Flexbox er ofte best når du skal styre én retning (rad eller
+                    kolonne), mens Grid er perfekt når du vil styre både rader <em>og</em> kolonner
+                    samtidig.
+                </div>
+
+                <h3>Aktivere Grid med <code>display: grid;</code></h3>
+                <p>
+                    For at et element skal bli et grid, må du gi det
+                    <code>display: grid;</code> i CSS. Først da vil egenskaper som
+                    <code>grid-template-columns</code> og <code>grid-template-rows</code> ha effekt.
+                </p>
+
+                <pre><code>.maincontainer {
+display: grid;
+}</code></pre>
+
+                <h3>Definere kolonner og rader</h3>
+                <p>
+                    Et rutenett består av <strong>kolonner</strong> og <strong>rader</strong>:
+                </p>
+                <ul>
+                    <li><code>grid-template-columns</code> – styrer bredden på kolonnene.</li>
+                    <li><code>grid-template-rows</code> – styrer høyden på radene.</li>
+                </ul>
+                <p>
+                    En måte å definere et grid på, er å liste opp flere lengdeverdier. Disse
+                    verdiene tilsvarer bredden på kolonnene (eller høyden på radene).
+                </p>
+
+                <pre><code>.maincontainer {
+display: grid;
+width: 100%;
+height: 100vh; /* tar hele høyden til vinduet */
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 30% 70%;
+}</code></pre>
+
+                <p>
+                    I eksemplet over:
+                </p>
+                <ul>
+                    <li>
+                    <code>1fr 2fr 1fr</code> deler containeren i tre kolonner, der den
+                    midterste er dobbelt så bred som de to på sidene.
+                    </li>
+                    <li>
+                    <code>30% 70%</code> gjør at første rad får 30&nbsp;% av høyden, og andre rad
+                    70&nbsp;%. Når du bruker prosent, er høyden alltid proporsjonal med størrelsen
+                    på containeren. :contentReference[oaicite:4]{index=4}
+                    </li>
+                </ul>
+
+                <div class="note">
+                    <strong>Begreper:</strong> <code>fr</code> betyr <em>fractional unit</em> (en
+                    del av tilgjengelig plass). Prosent (%) er alltid relativt til størrelsen på
+                    grid-containeren.
+                </div>
+
+                <h3>Grid-items og områder</h3>
+                <p>
+                    Hvert element inni grid-containeren blir et <strong>grid-item</strong>. Med
+                    CSS kan vi bestemme hvilke ruter hvert element skal ligge i, og hvor mange
+                    ruter det skal strekke seg over.
+                </p>
+
+                <pre><code>&lt;div class="maincontainer"&gt;
+&lt;section class="sec0"&gt;...&lt;/section&gt;
+&lt;section class="sec1"&gt;...&lt;/section&gt;
+&lt;section class="sec2"&gt;...&lt;/section&gt;
+&lt;section class="sec3"&gt;...&lt;/section&gt;
+&lt;section class="sec4"&gt;...&lt;/section&gt;
+&lt;section class="sec5"&gt;...&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre><code>.sec0 { display: flex; background-color: cadetblue; }
+.sec1 { display: flex; background-color: coral; }
+.sec2 { display: flex; background-color: cornflowerblue; }
+.sec3 { display: flex; background-color: rgb(223, 10, 205); }
+.sec4 { display: flex; background-color: rgb(181, 235, 190); }
+.sec5 { display: flex; background-color: rgb(143, 133, 125); }</code></pre>
+
+                <p>
+                    Hvert <code>section</code>-element blir et grid-item. I eksempelet i PDF-en
+                    brukes både Grid og Flexbox: Grid til å lage selve rutenettet, og Flexbox
+                    inni rutene for å styre innholdet. :contentReference[oaicite:5]{index=5}
+                </p>
+
+                <h3>Grid i nettaviser</h3>
+                <p>
+                    Mange nettaviser bruker Grid for å utforme forsiden. Hver nyhetssak er en
+                    lenke som inneholder bilde, overskrift og eventuell ingress. Grid brukes til
+                    å styre hvor mye plass hver sak tar i bredden og høyden. :contentReference[oaicite:6]{index=6}
+                </p>
+                <p>
+                    Vi kan definere klasser som sier hvor mange kolonner og rader en sak skal
+                    strekke seg over:
+                </p>
+
+                <pre><code>.one-column  { grid-column: span 1; }
+.two-columns { grid-column: span 2; }
+.three-columns { grid-column: span 3; }
+
+/* tilsvarende for rader */
+.one-row   { grid-row: span 1; }
+.two-rows  { grid-row: span 2; }
+.three-rows { grid-row: span 3; }</code></pre>
+
+                <p>
+                    På denne måten kan forsiden bygges opp som et rutenett der noen saker får
+                    mer plass (for eksempel toppsaker), mens andre blir mindre.
+                </p>
+
+                <h3>Tekst nederst og bilde i bakgrunnen</h3>
+                <p>
+                    I eksemplet med nettaviser gjenstår det å:
+                </p>
+                <ul>
+                    <li>flytte teksten ned til venstre i hver rute</li>
+                    <li>legge et bilde bak teksten</li>
+                </ul>
+                <p>
+                    Dette kan løses ved å definere hver rute som et flex-item, og flytte teksten
+                    ned med <code>align-items: flex-end;</code> og litt <code>padding</code>.
+                    Bildet kan legges inn enten som bakgrunnsbilde eller et vanlig
+                    <code>&lt;img&gt;</code>-element som plasseres bak teksten med absolutt
+                    posisjonering. :contentReference[oaicite:7]{index=7}
+                </p>
+
+                <pre><code>.news-item {
+display: flex;              /* bruker flex inni grid-ruta */
+align-items: flex-end;      /* tekst ned i bunnen */
+padding-left: 1rem;
+padding-bottom: 1rem;
+background-size: cover;
+background-position: center;
+}</code></pre>
+
+                <div class="note">
+                    <strong>Oppsummert:</strong> Bruk Grid til å lage rutenettet (layouten) for
+                    siden, og Flexbox inni rutene for å plassere tekst og annet innhold på en
+                    fleksibel måte.
+                </div>
+            </article>
+
 
           <!-- OPPGAVER A/B -->
           <article class="section-card" id="oppgaver">
@@ -1189,9 +1348,9 @@
       <div class="footer-inner">
         <span>
           <span class="dot-soft"></span>
-          Uke 45 – CSS3 · Flexbox &amp; Grid
+          Uke 48 – CSS3 · Flexbox &amp; Grid
         </span>
-        <span>Basert på prosjektbeskrivelsen din i PDF-format.</span>
+        <span>IM VG1 - Informasjonsteknologi og mediekommunikasjon. Åssiden VGS.</span>
       </div>
     </footer>
   </div>
