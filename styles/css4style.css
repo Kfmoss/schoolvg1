@@ -3,4 +3,46 @@ html{
     padding: 0;
     margin: 0;
     font-family: "Google Sans Flex", sans-serif;
+    box-sizing: border-box;
+    
 }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main"
+    "Footer footer footer";
+    margin: 1.5rem;
+}
+.nav_cont{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    
+}
+.nav_cont .nav_lenker{
+    display: flex;
+    list-style: none;
+}
+.nav_cont li{
+    padding: 1.25rem;
+    border: 1px #ffff solid;
+}
+
+.nav_lenker a{
+
+    text-decoration: none;
+    color: black;
+    padding: .75rem;
+    font-size: 1.2rem;
+}
+.nav_cont li:hover{
+    border: 1px rosybrown solid;
+
+}
+
+
+
