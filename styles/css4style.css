@@ -3,4 +3,109 @@ html{
     padding: 0;
     margin: 0;
     font-family: "Google Sans Flex", sans-serif;
+    box-sizing: border-box;
+    
 }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav"
+    "main main"
+    "Footer footer";
+    margin: 1.5rem;
+}
+.nav_cont{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4.5rem;
+    
+}
+.nav_cont .nav_lenker{
+    display: flex;
+    list-style: none;
+}
+.nav_cont li{
+    padding: 1.25rem;
+    border: 1px #ffff solid;
+}
+
+.nav_lenker a{
+
+    text-decoration: none;
+    color: black;
+    padding: .75rem;
+    font-size: 1.2rem;
+}
+.nav_cont li:hover{
+    border: 1px rosybrown solid;
+
+}
+.main_cont{
+    grid-area: main;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "google fonta";
+
+}
+.main_cont #google{
+    grid-area: google;
+    display: flex;
+    justify-content: center;
+
+    /* margin: 0 1.125rem 0 1.125rem; */
+}
+
+#google .description1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* border: 1px solid grey; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 30% 0 30%; 
+    background-color: rgb(236, 236, 228);   
+}
+#google .description1 p{
+    margin: 0 1.4rem 0 1.4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+#google .description1 iframe{
+    margin:0 .75rem 0 .75rem
+}
+
+
+.main_cont #FontAwesome{
+    grid-area: fonta;
+    display: flex;
+    justify-content: center;
+}
+
+#FontAwesome .description2{
+    background-color: rgb(236, 236, 228); 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* border: 1px solid grey; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 30% 0 30%; 
+}
+
+#FontAwesome .description2 iframe{
+     margin:0 .75rem 0 .75rem
+}
+#FontAwesome .description2 p{
+    margin: 0 1.4rem 0 1.4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
