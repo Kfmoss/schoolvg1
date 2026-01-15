@@ -50,26 +50,23 @@ html{
     grid-template-columns:repeat(2,1fr);
     grid-template-rows: auto;
     grid-template-areas:
-    "google fonta";
+    "google fonta"
+    "media ressurser";
 
 }
 .main_cont #google{
     grid-area: google;
     display: flex;
     justify-content: center;
-
-    /* margin: 0 1.125rem 0 1.125rem; */
 }
 
 #google .description1{
     display: flex;
     flex-direction: column;
     width: 80%;
-    /* border: 1px solid grey; */
     align-items: center;
-    justify-content: center;
     margin: 0 30% 0 30%; 
-    background-color: rgb(236, 236, 228);   
+   
 }
 #google .description1 p{
     margin: 0 1.4rem 0 1.4rem;
@@ -86,16 +83,15 @@ html{
     grid-area: fonta;
     display: flex;
     justify-content: center;
+    background-color: aquamarine;
 }
 
 #FontAwesome .description2{
-    background-color: rgb(236, 236, 228); 
+
     display: flex;
     flex-direction: column;
     width: 80%;
-    /* border: 1px solid grey; */
     align-items: center;
-    justify-content: center;
     margin: 0 30% 0 30%; 
 }
 
@@ -108,4 +104,42 @@ html{
     padding-top: 2rem;
     font-size: 1.2rem;
 }
+.main_cont #media{
+    grid-area: media;
+ 
+    background-color: aquamarine;
 
+}
+.figma{
+    text-align: center;
+    margin: 0 10% 0 10%;
+
+    /* display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 0 30% 0 30%;  */
+
+
+}
+.figma p{
+    margin: 0 1.4rem 0 1.4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+
+}
+
+
+.main_cont #ress{
+    grid-area:ressurser;
+    padding-top: 2.5rem;
+
+   
+}
+#ress p{
+    margin: 0 1.4rem 0 1.4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
