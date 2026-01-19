@@ -9,7 +9,8 @@
 html, body {
     scroll-behavior: smooth;
     height: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "montserrat", sans-serif ;
 }
 
 /* Main container with proper grid layout */
@@ -99,7 +100,7 @@ html, body {
 /* Footer */
 .footerMain {
     grid-area: footer;
-    background-color: #333;
+    background-color: #2754ce;
     display: flex;
     flex-direction: column;
     justify-content: center;
