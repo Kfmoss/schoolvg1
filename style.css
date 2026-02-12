@@ -612,6 +612,13 @@ a:hover, a:focus {
 
 }
 .grunnHTML p{
+    margin: 0 1.225rem 0 1.225rem ;
+    font-size: 1.5rem;
+    line-height: 2.7;
+    word-spacing: 0.35rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
     padding: .75rem 0 .75rem 0;
     font-size: 1.25rem;
 
