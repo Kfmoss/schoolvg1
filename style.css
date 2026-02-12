@@ -609,6 +609,7 @@ a:hover, a:focus {
 
 .grunnHTML{
     padding: 1.75rem 0 .75rem 0;
+    background-color: #eff8fc;
 
 }
 .grunnHTML p{
@@ -623,6 +624,9 @@ a:hover, a:focus {
     font-size: 1.25rem;
 
 }
+.eksempler{
+    list-style: none;
+}
 
 .grunnHTML .textspeech2{
     font-size: 2rem;
@@ -636,12 +640,19 @@ a:hover, a:focus {
     display: flex;
     flex-direction: column;
     padding: 1.75rem 0 .75rem 0;
-    background-color: #f0f1f6;
+    background-color: #eff8fc;
+   
 
 }
 .tagger p{
     padding: .75rem 0 .75rem 0;
-    font-size: 1.25rem;
+    margin: 0 1.225rem 0 1.225rem ;
+    font-size: 1.5rem;
+    line-height: 2.7;
+    word-spacing: 0.35rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
 }
 
 .tagg_beskrivelse{
@@ -679,7 +690,6 @@ a:hover, a:focus {
 }
 .html_innhold{
     list-style: none;
-
 }
 .html_innhold li{
     padding-left: 2rem;
