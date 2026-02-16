@@ -750,7 +750,7 @@ a:hover, a:focus {
     width: 100%;
 }
 .fork_dom{
-    border: 1px solid black;
+    
     background-color: #E2E0C8;
 }
 
@@ -793,6 +793,35 @@ a:hover, a:focus {
     margin-left: 1.2rem;
     margin-left: 1.2rem;
 }
+.git_github{
+    background-color: #eff8fc;
+   
+}
+.git_github p{
+    padding: .75rem 0 .75rem 0;
+    margin: 0 1.2rem 0 1.2rem ;
+    font-size: 1.5rem;
+    line-height: 2.7;
+    word-spacing: 0.35rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.install_git{
+
+    background-color: #eff8fc;
+}
+.git ul{
+    list-style: none;
+}
+.install_git_mac{
+    background-color: #eff8fc;
+
+}
+.useGitGitHub{
+    background-color: #eff8fc;
+
+}
+
+
 /* -------------------------------------- Om JavaScript------------------------------------- */
 
 .hoved_containeromjs{
