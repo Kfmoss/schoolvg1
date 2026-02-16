@@ -429,7 +429,6 @@ figcaption {
 .html-tagger-tabell {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
     background: #f9f9f9;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     border-radius: 8px;
@@ -591,14 +590,14 @@ a:hover, a:focus {
 }
 .introHTML p{
     margin: 0 1.225rem 0 1.225rem ;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2.7;
     word-spacing: 0.35rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
-    /* padding: .75rem 0 .75rem 0;
-    font-size: 1.50rem; */
+.introHTML h1, h4{
+    margin-left: 1.2rem;
 }
 .introHTML .textspeech1{
     font-size: 2rem;
@@ -611,6 +610,9 @@ a:hover, a:focus {
     padding: 1.75rem 0 .75rem 0;
     background-color: #eff8fc;
 
+}
+.grunnHTML h2, h3, h4{
+    margin-left: 1.2rem;
 }
 .grunnHTML p{
     margin: 0 1.225rem 0 1.225rem ;
@@ -644,6 +646,9 @@ a:hover, a:focus {
    
 
 }
+.tagger h2, h4{
+    margin-left: 1.2rem;
+}
 .tagger p{
     padding: .75rem 0 .75rem 0;
     margin: 0 1.225rem 0 1.225rem ;
@@ -668,6 +673,7 @@ a:hover, a:focus {
     padding-bottom: 0.75rem;
 
 }
+
 .bincode_img{
     width: 25rem;
 }
@@ -681,23 +687,57 @@ a:hover, a:focus {
 }
 .tagg_metafor li{
     padding: 3rem;
+    
 
 
 }
 .tagg_metafor img{
     width: 20rem;
+    box-shadow: 5px 5px 5px rgb(29, 29, 29);
 
+}
+.dom_forklaring{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.dom_forklaring li{
+    padding: 0 1.2rem;
 }
 .html_innhold{
     list-style: none;
+    background-color:#fff;
+    margin-left:1.2rem;
+    margin-right: 1.2rem;
+    display: flex;
+    justify-content:space-around;
 }
 .html_innhold li{
     padding-left: 2rem;
-}
-.workflow_nettleser{
-        padding: .75rem 0 .75rem 0;
-    font-size: 1.25rem;
+    box-shadow: 5px 5px 5px rgb(29, 29, 29);
+    
+    
 
+}
+
+
+
+
+.workflow_nettleser{
+    padding: .75rem 0 .75rem 0;
+    font-size: 1.25rem;
+    background-color: #eff8fc;
+
+}
+.workflow_nettleser h2, h4{
+    margin-left: 1.2rem;
+}
+.workflow_nettleser p{
+    margin: 0 1.225rem 0 1.225rem ;
+    font-size: 1.3rem;
+    line-height: 2.7;
+    word-spacing: 0.35rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .workflow_nettleser figure{
     display: flex;
@@ -717,7 +757,6 @@ a:hover, a:focus {
 .html-tagger-tabell {
   width: 100%;
   border-collapse: collapse;
-  margin: 1em 0;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -741,6 +780,18 @@ a:hover, a:focus {
 }
 .html-tagger-tabell strong {
   color: #005a9e;
+}
+.cont_tabell{
+    margin:0 1.2rem;
+}
+
+.eksempler{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1.2rem;
+    margin-left: 1.2rem;
 }
 /* -------------------------------------- Om JavaScript------------------------------------- */
 

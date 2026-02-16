@@ -40,10 +40,22 @@
                 <p id="speechText">
         
                     Har du noen gang lurt på hvordan nettsider blir til? 
-                    Svaret starter nesten alltid med HTML og CSS. HTML bygger selve skjelettet på en nettside – overskrifter, tekst, bilder og lenker. CSS gir sidene farge, form og stil. Sammen skaper de alt fra enkle blogger til avanserte nettbutikker.
-                    Selv i en tid med moderne rammeverk som React, Angular og Vue, ligger HTML-strukturen fortsatt i bunnen. Når du forstår HTML og CSS, blir det mye enklere å lære nye verktøy og teknologier. Du får et solid fundament som gjør deg mer fleksibel og verdifull som utvikler eller designer.
-                    I Norge er etterspørselen etter folk som kan bygge brukervennlige og pene nettsider fortsatt høy. Med kunnskap i HTML, CSS og JavaScript kan du åpne døren til en spennende karriere – enten du vil lage egne prosjekter, jobbe i et kreativt byrå eller bidra til å utvikle digitale løsninger for bedrifter.
-                    Å lære HTML og CSS handler ikke bare om koding – det handler om å skape, forme og dele ideer med verden.
+                    Svaret starter nesten alltid med HTML og CSS. HTML bygger 
+                    selve skjelettet på en nettside – overskrifter, tekst, bilder 
+                    og lenker. CSS gir sidene farge, form og stil. Sammen skaper 
+                    de alt fra enkle blogger til avanserte nettbutikker. <br> 
+                    Selv i en tid med moderne rammeverk som React, Angular og Vue, 
+                    ligger HTML-strukturen fortsatt i bunnen. Når du forstår HTML 
+                    og CSS, blir det mye enklere å lære nye verktøy og teknologier. 
+                    Du får et solid fundament som gjør deg mer fleksibel og verdifull 
+                    som utvikler eller designer. <br> 
+                    I Norge er etterspørselen etter folk som kan bygge brukervennlige 
+                    og pene nettsider fortsatt høy. Med kunnskap i HTML, CSS og 
+                    JavaScript kan du åpne døren til en spennende karriere – 
+                    enten du vil lage egne prosjekter, jobbe i et kreativt byrå 
+                    eller bidra til å utvikle digitale løsninger for bedrifter.
+                    Å lære HTML og CSS handler ikke bare om koding – det handler 
+                    om å skape, forme og dele ideer med verden.
                 </p>
 
             </article>
@@ -76,9 +88,9 @@
                     
                     La oss si at vi har tre forskjellige esker, hver med sitt innhold:
                     <ul class="html_innhold">
-                        <li><p>Eske 1 inneholder et par Nike-sko</p></li>
-                        <li><p>Eske 2 inneholder sjokolade</p></li>
-                        <li><p>Eske 3 inneholder pizza</p></li>
+                        <li><p>Eske 1. <br>  Inneholder Nike-sko</p></li>
+                        <li><p>Eske 2. <br> Inneholder sjokolade</p></li>
+                        <li><p>Eske 3. <br>  Inneholder pizza</p></li>
                     </ul>
 
 
@@ -90,17 +102,17 @@
                     <li><img src="img/chocolate.jpg" alt=""></li>
                     <li><img src="img/pizza.jpg" alt=""></li>
                 </ul>
-                <p>Hvis vi bruker en kodeeditor, kan disse eskene – altså taggene – se slik ut:</p>
+               
 
                 <ul class="eksempler">
+                    <li> <p>Hvis vi bruker en kodeeditor, kan disse eskene – altså taggene – se slik ut:</p></li>
                     <li><img src="img/htmlbasic1.png" alt=""></li>
+                    <li><p>Men ekte HTML-tagger ser slik ut:</p></li>
+                    <li><img src="img/ektetagg.png" alt=""></li>
                     
                 </ul>
-                <p>
-                    Men ekte HTML-tagger ser slik ut:
 
-                </p>
-                <img src="img/ektetagg.png" alt="">
+               
 
 
 
@@ -119,68 +131,71 @@
                     påvirker nettsidens utseende, selv om enkelte eldre versjoner av HTML har støtte for dette direkte. 
                     For funksjonalitet benyttes et skriptspråk, hvor JavaScript er det mest brukte i dag.
                 </p>
-                <table class="html-tagger-tabell">
-                <thead>
-                    <tr>
-                    <th>Tagg</th>
-                    <th>Forklaring</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td><strong>&lt;!DOCTYPE html&gt;</strong></td>
-                    <td>Deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;html&gt;</strong></td>
-                    <td>Den overordnede containeren for hele HTML-dokumentet.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;head&gt;</strong></td>
-                    <td>Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;title&gt;</strong></td>
-                    <td>Viser navnet på siden i nettleserens fane.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;body&gt;</strong></td>
-                    <td>Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;h1&gt;, &lt;h2&gt;, osv.</strong></td>
-                    <td>Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;p&gt;</strong></td>
-                    <td>Avsnitt som brukes for å gruppere tekst.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;a&gt;</strong></td>
-                    <td>Anker-tagg som brukes til å lage lenker. <code>href</code>-attributtet angir hvor lenken går.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;ul&gt;</strong> og <strong>&lt;li&gt;</strong></td>
-                    <td>En uordnet liste (<strong>ul</strong> står for "unordered list") og listeelementer (<strong>li</strong> står for "list item").</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;br&gt;</strong></td>
-                    <td>Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;hr&gt;</strong></td>
-                    <td>Horisontal linje som brukes til å visuelt dele opp innhold.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;img&gt;</strong></td>
-                    <td>Brukes for å vise bilder på nettsiden.</td>
-                    </tr>
-                    <tr>
-                    <td><strong>&lt;div&gt;</strong></td>
-                    <td>En container som brukes til å gruppere innhold og strukturere siden.</td>
-                    </tr>
-                </tbody>
-                </table>
+                <div class="cont_tabell">
+
+                    <table class="html-tagger-tabell">
+                    <thead>
+                        <tr>
+                        <th><p>Tagg</p></th>
+                        <th><p>Forklaring</p></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td><strong>&lt;!DOCTYPE html&gt;</strong></td>
+                        <td>Deklarasjon som forteller nettleseren at dokumentet er skrevet i HTML5.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;html&gt;</strong></td>
+                        <td>Den overordnede containeren for hele HTML-dokumentet.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;head&gt;</strong></td>
+                        <td>Inneholder metadata om dokumentet, som for eksempel tegnsett og tittel.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;title&gt;</strong></td>
+                        <td>Viser navnet på siden i nettleserens fane.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;body&gt;</strong></td>
+                        <td>Inneholder det som vises på nettsiden, inkludert tekst, lenker, bilder, osv.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;h1&gt;, &lt;h2&gt;, osv.</strong></td>
+                        <td>Overskrifter av forskjellige nivåer, hvor &lt;h1&gt; er den største og mest betydningsfulle.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;p&gt;</strong></td>
+                        <td>Avsnitt som brukes for å gruppere tekst.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;a&gt;</strong></td>
+                        <td>Anker-tagg som brukes til å lage lenker. <code>href</code>-attributtet angir hvor lenken går.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;ul&gt;</strong> og <strong>&lt;li&gt;</strong></td>
+                        <td>En uordnet liste (<strong>ul</strong> står for "unordered list") og listeelementer (<strong>li</strong> står for "list item").</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;br&gt;</strong></td>
+                        <td>Linjeskift som brukes til å lage en ny linje uten å starte et nytt avsnitt.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;hr&gt;</strong></td>
+                        <td>Horisontal linje som brukes til å visuelt dele opp innhold.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;img&gt;</strong></td>
+                        <td>Brukes for å vise bilder på nettsiden.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>&lt;div&gt;</strong></td>
+                        <td>En container som brukes til å gruppere innhold og strukturere siden.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
 
                 
 
@@ -202,11 +217,16 @@
                         <img style="border: 1px solid black;width:50%; " src="img/dom_bygging_forbedret.png" alt="">
                     </figure>
                 </p>
-                <p>
-                    Diagrammet under viser et eksempel på DOM-hierarkiet av elementene.
-                    <figure style="display: flex;flex-direction: column; justify-content: center;">
-                        <div style="display: flex; justify-content: centers;"><img style="width: 25rem;height: 25rem;" class="dom1" src="img/DOM1.png" alt="">
-                        <img style="width: 25rem; height:25rem;" src="img/DOM2.png" alt="">
+                <h3>Diagrammet viser et eksempel på DOM-hierarkiet av elementene.</h3>
+                <ul class="dom_forklaring">
+                    <li><img class="dom1" src="img/DOM1.png" alt=""></li>
+                    <li><img src="img/DOM2.png" alt=""></li>
+                    <li><img src="img/resDOM.png" alt=""></li>
+
+                </ul>
+                    <figure >
+                        <div>
+                       
                         </div>
                         <figcaption class="fork_dom"> <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>  <strong>&lt;html&gt;</strong> er rotelementet i dokumentet. <br>
                              Alle andre elementer er etterkommere av dette. <br> 
@@ -215,8 +235,8 @@
                         </figcaption>
                     </figure>
                     <p>Etter at DOM-strukturen er opprettet, vil nettleseren vise elementene på skjermen.</p>
-                    <img style="margin: .75rem 0 ; border: 1px solid black; width: 30%; " src="img/resDOM.png" alt="">
-                </p>
+                    
+               
                 <h3>Du finner mer informasjon om Tagger og HTML-struktur <a style="text-decoration: none;" href="https://ndla.no/nb/r/konseptutvikling-og-programmering-im-ikm-vg1/nettsider-bygges-med-html-kode/bc8e8d7310">HER</a>. </h3>
             </article>
 
