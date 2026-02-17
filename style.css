@@ -326,9 +326,7 @@ body {
     display: flex;
     align-items: center;
 }
-.basicNav li {
-    /* margin: 0 1.2rem 0 0; */
-}
+
 .basicNav a {
     color: #fff;
     text-decoration: none;
@@ -712,8 +710,6 @@ a:hover, a:focus {
 .html_innhold li{
     padding-left: 2rem;
     box-shadow: 5px 5px 5px rgb(29, 29, 29);
-    
-    
 
 }
 
@@ -816,6 +812,26 @@ a:hover, a:focus {
 .useGitGitHub{
     background-color: #eff8fc;
 
+}
+#btn_up{
+    display: none; /* Hidden by default */
+    position: fixed; 
+    bottom: 3.5em; 
+    right: 3.5em; 
+    z-index: 99; 
+    padding: 2.5rem;
+    background-color: #a3d9ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px grey;
+}
+#btn_up p{
+    color:#000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 
