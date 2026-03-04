@@ -638,7 +638,7 @@ a:hover, a:focus {
     flex-direction: column;
     padding: 1.75rem 0 .75rem 0;
     background-color: #eff8fc;
-   
+
 
 }
 .tagger h2, h4{
@@ -682,7 +682,7 @@ a:hover, a:focus {
 }
 .tagg_metafor li{
     padding: 3rem;
-    
+
 
 
 }
@@ -699,6 +699,89 @@ a:hover, a:focus {
 .dom_forklaring li{
     padding: 0 1.2rem;
 }
+.Ki{
+    margin-left:5% ;
+    margin-right: 5%;
+
+    background-color: #fff;
+    border: 2px solid purple;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "interaksjon chat";
+
+}
+.Ki .ki_alt{
+    list-style: none;
+    grid-area: interaksjon;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+.Ki .ki_alt li{
+    padding: 1.125rem;
+
+}
+
+.Ki .ki_alt button{
+    border: none;
+    font-size: 1.2rem;
+    padding: 1.125rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition:ease 0.3s;
+}
+.Ki .ki_alt button:hover{
+    background-color:#d3b21f;
+
+}
+.chatKi{
+    grid-area: chat;
+    background-color:#f7f7f8;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 100%;
+
+}
+#_window{
+    margin: .75rem 1rem;
+    padding: 1.5rem;
+    /* prevent the inner box from forcing the parent taller */
+    height: 100%;            /* take up all of .Window_chat’s height */
+    max-height: 100%;        /* never exceed the parent */
+    overflow-y: auto;        /* scroll this element if text overflows */
+    overflow-x: hidden;
+    font-size: 1.5rem;
+    line-height: 2.7;
+    word-spacing: 0.35rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;  /* include padding in height calculations */
+
+}
+#_window ::-webkit-scrollbar{
+    width: 8px;
+}
+
+#_window::-webkit-scrollbar-track{
+    background-color: #6e5858;
+    border-radius: 10px;
+
+}
+#_window ::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+#_window ::-webkit-scrollbar-track:hover{
+    background: #555;
+}
+
+
+
 .html_innhold{
     list-style: none;
     background-color:#fff;
@@ -743,7 +826,7 @@ a:hover, a:focus {
     width: 100%;
 }
 .fork_dom{
-    
+
     background-color: #E2E0C8;
 }
 
@@ -788,7 +871,7 @@ a:hover, a:focus {
 }
 .git_github{
     background-color: #eff8fc;
-   
+
 }
 .git_github p{
     padding: .75rem 0 .75rem 0;
@@ -815,10 +898,10 @@ a:hover, a:focus {
 }
 #btn_up{
     display: none; /* Hidden by default */
-    position: fixed; 
-    bottom: 3.5em; 
-    right: 3.5em; 
-    z-index: 99; 
+    position: fixed;
+    bottom: 3.5em;
+    right: 3.5em;
+    z-index: 99;
     padding: 2.5rem;
     background-color: #a3d9ee;
     color: white;

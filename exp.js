@@ -1,3 +1,68 @@
+import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
+import{has} from './rest.js';
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+const genAI = new GoogleGenerativeAI(has);
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
+const spm = "hva er "; 
+
+const btn_send = document.getElementById('btn_send').addEventListener("click", () =>{
+    // console.log("pleaseeeeee");
+    // const qst = document.getElementById('input_bruker').value;
+    const qst = spm+"DOM HTML";
+    const window = document.getElementById('_window');
+    // const inp = document.getElementById('input_bruker');
+    // console.log(qst);
+    async function spørGemini(qst) {
+      try{
+
+        const result = await model.generateContent(qst);
+        const response = await result.response;
+        const text = await result.response.text();
+        window.innerHTML = marked.parse(text);
+        
+        // console.log(text);
+    
+
+
+      }
+      catch(error)
+      {
+        console.error("Houston, we have a problem: ", error);
+
+      }
+
+      
+    }
+    spørGemini(qst);    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let isReading = false;

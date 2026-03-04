@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Grunnleggende HTML</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "@google/generai": "https://esm.run/@google/generai"
+        }
+    }
+    </script>
 
 </head>
 <body>
@@ -196,6 +203,7 @@
                         </tr>
                     </tbody>
                     </table>
+                    <div></div>
                 </div>
 
                 
@@ -226,19 +234,38 @@
 
                 </ul>
 
-                    <figure >
-                        <figcaption class="fork_dom"> <h4 class="textspeech1">
-                            <i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
-                            <p><strong>&lt;html&gt;</strong> er 
-                            rotelementet i dokumentet. 
-                             Alle andre elementer er etterkommere av dette. <br> 
-                            &lt;html&gt; har to direkte barn: <strong>&lt;head&gt;</strong> 
-                             og <strong>&lt;body&gt;</strong>. <br> Head-elementet inneholder et 
-                             title-element. Teksten "Grunnleggende HTML" er innholdet i title-elementet.
-                            Body-elementet inneholder et h1-element (en overskrift). 
-                            Teksten "Åssiden videregående skole" er innholdet i h1-elementet.</p>
-                        </figcaption>
-                    </figure>
+                <div class="Ki">
+                    <ul class="ki_alt">
+                        <li><button> <span>Forklar på nytt</span></button></li>
+                        <li><button><span>Mer informasjon</span></button></li>
+                        <li><button id="btn_send"><span>DOM</span></button></li>
+                        <li><button><span>Tagg</span></button></li>
+                    </ul>
+               
+                    <div class="chatKi">
+                        <p id="_window" class="_window"></p>
+
+                    </div>
+                
+
+                </div>
+
+                <figure >
+                    <figcaption class="fork_dom"> <h4 class="textspeech1">
+                        <i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <p><strong>&lt;html&gt;</strong> er 
+                        rotelementet i dokumentet. 
+                            Alle andre elementer er etterkommere av dette. <br> 
+                        &lt;html&gt; har to direkte barn: <strong>&lt;head&gt;</strong> 
+                            og <strong>&lt;body&gt;</strong>. <br> Head-elementet inneholder et 
+                            title-element. Teksten "Grunnleggende HTML" er innholdet i title-elementet.
+                        Body-elementet inneholder et h1-element (en overskrift). 
+                        Teksten "Åssiden videregående skole" er innholdet i h1-elementet.</p>
+                    </figcaption>
+                </figure>
+
+
+                
 
                     
                
@@ -437,7 +464,8 @@
         </main>
     </div>
 
-    <script src="exp.js"></script>
+    <!-- Use a module script so that import statements in exp.js are allowed -->
+    <script type="module" src="exp.js"></script>
 </body>
 </html>
 
