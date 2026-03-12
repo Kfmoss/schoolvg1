@@ -7,8 +7,6 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 const spm = "hva er "; 
 
 const btn_send = document.getElementById('btn_send').addEventListener("click", () =>{
-    // console.log("pleaseeeeee");
-    // const qst = document.getElementById('input_bruker').value;
     const qst = spm+"DOM HTML";
     const window = document.getElementById('_window');
     // const inp = document.getElementById('input_bruker');
@@ -20,18 +18,13 @@ const btn_send = document.getElementById('btn_send').addEventListener("click", (
         const response = await result.response;
         const text = await result.response.text();
         window.innerHTML = marked.parse(text);
-        
-        // console.log(text);
     
-
-
       }
       catch(error)
       {
         console.error("Houston, we have a problem: ", error);
 
       }
-
       
     }
     spørGemini(qst);    
