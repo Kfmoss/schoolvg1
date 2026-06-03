@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
-import { has } from './rest.js';
+import { has } from './api/gemini.js';
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 const genAI = new GoogleGenerativeAI(has);
