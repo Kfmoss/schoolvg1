@@ -395,6 +395,18 @@ img {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
+.test_intro{
+    margin: 1.2rem;
+
+}
+.test_intro .test1{
+    list-style: none;
+
+}
+.test1 .question{
+    
+}
+
 .basicmainpic1 {
     width: 100%;
     max-height: 320px;
