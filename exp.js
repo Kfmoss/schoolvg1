@@ -1,98 +1,13 @@
-// import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
-// import{has} from './rest.js';
-// import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-// const genAI = new GoogleGenerativeAI(has);
-// const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-// const spm = "hva er "; 
-// const spm2 = "Kan du omformulere forrige forklsringen?";
-
-// const delay = (ms) =>new Promise((resolve) => setTimeout(resolve,ms));
-
-
-// const btn_send = document.getElementById('btn_send1').addEventListener("click", () =>{
-//     const qst = spm+"DOM HTML, forklar dette kort";
-//     const window = document.getElementById('_window');
-
-//     async function spørGemini(qst, retries =3, delaysMs =1000) {
-//         for(let i=0; i<retries; i++){
-
-//         }
-//       try{
-
-
-//         const result = await model.generateContent(qst);
-//         const response = await result.response;
-//         const text = await result.response.text();
-        
-//         window.innerHTML = marked.parse(text);
-    
-//       }
-//       catch(error)
-//       {
-//         console.error("Houston, we have a problem: ", error);
-
-//       }
-      
-//     }
-//     spørGemini(qst);    
-// })
-
-// const btn_response_nei = document.getElementById('btn_send6').addEventListener("click", () =>{
-//     const qst = spm2;
-//     async function spørGemini(qst) {
-//       try{
-
-//         const result = await model.generateContent(qst);
-//         const response = await result.response;
-//         const text = await result.response.text();
-     
-        
-//         window.innerHTML = marked.parse(text);
-    
-//       }
-//       catch(error)
-//       {
-//         console.error("Houston, we have a problem: ", error);
-
-//       }
-      
-//     }
-//     spørGemini(qst);  
-
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const btsss = document.querySelector(".testingbtn");
+if (btsss){
+    btsss.addEventListener("click", speak);
+}
 
 
 
 let isReading = false;
+
+
 
 function speak() {
     if (isReading) {
@@ -124,6 +39,7 @@ function speak() {
     isReading = true;
     speechSynthesis.speak(lyd);
 }
+
 
 function read_Tagg() {
     if (isReading) {
@@ -237,10 +153,14 @@ function textToSpeech() {
     speechSynthesis.speak(lyd);
 }
 
+// --------------button UP!!! --------------
+
 const btn_top = document.getElementById('btn_up');
 window.onscroll = function(){
     scrollFunc();
 }
+
+
 function scrollFunc(){
     if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
         btn_top.style.display ="block";
