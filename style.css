@@ -349,7 +349,7 @@ body {
 }
 
 /* Hovedinnhold */
-.basicsMain h1, .basicsMain h2, .basicsMain h3, .basicsMain h4 {
+.basicsMain h1, .basicsMain h3, .basicsMain h4 {
     color: #005a9e;
     margin-top: 1.5rem;
     margin-bottom: 0.7rem;
@@ -357,9 +357,7 @@ body {
 .basicsMain h1 {
     font-size: 2.1rem;
 }
-.basicsMain h2 {
-    font-size: 1.5rem;
-}
+
 .basicsMain h3 {
     font-size: 1.2rem;
 }
@@ -389,10 +387,15 @@ ul, ol {
     line-height: 2.7;
     word-spacing: 0.35rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
     padding: .75rem 0 .75rem 0;
     font-size: 1.25rem;
+}
+.Basiccontainer h2{
+    color: #005a9e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.5rem;
+
 }
 
 ul.html_innhold, ul.tagg_metafor {
@@ -949,18 +952,17 @@ a:hover, a:focus {
     margin-left: 1.2rem;
     margin-left: 1.2rem;
 }
+.intro_git{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .git_github{
     background-color: #eff8fc;
 
 }
-/* .git_github p{
-    padding: .75rem 0 .75rem 0;
-    margin: 0 1.2rem 0 1.2rem ;
-    font-size: 1.5rem;
-    line-height: 2.7;
-    word-spacing: 0.35rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
+
 .install_git{
 
     background-color: #eff8fc;
@@ -968,6 +970,7 @@ a:hover, a:focus {
 .git ul{
     list-style: none;
 }
+
 .install_git_mac{
     background-color: #eff8fc;
 
