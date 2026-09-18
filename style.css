@@ -958,6 +958,12 @@ a:hover, a:focus {
     
 }
 
+.git_commands .gitCom{
+    background-color: #d1d5db;
+    padding: 1.2rem;
+    border-radius: 5%;
+}
+
 .git_github{
     background-color: #eff8fc;
 
