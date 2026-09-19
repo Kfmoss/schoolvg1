@@ -1140,10 +1140,18 @@ a:hover, a:focus {
 /* Basics page responsive overrides */
 @media (max-width: 800px) {
     .Basiccontainer {
+        box-sizing: border-box;
         width: 100%;
         max-width: none;
         margin: 0;
         padding: 1rem;
+        overflow-x: hidden;
+    }
+
+    .Basiccontainer *,
+    .Basiccontainer *::before,
+    .Basiccontainer *::after {
+        box-sizing: border-box;
     }
 
     .basicNav {
@@ -1227,6 +1235,7 @@ a:hover, a:focus {
 
     .html-tagger-tabell {
         min-width: 36rem;
+        max-width: none;
     }
 
     .workflow_nettleser figure {
@@ -1252,7 +1261,7 @@ a:hover, a:focus {
 
 @media (max-width: 480px){
     .Basiccontainer {
-        
+        box-sizing: border-box;
         width: 100%;
 
     }
@@ -1260,7 +1269,7 @@ a:hover, a:focus {
     .basicNav ul {
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1.75, auto;
+        grid-template-rows: auto auto;
         grid-template-areas:
         "link1 link2 link3 ."
         "  .   link4 link5 .";
