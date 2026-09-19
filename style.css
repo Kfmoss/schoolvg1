@@ -1262,13 +1262,18 @@ a:hover, a:focus {
     }
 
     .basicNav ul {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.25rem;
     }
 
     .basicNav ul li,
     .basicNav ul li a {
-        width: 100%;
+        width: auto;
+        flex: 0 0 auto;
         text-align: center;
     }
 
