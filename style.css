@@ -1250,8 +1250,7 @@ a:hover, a:focus {
     }
 }
 
-@media (max-width: 767px){
-/* @media (max-width: 400px) { */
+@media (max-width: 480px){
     .Basiccontainer {
         
         width: 100%;
