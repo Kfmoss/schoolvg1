@@ -669,13 +669,7 @@ a:hover, a:focus {
    padding: 1.75rem 0 .75rem 0;
    background-color: #eff8fc;
 }
-/* .introHTML p{
-    margin: 0 1.225rem 0 1.225rem ;
-    font-size: 1.3rem;
-    line-height: 2.7;
-    word-spacing: 0.35rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
+
 
 .introHTML h1, h4{
     margin-left: 1.2rem;
@@ -1256,25 +1250,48 @@ a:hover, a:focus {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px){
+/* @media (max-width: 400px) { */
     .Basiccontainer {
-        padding: 0.75rem;
+        
+        width: 100%;
+
     }
 
     .basicNav ul {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 0.25rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1.75, auto;
+        grid-template-areas:
+        "link1 link2 link3 ."
+        "  .   link4 link5 .";
+
     }
+    #topLink1{
+        grid-area: link1;
+    }
+    #topLink2{
+        grid-area: link2;
+    }
+    #topLink3{
+        grid-area: link3;
+
+    }
+    #topLink4{
+        grid-area: link4;
+
+    }
+    #topLink5{
+        grid-area: link5;
+
+    }
+
+
+
 
     .basicNav ul li,
     .basicNav ul li a {
         width: auto;
-        flex: 0 0 auto;
-        text-align: center;
     }
 
     .basicNav ul .logo1 {
