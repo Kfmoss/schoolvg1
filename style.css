@@ -960,6 +960,10 @@ a:hover, a:focus {
     padding: 1.2rem;
     border-radius: 5%;
 }
+.git_forklaring{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 
 .git_github{
     background-color: #eff8fc;
