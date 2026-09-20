@@ -283,6 +283,34 @@
 
                         <h2>Introduksjon til GIT og GitHub</h2>
                         <h4 class="textspeech1"><i onclick="read_git_intro()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h3>Hva er GitHub</h3>
+                        <p>
+                            GitHub er en nettbasert plattform som bruker Git. 
+                            Det fungerer som en skylagring for kodeprosjektene dine — med superkrefter for samarbeid. 
+                            Andre populære alternativer som gjør det samme er GitLab og Bitbucket:
+                            <div class="alternativer_gitHub">
+                                <a href="https://www.atlassian.com/software/bitbucket"><img src="img/bit_logo.png" alt=""></a>
+                                <a href="https://about.gitlab.com/"><img src="img/gitlab.webp" alt=""></a>
+
+                            </div>
+
+                        </p>
+                        <h3>Hvorfor bruker vi Git og GitHub?</h3>
+                        <p> Med et versjonskontrollsystem kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
+                            til en tidligere versjon. Om du samarbeider med andre elever/utviklere kan du 
+                            se hvem som har gjort hvilke endringer og når. <br> Flere elever kan jobbe på samme prosjekt samtidig,
+                            siden GitHub tillater dere automatisk sammenslåing av endringer med konfliktløsning når flere 
+                            endrer samme fil. GitHub er perfekt for personlig utvikling siden plattformen viser arbeidshistorikken
+                            til potensielle arbeidsgivere. GitHub er i dag "standardverktøy" i IT-bransjen. Store og små bedrifter
+                            i både offentlig og privat sektor bruker Git og GitHub, og noen av disse er:
+                            <ul>
+                                <li><p>Microsoft</p></li>
+                                <li><p>Google</p></li>
+                                <li>Meta (Facebook, Instagram ...)</li>
+                                <li>Netflix og andre</li>
+                            </ul>
+                        </p>
+
                         <h3>Hva er GIT?</h3>
                         <p>
                             Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
@@ -290,7 +318,7 @@
                             Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
                             ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
                         </p>
-                        <h3>mest useful git-commands</h3>
+                        <h3>Du skal lære om hvordan disse Git-kommandoene fungerer</h3>
                         <ul class="git_commands">
                             <li><p><strong class="gitCom">git add .</strong></p>
                             <article class="explain_add">
@@ -300,7 +328,6 @@
                                      Med andre ord, Tenk deg at du har skrevet eller endret flere filer i prosjektet ditt. 
                                      Før Git kan ta et nytt "bilde" av prosjektet,
                                       må du velge hvilke endringer som skal være med.</p>
-                                <img src="img/git_add.png" alt="">
                             </article></li>
                             
                             <li><p> <strong class="gitCom">git commit</strong></p>
@@ -329,34 +356,35 @@
                                         git commit, lagres endringene kun lokalt på din maskin. 
                                         Med git push deler du koden med resten av teamet eller 
                                         tar en trygg sikkerhetskopi i skyen.</p>
+                                    <h3>Slik bruker du git push</h3>
+                                    <ol class="git_forklaring">
+                                        <li><p><strong>Lagre endringene lokalt</strong>:
+                                        Sørg for at du har klargjort og lagret endringene med commit: <br>
+                                    <img src="img/git_push.png" alt=""></p></li>
+                                    <li>
+                                        <p>
+                                            <strong>Koble til eksternt kodelager</strong>. Du skal gjøre det bare første gangen du pusher 
+                                            kode til et GIT-repositorium. Eksempel: <br>
+                                            <img src="img/git_push3.png" alt="">
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <strong>Send endringene opp (Push)</strong> Laste opp commit-ene til <strong>hovedgrene</strong>  (f.eks. main) i skyen. Eksempel: <br>
+                                            <img src="img/git_push4.png" alt="">
+                                        </p>
+                                    </li>
+                                    </ol>
 
                                 </article>
                             </li>
 
                         </ul>
                         <h4>Slik fungerer git</h4>
-                        <img class="git_image" src="img/git.png" alt="">
-                        <h3>Hva er GitHub</h3>
-                        <p>
-                            GitHub er en nettbasert plattform som bruker Git. 
-                            Det er som en "skylagring" for kodeprosjektene dine, men med superkrefter 
-                            for samarbeid.
-                        </p>
-                        <h3>Hvorfor bruker vi Git og GitHub?</h3>
-                        <p> Med et versjonskontrollsystem kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
-                            til en tidligere versjon. Om du samarbeider med andre elever/utviklere kan du 
-                            se hvem som har gjort hvilke endringer og når. <br> Flere elever kan jobbe på samme prosjekt samtidig,
-                            siden GitHub tillater dere automatisk sammenslåing av endringer med konfliktløsning når flere 
-                            endrer samme fil. GitHub er perfekt for personlig utvikling siden plattformen viser arbeidshistorikken
-                            til potensielle arbeidsgivere. GitHub er i dag "standardverktøy" i IT-bransjen. Store og små bedrifter
-                            i både offentlig og privat sektor bruker Git og GitHub, og noen av disse er:
-                            <ul>
-                                <li><p>Microsoft</p></li>
-                                <li><p>Google</p></li>
-                                <li>Meta (Facebook, Instagram ...)</li>
-                                <li>Netflix og andre</li>
-                            </ul>
-                        </p>
+                        <div id="show_image">
+
+                            <img class="git_image" src="img/git.png" alt="">
+                        </div>
                     </div>
                     <div class="install_git">
 

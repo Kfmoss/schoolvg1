@@ -949,10 +949,35 @@ a:hover, a:focus {
     margin-left: 1.2rem;
     margin-left: 1.2rem;
 }
+.alternativer_gitHub{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.alternativer_gitHub a{
+    margin-left:1.25rem;
+    margin-right: 1.25rem;
+}
+.alternativer_gitHub img{
+    
+
+}
+#show_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .intro_git{
     display: flex;
     flex-direction: column;
     
+}
+.git_image{
+    width: 80%;
+    box-shadow:  0 2px 8px rgba(0,0,0,0.07);
+    border-radius: 5px;
+
 }
 
 .git_commands .gitCom{
