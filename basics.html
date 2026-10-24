@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Grunnleggende HTML</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "@google/generai": "https://esm.run/@google/generai"
+        }
+    }
+    </script>
 
 </head>
 <body>
@@ -16,21 +23,24 @@
         <nav class="basicNav">
            
             <ul>
-                <li><a href="#tagger"><span>Tagger</span></a></li>
-                <li><a href="#DOM"><span>DOM</span></a></li>
-                <li><a href="#git"><span>GIT</span></a></li>
-                <li><a href="#oppgaver"><span>Oppgaver</span></a></li>
-                <li><a href="index.html"><span>Main</span></a></li>
+                <li id="topLink1"><a href="index.html"><span>Main</span></a></li>
+                <li id="topLink2"><a href="#tagger"><span>Tagger</span></a></li>
+                <li id="topLink3"><a href="#DOM"><span>DOM</span></a></li>
+                <li id="topLink4"><a href="#git"><span>GIT</span></a></li>
+                <li id="topLink5"><a href="#oppgaver"><span>Oppgaver</span></a></li>
                 
             </ul>
         
         </nav>
+        <button id="btn_up" title="Til top"><p>Top</p></button>
 
         <main class="basicsMain">
             <div class="picsBasics">
                 <img class="basicmainpic1" src="img/html_code_background.webp" alt="html1">
 
             </div>
+            
+               
             
             <article class="introHTML">
                 <h4 id="btn1" class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
@@ -51,6 +61,8 @@
                      et kreativt byrå eller bidra til å utvikle digitale løsninger for bedrifter.
                     Å lære HTML og CSS handler ikke bare om koding – det handler om å skape, forme og dele ideer med verden.
                 </p>
+
+                <p id="ukrainianTranslation" lang="uk"></p>
 
             </article>
             <article class="grunnHTML">
@@ -82,9 +94,9 @@
                     
                     La oss si at vi har tre forskjellige esker, hver med sitt innhold:
                     <ul class="html_innhold">
-                        <li><p>Eske 1 inneholder et par Nike-sko</p></li>
-                        <li><p>Eske 2 inneholder sjokolade</p></li>
-                        <li><p>Eske 3 inneholder pizza</p></li>
+                        <li><p>Eske 1. <br>  Inneholder Nike-sko</p></li>
+                        <li><p>Eske 2. <br> Inneholder sjokolade</p></li>
+                        <li><p>Eske 3. <br>  Inneholder pizza</p></li>
                     </ul>
 
 
@@ -96,23 +108,20 @@
                     <li><img src="img/chocolate.jpg" alt=""></li>
                     <li><img src="img/pizza.jpg" alt=""></li>
                 </ul>
-                <p>Hvis vi bruker en kodeeditor, kan disse eskene – altså taggene – se slik ut:</p>
+               
 
                 <ul class="eksempler">
+                    <li> <p>Hvis vi bruker en kodeeditor, kan disse eskene – altså taggene – se slik ut:</p></li>
                     <li><img src="img/htmlbasic1.png" alt=""></li>
+                    <li><p>Men ekte HTML-tagger ser slik ut:</p></li>
+                    <li><img src="img/ektetagg.png" alt=""></li>
                     
                 </ul>
-                <p>
-                    Men ekte HTML-tagger ser slik ut:
-
-                </p>
-                <img src="img/ektetagg.png" alt="">
-
-
-
-
                 
             </article>
+
+
+            
             <article id="tagger" class="tagger" >
                 <h2>Grunnleggende HTML-tagger og deres funksjon</h2>
                 <h4 class="textspeech1"><i onclick="read_Tagg()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
@@ -241,18 +250,17 @@
 
                         <h2>Introduksjon til GIT og GitHub</h2>
                         <h4 class="textspeech1"><i onclick="read_git_intro()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
-                        <h3>Hva er GIT?</h3>
-                        <p>
-                            Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
-                            Tenk på det som en "tidsmaskin" for koden din – du kan alltid gå tilbake til tidligere versjoner hvis noe går galt.
-                            Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
-                            ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
-                        </p>
                         <h3>Hva er GitHub</h3>
                         <p>
                             GitHub er en nettbasert plattform som bruker Git. 
-                            Det er som en "skylagring" for kodeprosjektene dine, men med superkrefter 
-                            for samarbeid.
+                            Det fungerer som en skylagring for kodeprosjektene dine — med superkrefter for samarbeid. 
+                            Andre populære alternativer som gjør det samme er GitLab og Bitbucket:
+                            <div class="alternativer_gitHub">
+                                <a href="https://www.atlassian.com/software/bitbucket"><img src="img/bit_logo.png" alt=""></a>
+                                <a href="https://about.gitlab.com/"><img src="img/gitlab.webp" alt=""></a>
+
+                            </div>
+
                         </p>
                         <h3>Hvorfor bruker vi Git og GitHub?</h3>
                         <p> Med et versjonskontrollsystem kan du spore alle endringer i koden, og du kan enkelt gå tilbake 
@@ -269,6 +277,81 @@
                                 <li>Netflix og andre</li>
                             </ul>
                         </p>
+
+                        <h3>Hva er GIT?</h3>
+                        <p>
+                            Git er et versjonskontrollsystem (et dataprogram) som lar deg spore endringer i filer over tid. 
+                            Tenk på det som en "tidsmaskin" for koden din – du kan alltid gå tilbake til tidligere versjoner hvis noe går galt.
+                            Git er som å ta "øyeblikksbilder" (snapshots) av prosjektet 
+                            ditt hver gang du gjør endringer. Disse øyeblikksbildene kalles "commits".
+                        </p>
+                        <h3>Du skal lære om hvordan disse Git-kommandoene fungerer</h3>
+                        <ul class="git_commands">
+                            <li><p><strong class="gitCom">git add .</strong></p>
+                            <article class="explain_add">
+                                <h3 >Når du lagrer arbeidet ditt</h3>
+                                <p>Denne kommandoen forteller Git hvilke endringer 
+                                    du ønsker å ta med i neste øyeblikksbilde (commit).
+                                     Med andre ord, Tenk deg at du har skrevet eller endret flere filer i prosjektet ditt. 
+                                     Før Git kan ta et nytt "bilde" av prosjektet,
+                                      må du velge hvilke endringer som skal være med.</p>
+                            </article></li>
+                            
+                            <li><p> <strong class="gitCom">git commit</strong></p>
+                                <article>
+                                    <h3>En papparazzi</h3>
+                                    <p>En git commit tar et "<strong>momentbilde</strong>" (snapshot) av de endringene du har gjort i koden din. 
+                                        Du kan tenke på det som å lagre en versjon i et spill eller opprette
+                                         et sjekkpunkt i et dokument, slik at du alltid kan gå tilbake til denne 
+                                         tilstanden senere.</p>
+                                    <h3>Slik bruker du git commit</h3>
+                                    <ol class="git_forklaring">
+                                        <li><p> <strong>Gjør endringer i prosjektet</strong> :Rediger, legg til eller slett filer i prosjektmappen din som vanlig.</p></li>
+                                        <li><p><strong>Klargjør endringene</strong>:Bruk git add for å velge hvilke filer du vil inkludere i momentbildet. For eksempel:  <br><img src="img/gitAdd.png" alt=""> eller <img src="img/gitadd2.png" alt=""></p><br>
+                                        </li>
+
+                                        <li><p><strong>Opprett momentbildet</strong>: Kjør git commit med en beskrivende melding om hva du har gjort. For eksempel: <br>
+                                        <img src="img/git_commit1.png" alt=""></p></li>
+                                    </ol>
+
+                                </article></li>
+                            <li><p><strong class="gitCom">git push</strong></p>
+                                <article>
+                                    <h3></h3>
+                                    <p>En git push laster opp de lokale endringene dine (commit-ene du har lagret på datamaskinen din) til et eksternt kodelager (et remote repository), 
+                                        som for eksempel GitHub, GitLab eller Bitbucket.Når du kjører 
+                                        git commit, lagres endringene kun lokalt på din maskin. 
+                                        Med git push deler du koden med resten av teamet eller 
+                                        tar en trygg sikkerhetskopi i skyen.</p>
+                                    <h3>Slik bruker du git push</h3>
+                                    <ol class="git_forklaring">
+                                        <li><p><strong>Lagre endringene lokalt</strong>:
+                                        Sørg for at du har klargjort og lagret endringene med commit: <br>
+                                    <img src="img/git_push.png" alt=""></p></li>
+                                    <li>
+                                        <p>
+                                            <strong>Koble til eksternt kodelager</strong>. Du skal gjøre det bare første gangen du pusher 
+                                            kode til et GIT-repositorium. Eksempel: <br>
+                                            <img src="img/git_push3.png" alt="">
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <strong>Send endringene opp (Push)</strong> Laste opp commit-ene til <strong>hovedgrene</strong>  (f.eks. main) i skyen. Eksempel: <br>
+                                            <img src="img/git_push4.png" alt="">
+                                        </p>
+                                    </li>
+                                    </ol>
+
+                                </article>
+                            </li>
+
+                        </ul>
+                        <h4>Slik fungerer git</h4>
+                        <div id="show_image">
+
+                            <img class="git_image" src="img/git.png" alt="">
+                        </div>
                     </div>
                     <div class="install_git">
 
@@ -282,12 +365,7 @@
                             <li><p>og følg instruksjonene.</p></li>
                             <li><p>Etter installasjonen er ferdig, åpne Command Prompt eller PowerShell og kjør "git --version"</p></li>
                             <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
-                            <li><iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/JNWXQskz4Uk"
-                                    frameborder="0"
-                                    allowfullscreen>
-                            </iframe>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="install_git_mac">
@@ -297,12 +375,7 @@
                             <li><p>Kjør brew install git i terminalen</p></li>
                             <li><p>Etter at Git er ferdig installert, kjør "git --version"</p> </li>
                             <li><p>Hvis Git er korrekt installert, får du Git-versjonen installert.</p></li>
-                            <li><iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/9GZmaxaQV0c"
-                                    frameborder="0"
-                                    allowfullscreen>
-                            </iframe>
-                            </li>
+
                         </ul>
 
                     </div>
@@ -359,11 +432,134 @@
                         <li><p>Deretter får du to lister med kommandoer. Du skal bare bruke 3 av disse 
                     </ul>
                 </article>
-                <div class="HTMLoppgaver">
+                <article>
+                    <h2>Test deg selv før du begynner</h2>
+                    <h4>Målet med testen er at du skal kunne måle hvor mye du kan om HTML-koding, og finne ut hva du trenger å lære mer om. 
+                        Dette skal hjelpe oss med å utforme andre oppgaver senere.
+                    </h4>  
+
+                    <form class="test1">
+                        <h3>Hva HTML står for?</h3>
+                        <div class="question">
+                            <label class="option">
+                                <input type="radio" name="q1" value="A">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="B">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="C">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="D">
+                                A. Hyper Text Markup Language
+                            </label>
+                            
+
+
+                        </div>
+                        <h3>Hva er den beste beskrivelsen for hva en tagg er?</h3>
+                        <div class="question">
+                            <label class="option">
+                                <input type="radio" name="q2" value="A">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="B">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="C">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="D">
+                                A. Hyper Text Markup Language
+                            </label>
+                            
+
+
+                        </div>
+
+                        <h3>Hva slags data inneholder taggen <strong>head</strong>?</h3>
+                        <div class="question">
+                            <label class="option">
+                                <input type="radio" name="q3" value="A">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="B">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="C">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="D">
+                                A. Hyper Text Markup Language
+                            </label>
+                        </div>
+                        <div class="question">
+                            <h3>Hvilken type informasjon inneholder taggen<strong>body</strong>?</h3>
+                            <label class="option">
+                                <input type="radio" name="q4" value="A">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="B">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="C">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="D">
+                                A. Hyper Text Markup Language
+                            </label>
+
+                        </div>
+                        <h3>Hva er et DOM-tre?</h3>
+                        <div class="question">
+                            <label class="option">
+                                <input type="radio" name="q5" value="A">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="B">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="C">
+                                A. Hyper Text Markup Language
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="D">
+                                A. Hyper Text Markup Language
+                            </label>
+
+                        </div>
+                        <button type="submit" id="sendbtn" class="sendbtn">
+                            Lever test
+                        </button>
+
+                    </form>
+                    <div id="result"></div>
+
+                    
+
+
+                </article>    
+                    <div class="HTMLoppgaver">
+                    
 
                     <article id="oppgaver" class="oppgaverHTML">
                         <h2>Oppgaver</h2>
-                        <h4 class="textspeech1"><i onclick="read_oppgaver()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4 class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
                         <h3>Arbeidsmåte og levering</h3>
                         <p>I dette prosjektet skal du lære om grunnleggende
                              konsepter i HTML. Dette danner et viktig fundament for 
@@ -379,9 +575,9 @@
                               karakter, og det gir deg et godt grunnlag for mer 
                               avanserte oppgaver. Konseptene du øver på nå er også 
                               nyttige videre på VG2.
-                            .<br>
+                            <br>
                             <strong>Vurderingsform : Godkjent/Ikke godkjent</strong> <br>
-                            <strong>Frist for innlevering: 04.sept kl.15</strong> <br>
+                            <strong>Frist for innlevering: 24.sept kl.15</strong> <br>
                             <strong></strong> </p>
                         <h3>Lag din egen nettside</h3>
                         <p>I denne oppgaven skal du bruke HTML-tagger til å lage en 
@@ -424,9 +620,13 @@
                 </div>
             </div>
         </main>
+        <button class="testingbtn">please!!</button>
     </div>
-
+   
     <script src="exp.js"></script>
+
+    
 </body>
+   
 </html>
 
