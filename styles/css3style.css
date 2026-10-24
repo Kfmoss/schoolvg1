@@ -35,19 +35,24 @@
 
     .theme-toggle {
       font: inherit;
-      color: var(--text);
-      padding: 0.4rem 0.75rem;
-      border: 1px solid rgba(56, 189, 248, 0.65);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f172a;
+      padding: 0.55rem 1rem;
+      border: 1px solid #7dd3fc;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
+      background: #38bdf8;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
       cursor: pointer;
       transition: background 0.16s ease-out, color 0.16s ease-out;
     }
 
     .theme-toggle:hover,
     .theme-toggle:focus-visible {
-      background: #0b1120;
-      color: #f9fafb;
+      background: #7dd3fc;
+      color: #0f172a;
     }
 
     .theme-toggle:focus-visible {
@@ -129,7 +134,7 @@
 
     .nav-links {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 0.5rem;
       font-size: 0.85rem;
     }
@@ -450,6 +455,9 @@
       color: #e5e7eb;
       font-weight: 500;
     }
+    .flex-table td{
+        color: #ffff;
+    }
 
     .minioppgave-label {
       display: inline-flex;
@@ -491,9 +499,11 @@
       display: flex;
       flex-direction: column;
       gap: 0.9rem;
+    }
+
+    #rightsideCard {
       position: sticky;
-      top: 1rem;
-      align-self: start;
+      top: 6rem;
     }
 
     .sidebar-card {
@@ -676,7 +686,7 @@
       .content {
         grid-template-columns: minmax(0, 1fr);
       }
-      .sidebar {
+      #rightsideCard {
         position: static;
       }
       .header-inner {
@@ -685,5 +695,6 @@
       }
       .nav-links {
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
     }
