@@ -7,12 +7,13 @@
       --accent-2: #3bd9c7;
       --code-bg: #4b588d;
       --border: #23304f;
+  --page-gradient: linear-gradient(180deg, #804062 0%, #aa5a6c 12.5%, #d57c76 25%, #fab694 37.5%, #fcbda1 50%, #fec5af 62.5%, #ffcebe 75%, #ffd8cd 87.5%, #ffe3dc 100%);
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;}
     body{
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      line-height:1.6; color:var(--ink); background:linear-gradient(180deg,#0a0f1e 0%, #0e1530 100%);
+      line-height:1.6; color:var(--ink); background:var(--page-gradient); background-attachment:fixed;
     }
     header{
       position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px);
@@ -280,7 +281,7 @@ body.light-mode {
   --accent-2: #06b6d4;
   --code-bg: #e5e7eb;
   --border: #d1d5db;
-  background: linear-gradient(180deg, #f6f8fa 0%, #e5e7eb 100%);
+  background: var(--page-gradient);
   color: var(--ink);
   .a1{
       color:#212020;

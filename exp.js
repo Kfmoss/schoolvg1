@@ -1,6 +1,22 @@
+const btsss = document.querySelector(".testingbtn");
+if (btsss){
+    btsss.addEventListener("click", speak);
+}
+
 
 
 let isReading = false;
+
+function getNorwegianVoice() {
+    const voices = speechSynthesis.getVoices();
+    return voices.find(voice =>
+        voice.lang.toLowerCase() === "nb-no" && voice.name.toLowerCase().includes("google")
+    ) || voices.find(voice =>
+        voice.lang.toLowerCase().startsWith("nb")
+    );
+}
+
+
 
 function speak() {
     if (isReading) {
@@ -14,6 +30,7 @@ function speak() {
     speechElem.innerHTML = words.map(w => w.trim() ? `<span class="tts-word">${w}</span>` : w).join("");
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     let wordIndex = 0;
     const wordSpans = speechElem.querySelectorAll('.tts-word');
     lyd.onboundary = function(event) {
@@ -33,6 +50,7 @@ function speak() {
     speechSynthesis.speak(lyd);
 }
 
+
 function read_Tagg() {
     if (isReading) {
         speechSynthesis.cancel();
@@ -42,6 +60,7 @@ function read_Tagg() {
     let text = document.querySelector(".tagger").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -56,6 +75,7 @@ function read_DOM() {
     let text = document.querySelector(".workflow_nettleser").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -70,6 +90,7 @@ function read_Fork_Dom() {
     let text = document.querySelector(".fork_dom").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -84,6 +105,7 @@ function read_git_intro() {
     let text = document.querySelector(".intro_git").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -98,6 +120,7 @@ function read_installGit() {
     let text = document.querySelector(".install_git").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -112,6 +135,7 @@ function read_installGitMac() {
     let text = document.querySelector(".install_git_mac").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -126,6 +150,7 @@ function read_oppgaver() {
     let text = document.querySelector(".HTMLoppgaver").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
@@ -140,114 +165,32 @@ function textToSpeech() {
     let text = document.querySelector(".grunnHTML").textContent;
     const lyd = new SpeechSynthesisUtterance(text);
     lyd.lang = "nb-NO";
+    lyd.voice = getNorwegianVoice();
     lyd.onend = () => { isReading = false; };
     isReading = true;
     speechSynthesis.speak(lyd);
 }
 
+// --------------button UP!!! --------------
+
+const btn_top = document.getElementById('btn_up');
+window.onscroll = function(){
+    scrollFunc();
+}
 
 
+function scrollFunc(){
+    if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+        btn_top.style.display ="block";
 
-// function speak(){
-
-//     const speechElem = document.querySelector("#speechText");
-    
-
-//     let text = speechElem.textContent.trim();
-//     // Split text into words and wrap each in a span
-//     const words = text.split(/(\s+)/); // keep spaces
-//     speechElem.innerHTML = words.map(w => w.trim() ? `<span class="tts-word">${w}</span>` : w).join("");
-
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-
-//     let wordIndex = 0;
-//     const wordSpans = speechElem.querySelectorAll('.tts-word');
-
-//     lyd.onboundary = function(event) {
-//         if (event.name === 'word') {
-//             // Remove highlight from all
-//             wordSpans.forEach(span => span.style.background = '');
-//             // Highlight current word
-//             if (wordSpans[wordIndex]) {
-//                 wordSpans[wordIndex].style.background = 'yellow';
-//             }
-//             wordIndex++;
-//         }
-//     };
-//     lyd.onend = function() {
-//         wordSpans.forEach(span => span.style.background = '');
-//     };
-//     speechSynthesis.speak(lyd);
-
-    
-// }
-
-// function read_Tagg(){
-//     let text = document.querySelector(".tagger").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-// }
-// function read_DOM(){
-//     let text = document.querySelector(".workflow_nettleser").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-// }
-// function read_Fork_Dom(){
-//         let text = document.querySelector(".fork_dom").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-// }
-// function read_git_intro(){
-//     let text = document.querySelector(".intro_git").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-
-// }
-// function read_installGit(){
-//     let text = document.querySelector(".install_git").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-// }
-// function read_installGitMac(){
-//     let text = document.querySelector(".install_git_mac").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-// }
-// function read_oppgaver(){
-//     let text = document.querySelector(".HTMLoppgaver").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-
-// }
-
-
-// function textToSpeech(){
-//     let text = document.querySelector(".grunnHTML").textContent;
-//     console.log(text);
-//     const lyd = new SpeechSynthesisUtterance(text);
-//     lyd.lang = "nb-NO";
-//     speechSynthesis.speak(lyd);
-// }
-
-
-
+    }
+    else{
+        btn_top.style.display ="none";
+    }
+}
+btn_top.onclick = function(){
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    })
+}
