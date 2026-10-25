@@ -134,7 +134,7 @@
 
     .nav-links {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: 0.5rem;
       font-size: 0.85rem;
     }
@@ -164,6 +164,24 @@
       background: radial-gradient(circle at top, #0b1120, #020617);
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
       transform: translateY(-1px);
+    }
+
+    .nav-links .home-link {
+      color: #0f172a;
+      background: #38bdf8;
+      border-color: #7dd3fc;
+      font-weight: 600;
+    }
+
+    .nav-links .home-link:hover,
+    .nav-links .home-link:focus-visible {
+      color: #0f172a;
+      background: #7dd3fc;
+    }
+
+    .nav-links .home-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
 
     main {
@@ -420,6 +438,20 @@
 
     .section-card li {
       margin-bottom: 0.25rem;
+    }
+
+    .resource-list h3 {
+      margin-bottom: 0.15rem;
+    }
+
+    .resource-list a {
+      color: #7dd3fc;
+      text-underline-offset: 0.2em;
+    }
+
+    .resource-list a:hover,
+    .resource-list a:focus-visible {
+      color: #bae6fd;
     }
 
     .note {
