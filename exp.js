@@ -6,6 +6,7 @@ if (btsss){
 
 
 let isReading = false;
+let activeReadAloudButton = null;
 
 function getNorwegianVoice() {
     const voices = speechSynthesis.getVoices();
@@ -15,6 +16,88 @@ function getNorwegianVoice() {
         voice.lang.toLowerCase().startsWith("nb")
     );
 }
+
+function resetReadAloudButton(button) {
+    button.textContent = "Les opp";
+    button.setAttribute("aria-label", "Les opp");
+    button.setAttribute("aria-pressed", "false");
+    if (activeReadAloudButton === button) {
+        activeReadAloudButton = null;
+        isReading = false;
+    }
+}
+
+function readAloud(button) {
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        button.textContent = "Opplesing er ikke tilgjengelig";
+        button.setAttribute("aria-live", "polite");
+        return;
+    }
+
+    if (activeReadAloudButton === button && isReading) {
+        speechSynthesis.cancel();
+        resetReadAloudButton(button);
+        return;
+    }
+
+    if (isReading) {
+        speechSynthesis.cancel();
+        if (activeReadAloudButton) {
+            resetReadAloudButton(activeReadAloudButton);
+        } else {
+            isReading = false;
+        }
+    }
+
+    const content = button.closest("[data-speech-content]");
+    if (!content) {
+        console.error("Les opp-knappen mangler en data-speech-content-container.");
+        return;
+    }
+
+    const contentCopy = content.cloneNode(true);
+    contentCopy.querySelectorAll("[data-read-aloud]").forEach(readButton => readButton.remove());
+    const text = contentCopy.textContent.trim().replace(/\s+/g, " ");
+    if (!text) {
+        console.error("Fant ingen tekst å lese opp.");
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "nb-NO";
+    const voice = getNorwegianVoice();
+    if (voice) {
+        utterance.voice = voice;
+    }
+    utterance.onend = () => resetReadAloudButton(button);
+    utterance.onerror = event => {
+        if (activeReadAloudButton !== button) {
+            return;
+        }
+        resetReadAloudButton(button);
+        if (event.error !== "canceled" && event.error !== "interrupted") {
+            button.textContent = "Opplesing feilet";
+            button.setAttribute("aria-live", "polite");
+        }
+    };
+
+    activeReadAloudButton = button;
+    isReading = true;
+    button.textContent = "Stopp lesing";
+    button.setAttribute("aria-label", "Stopp lesing");
+    button.setAttribute("aria-pressed", "true");
+    speechSynthesis.speak(utterance);
+}
+
+document.addEventListener("click", event => {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+    const button = event.target.closest("[data-read-aloud]");
+    if (button) {
+        readAloud(button);
+    }
+});
 
 
 
@@ -174,23 +257,17 @@ function textToSpeech() {
 // --------------button UP!!! --------------
 
 const btn_top = document.getElementById('btn_up');
-window.onscroll = function(){
-    scrollFunc();
-}
-
-
-function scrollFunc(){
-    if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
-        btn_top.style.display ="block";
-
-    }
-    else{
-        btn_top.style.display ="none";
-    }
-}
-btn_top.onclick = function(){
-    window.scrollTo({
-        top:0,
-        behavior:'smooth'
-    })
+if (btn_top) {
+    window.addEventListener("scroll", () => {
+        btn_top.style.display =
+            document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+                ? "block"
+                : "none";
+    });
+    btn_top.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 }
