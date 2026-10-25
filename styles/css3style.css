@@ -252,7 +252,7 @@
     }
 
     .hero-subtitle {
-      font-size: 0.98rem;
+      font-size: 1.1rem;
       color: var(--muted);
       max-width: 36rem;
       margin-bottom: 0.9rem;
@@ -263,7 +263,7 @@
       flex-wrap: wrap;
       gap: 0.75rem;
       margin-bottom: 0.75rem;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--muted);
     }
 
@@ -305,7 +305,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 0.88rem;
+      font-size: 0.98rem;
       display: grid;
       gap: 0.25rem;
     }
@@ -415,16 +415,16 @@
     }
 
     .section-card h2 {
-      font-size: 1.15rem;
+      font-size: 1.35rem;
     }
 
     .section-card h3 {
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
 
     .section-card p {
       margin: 0.35rem 0;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #d1d5db;
     }
 
@@ -432,8 +432,41 @@
     .section-card ol {
       margin: 0.4rem 0 0.4rem 1.1rem;
       padding-left: 0.2rem;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #d1d5db;
+    }
+
+    .read-aloud {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.5rem;
+      margin: 0.25rem 0 0.65rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid #7dd3fc;
+      border-radius: 0.65rem;
+      background: #38bdf8;
+      color: #0f172a;
+      font: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .read-aloud:hover,
+    .read-aloud:focus-visible {
+      background: #7dd3fc;
+    }
+
+    .read-aloud:focus-visible {
+      outline: 3px solid #bae6fd;
+      outline-offset: 2px;
+    }
+
+    .project-description + .project-description {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
     }
 
     .section-card li {
@@ -459,7 +492,7 @@
       border-radius: 0.75rem;
       background: rgba(15, 23, 42, 0.95);
       border: 1px dashed rgba(148, 163, 184, 0.6);
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--muted);
       margin-top: 1.2rem;
     }
@@ -472,7 +505,7 @@
       width: 100%;
       border-collapse: collapse;
       margin: 0.5rem 0 0.2rem;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
 
     .flex-table th,
@@ -544,8 +577,9 @@
       border: 1px solid rgba(31, 41, 55, 0.95);
       padding: 0.9rem 0.9rem 1rem;
       box-shadow: var(--shadow-subtle);
-      font-size: 0.88rem;
+      font-size: 1rem;
       color: #d1d5db;
+      line-height: 1.65;
     }
 
     .sidebar-card h3 {
@@ -553,6 +587,16 @@
       font-size: 0.95rem;
       letter-spacing: -0.02em;
       color: #e5e7eb;
+    }
+
+    .sidebar-card h4 {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 0.15rem;
+    }
+
+    .sidebar-card p,
+    .sidebar-card li {
+      font-size: 1rem;
     }
 
     .pill-soft {
