@@ -7,14 +7,36 @@ if (btsss){
 
 let isReading = false;
 let activeReadAloudButton = null;
+let speechRequestId = 0;
 
-function getNorwegianVoice() {
-    const voices = speechSynthesis.getVoices();
+function getNorwegianVoice(voices = speechSynthesis.getVoices()) {
     return voices.find(voice =>
         voice.lang.toLowerCase() === "nb-no" && voice.name.toLowerCase().includes("google")
     ) || voices.find(voice =>
         voice.lang.toLowerCase().startsWith("nb")
     );
+}
+
+function getAvailableSpeechVoices() {
+    const voices = speechSynthesis.getVoices();
+    if (voices.length) {
+        return Promise.resolve(voices);
+    }
+
+    return new Promise(resolve => {
+        const finish = () => {
+            clearTimeout(timeoutId);
+            speechSynthesis.removeEventListener("voiceschanged", handleVoicesChanged);
+            resolve(speechSynthesis.getVoices());
+        };
+        const handleVoicesChanged = () => {
+            if (speechSynthesis.getVoices().length) {
+                finish();
+            }
+        };
+        const timeoutId = setTimeout(finish, 1500);
+        speechSynthesis.addEventListener("voiceschanged", handleVoicesChanged);
+    });
 }
 
 function getSpeechLanguage(button) {
@@ -25,22 +47,42 @@ function getSpeechLanguage(button) {
         ?.querySelector(".speech-language")?.value || "nb-NO";
 }
 
-function getSpeechVoice(language) {
+function getSpeechVoice(language, voices) {
     if (language === "nb-NO") {
-        return getNorwegianVoice();
+        return getNorwegianVoice(voices);
     }
     const languagePrefix = language.split("-")[0].toLowerCase();
-    const voices = speechSynthesis.getVoices();
     return voices.find(voice => voice.lang.toLowerCase() === language.toLowerCase())
         || voices.find(voice => voice.lang.toLowerCase().startsWith(languagePrefix));
 }
 
+function showSpeechStatus(message) {
+    const status = document.getElementById("speech-status");
+    if (status) {
+        status.textContent = message;
+        status.hidden = !message;
+    } else if (message) {
+        console.error(message);
+    }
+}
+
+function getMissingVoiceMessage(language) {
+    const languageNames = {
+        uk: "ukrainsk",
+        ar: "arabisk",
+        en: "engelsk"
+    };
+    const languageName = languageNames[language.split("-")[0]] || language;
+    return `Ingen ${languageName} tale-stemme er tilgjengelig. Installer en slik stemme i nettleseren eller operativsystemet, og prøv igjen.`;
+}
+
 function readSpeechContent(button, selector) {
     if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
-        console.error("Opplesing er ikke tilgjengelig i denne nettleseren.");
+        showSpeechStatus("Opplesing er ikke tilgjengelig i denne nettleseren.");
         return;
     }
     if (isReading) {
+        speechRequestId++;
         speechSynthesis.cancel();
         isReading = false;
         return;
@@ -60,21 +102,41 @@ function readSpeechContent(button, selector) {
     }
 
     const language = getSpeechLanguage(button);
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = language;
-    const voice = getSpeechVoice(language);
-    if (voice) {
-        utterance.voice = voice;
-    }
-    utterance.onend = () => { isReading = false; };
-    utterance.onerror = event => {
-        isReading = false;
-        if (event.error !== "canceled" && event.error !== "interrupted") {
-            console.error("Opplesing feilet:", event.error);
-        }
-    };
+    const requestId = ++speechRequestId;
     isReading = true;
-    speechSynthesis.speak(utterance);
+    showSpeechStatus("");
+    getAvailableSpeechVoices().then(voices => {
+        if (!isReading || requestId !== speechRequestId) {
+            return;
+        }
+        const voice = getSpeechVoice(language, voices);
+        if (language !== "nb-NO" && !voice) {
+            isReading = false;
+            showSpeechStatus(getMissingVoiceMessage(language));
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = voice?.lang || language;
+        if (voice) {
+            utterance.voice = voice;
+        }
+        utterance.onend = () => {
+            if (requestId === speechRequestId) {
+                isReading = false;
+            }
+        };
+        utterance.onerror = event => {
+            if (requestId !== speechRequestId) {
+                return;
+            }
+            isReading = false;
+            if (event.error !== "canceled" && event.error !== "interrupted") {
+                showSpeechStatus(`Opplesing feilet: ${event.error}`);
+            }
+        };
+        speechSynthesis.speak(utterance);
+    });
 }
 
 const readingModeToggle = document.getElementById("reading-mode-toggle");
@@ -172,7 +234,12 @@ document.addEventListener("click", event => {
 
 
 function speak(button) {
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        showSpeechStatus("Opplesing er ikke tilgjengelig i denne nettleseren.");
+        return;
+    }
     if (isReading) {
+        speechRequestId++;
         speechSynthesis.cancel();
         isReading = false;
         return;
@@ -181,29 +248,55 @@ function speak(button) {
     let text = speechElem.textContent.trim();
     const words = text.split(/(\s+)/);
     speechElem.innerHTML = words.map(w => w.trim() ? `<span class="tts-word">${w}</span>` : w).join("");
-    const lyd = new SpeechSynthesisUtterance(text);
-    lyd.lang = getSpeechLanguage(button);
-    const voice = getSpeechVoice(lyd.lang);
-    if (voice) {
-        lyd.voice = voice;
-    }
-    let wordIndex = 0;
+    const language = getSpeechLanguage(button);
     const wordSpans = speechElem.querySelectorAll('.tts-word');
-    lyd.onboundary = function(event) {
-        if (event.name === 'word') {
-            wordSpans.forEach(span => span.style.background = '');
-            if (wordSpans[wordIndex]) {
-                wordSpans[wordIndex].style.background = 'yellow';
-            }
-            wordIndex++;
-        }
-    };
-    lyd.onend = function() {
-        wordSpans.forEach(span => span.style.background = '');
-        isReading = false;
-    };
+    const requestId = ++speechRequestId;
     isReading = true;
-    speechSynthesis.speak(lyd);
+    showSpeechStatus("");
+    getAvailableSpeechVoices().then(voices => {
+        if (!isReading || requestId !== speechRequestId) {
+            return;
+        }
+        const voice = getSpeechVoice(language, voices);
+        if (language !== "nb-NO" && !voice) {
+            isReading = false;
+            showSpeechStatus(getMissingVoiceMessage(language));
+            return;
+        }
+
+        const lyd = new SpeechSynthesisUtterance(text);
+        lyd.lang = voice?.lang || language;
+        if (voice) {
+            lyd.voice = voice;
+        }
+        let wordIndex = 0;
+        lyd.onboundary = function(event) {
+            if (event.name === 'word') {
+                wordSpans.forEach(span => span.style.background = '');
+                if (wordSpans[wordIndex]) {
+                    wordSpans[wordIndex].style.background = 'yellow';
+                }
+                wordIndex++;
+            }
+        };
+        lyd.onend = function() {
+            if (requestId === speechRequestId) {
+                wordSpans.forEach(span => span.style.background = '');
+                isReading = false;
+            }
+        };
+        lyd.onerror = event => {
+            if (requestId !== speechRequestId) {
+                return;
+            }
+            wordSpans.forEach(span => span.style.background = '');
+            isReading = false;
+            if (event.error !== "canceled" && event.error !== "interrupted") {
+                showSpeechStatus(`Opplesing feilet: ${event.error}`);
+            }
+        };
+        speechSynthesis.speak(lyd);
+    });
 }
 
 
