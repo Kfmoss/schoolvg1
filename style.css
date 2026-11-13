@@ -911,8 +911,8 @@ a:hover, a:focus {
 #btn_up{
     display: none; /* Hidden by default */
     position: fixed; 
-    bottom: 3.5em; 
-    right: 3.5em; 
+    bottom: 2em; 
+    right: 2em; 
     z-index: 99; 
     padding: 2.5rem;
     background-color: #a3d9ee;
