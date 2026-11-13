@@ -33,6 +33,7 @@
         
         </nav>
         <button id="btn_up" title="Til top"><p>Top</p></button>
+        <button id="reading-mode-toggle" type="button" aria-pressed="false">Slå på lesemodus</button>
 
         <main class="basicsMain">
             <div class="picsBasics">
@@ -41,7 +42,7 @@
             </div>
             
             <article class="introHTML">
-                <h4 id="btn1" class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                <h4 id="btn1" class="textspeech1"><i onclick="speak(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                 <!-- <button class="text-to-speech1" onclick="speak()">text-to-speech</button> -->
             
                 <h1>Hvorfor lærer du HTML?</h1>
@@ -65,7 +66,7 @@
             </article>
             <article class="grunnHTML">
                 <!-- <button class="text-to-speech1" onclick="textToSpeech()">text-to-speech</button> -->
-                <h4 class="textspeech2" ><i onclick="textToSpeech()" class="fa-solid fa-book-open-reader" id="btn2"></i></h4>
+                <h4 class="textspeech2" ><i onclick="textToSpeech(this)" class="fa-solid fa-book-open-reader" id="btn2"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                 <h2>HTML: Hva er dette?</h2>
 
                 <h3><strong>Internett er en del av hverdagen vår.</strong></h3>
@@ -122,7 +123,7 @@
             
             <article id="tagger" class="tagger" >
                 <h2>Grunnleggende HTML-tagger og deres funksjon</h2>
-                <h4 class="textspeech1"><i onclick="read_Tagg()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                <h4 class="textspeech1"><i onclick="read_Tagg(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                 <p style="padding: 1.5rem;">
                     HTML-taggene forteller nettleseren om innholdet og strukturen til de ulike 
                     elementene på nettsiden. At overskrifter får større skriftstørrelse, eller
@@ -203,7 +204,7 @@
             </article>
             <article id="DOM"  class="workflow_nettleser">
                 <h2> Hva er en nettleser og hvordan fungerer den?</h2>
-                <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                <h4 class="textspeech1"><i onclick="read_DOM(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                 <p>
                     Det å oppsummere hele prosessen til en nettleser i bare noen få ord er ikke en lett oppgave, men vi kan si at
                     en nettleser er et program som henter informasjon
@@ -228,7 +229,7 @@
                         <div ><img  class="dom1" src="img/DOM1.png" alt="">
                         <img  src="img/DOM2.png" alt="">
                         </div>
-                        <figcaption class="fork_dom"> <h4 class="textspeech1"><i onclick="read_DOM()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>  <strong>&lt;html&gt;</strong> er rotelementet i dokumentet. <br>
+                        <figcaption class="fork_dom"> <h4 class="textspeech1"><i onclick="read_Fork_Dom(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>  <strong>&lt;html&gt;</strong> er rotelementet i dokumentet. <br>
                              Alle andre elementer er etterkommere av dette. <br> 
                             &lt;html&gt; har to direkte barn: <strong>&lt;head&gt;</strong>  og <strong>&lt;body&gt;</strong>. <br> Head-elementet inneholder et title-element. Teksten "Grunnleggende HTML" er innholdet i title-elementet. <br>
                          Body-elementet inneholder et h1-element (en overskrift). Teksten "Åssiden videregående skole" er innholdet i h1-elementet.
@@ -247,7 +248,7 @@
                     <div class="intro_git">
 
                         <h2>Introduksjon til GIT og GitHub</h2>
-                        <h4 class="textspeech1"><i onclick="read_git_intro()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4 class="textspeech1"><i onclick="read_git_intro(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                         <h3>Hva er GitHub</h3>
                         <p>
                             GitHub er en nettbasert plattform som bruker Git. 
@@ -354,7 +355,7 @@
                     <div class="install_git">
 
                         <h3>Installasjon av Git</h3>
-                        <h4 class="textspeech1"><i onclick="read_installGit()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4 class="textspeech1"><i onclick="read_installGit(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                         <h4>For Windows</h4>
                         <ul class="setup_git">
                             <li><p>Gå til <a href="https://git-scm.com/downloads/win" target="_blank">https://git-scm.com/downloads/win</a></p> </li>
@@ -368,7 +369,7 @@
                     </div>
                     <div class="install_git_mac">
                         <h4>For macOS</h4>
-                        <h4 class="textspeech1"><i onclick="read_installGitMac()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4 class="textspeech1"><i onclick="read_installGitMac(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                         <ul class="setup_git_mac">
                             <li><p>Kjør brew install git i terminalen</p></li>
                             <li><p>Etter at Git er ferdig installert, kjør "git --version"</p> </li>
@@ -557,7 +558,7 @@
 
                     <article id="oppgaver" class="oppgaverHTML">
                         <h2>Oppgaver</h2>
-                        <h4 class="textspeech1"><i onclick="speak()" class="fa-solid fa-book-open-reader" id="t1"></i></h4>
+                        <h4 class="textspeech1"><i onclick="read_oppgaver(this)" class="fa-solid fa-book-open-reader" id="t1"></i> <label class="speech-language-label">Språk: <select class="speech-language" aria-label="Språk for opplesing"><option value="nb-NO">Norsk</option><option value="uk-UA">Ukrainsk</option><option value="ar-SA">Arabisk</option><option value="en-US">Engelsk</option></select></label></h4>
                         <h3>Arbeidsmåte og levering</h3>
                         <p>I dette prosjektet skal du lære om grunnleggende
                              konsepter i HTML. Dette danner et viktig fundament for 
