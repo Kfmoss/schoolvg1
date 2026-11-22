@@ -7,6 +7,18 @@ btn.addEventListener('click', () => {
 document.body.classList.toggle('light-mode');
 });
 
+const mainNav = document.querySelector('.main_nav');
+let previousScrollPosition = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
+    const hasScrolledEnough = currentScrollPosition > 70;
+    const isScrollingDown = currentScrollPosition > previousScrollPosition;
+
+    mainNav.classList.toggle('nav-hidden', hasScrolledEnough && isScrollingDown);
+    previousScrollPosition = currentScrollPosition;
+}, { passive: true });
+
 
 let isReading = false;
 let listenersAdded = false;

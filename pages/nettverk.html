@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,12 @@
             </ul>
 
         </nav>
-        <nav class="beside_nav">
+        <nav class="beside_nav" aria-label="Oversikt over nettverkskonsepter">
             <ul class="list1">
                 <li><a href="#nettverk">Hva er et nettverk</a></li>
                 <li><a href="#tema2">IP-adresse</a></li>
                 <li><a href="#tema3">Brannmur</a></li>
-                <li><a href="#tema4">Prokoller</a></li>
+                <li><a href="#tema4">Protokoller</a></li>
                 <li><a href="#tema5">Porter</a></li>
                 <li><a href="#tema6">Tjenester</a></li>
                 <li><a href="#tema7">DHCP</a></li>
@@ -62,7 +62,7 @@
                         må vi kjenne til de viktigste byggesteinene som sørger for 
                         sikker og effektiv kommunikasjon. I dette prosjektet skal du lære om 
                         sentrale elementer som brannmur, porter, 
-                        P-adresser, protokoller og tjenester som DNS. Sammen utgjør disse 
+                        IP-adresser, protokoller og tjenester som DNS. Sammen utgjør disse
                         grunnlaget for hvordan data flyttes, beskyttes og finner veien dit 
                         de skal i et nettverk.
                     </p>
@@ -166,14 +166,14 @@
             </section>
             <section id="tema2">
                 <Article>
-                    <h2>IPAdresse</h2>
+                    <h2>IP-adresse</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-                    <p>En IP-adresse (Internet Protocol address) er en unik 
-                        identifikator, eller adresse, som blir tildelt en enhet – 
-                        for eksempel en PC eller en mobil – slik at de kan skilles 
-                        fra hverandre på et nettverk. En IP-adresse brukes for å finne 
-                        og kommunisere med enheter på et datanettverk, som for eksempel 
-                        internett. </p>
+                    <p><strong>En IP-adresse</strong> er en numerisk adresse som identifiserer
+                        en nettverksenhet eller nettverksgrensesnitt, for eksempel en datamaskin,
+                        telefon eller server. Adressen gjør det mulig å sende datapakker til riktig
+                        mottaker i et nettverk. Det er vanlig å sammenligne IP-adressen med
+                        en gateadresse: den forteller hvor datapakken skal, mens en port forteller
+                        hvilket program på enheten pakken skal leveres til.</p>
                     
                     <ul class="list_ipAdress">
                         <li><h3>Offentlig IP-adresse</h3>
@@ -203,12 +203,12 @@
                             </div>
                         </li>
                         <li>
-                            <h3>Statisk vs Dinamysk IP-adresse</h3>
-                            <p>Den viktigste forskjellen er at en statisk
-                                 IP-adresse alltid er den samme, mens en dynamisk 
-                                 IP-adresse endrer seg. En statisk adresse gis til deg av 
-                                 internettleverandøren og forblir den samme hele tiden, mens en
-                                  dynamisk IP-adresse endres fra tid til annen.</p>
+                            <h3>Statisk eller dynamisk IP-adresse</h3>
+                            <p>En <strong>statisk IP-adresse</strong> endrer seg vanligvis ikke og
+                                kan brukes av servere eller enheter som alltid skal være lette å
+                                finne på nettverket. En <strong>dynamisk IP-adresse</strong> blir
+                                tildelt automatisk og kan forandres over tid. Dynamiske adresser
+                                tildeles vanligvis av DHCP-tjenesten i ruteren.</p>
                             <div class="video-ip">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/5WfiTHiU4x8?si=Q9m84xWfH6-BA5sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -218,7 +218,7 @@
                             <h3>Mer om IP-adresse</h3>
                             
                             <p> <strong>Vil du vite mer om IP-adresse? klikk <a href="https://ndla.no/nb/r/teknologiforstaelse-im-ikm-vg1/ip-adresser/a14943faa6">her</a>.</strong> </p>
-                            <p>Se hva hva <strong>Datatilsynet</strong> mener om personligeopplysninger og bruken av IP-adresse. Klikk <a href="https://www.datatilsynet.no/rettigheter-og-plikter/personopplysninger/">her</a>.</p>
+                            <p>Se hva <strong>Datatilsynet</strong> mener om personopplysninger og bruken av IP-adresse. Klikk <a href="https://www.datatilsynet.no/rettigheter-og-plikter/personopplysninger/">her</a>.</p>
                         </li>
 
 
@@ -232,26 +232,14 @@
                 <article>
                     <h2>Brannmur</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-                    <p>En brannmur (firewall på engelsk) er et sikkerhetssystem som beskytter datamaskiner og nettverk mot uønsket eller skadelig trafikk fra internett eller andre nettverk. En brannmur fungerer som en digital dørvakt. Den bestemmer hvilken datatrafikk som får komme inn og gå ut av nettverket ditt, 
-                        basert på forhåndsdefinerte regler. </p>
-                    <p>En brannmur er et program som kan beskytte datamaskinen mot 
-                        at noen med uærlige hensikter får tilgang til datafilene dine 
-                        eller legger inn et spionprogram eller virus på datamaskinen din. 
-                        Forskjellige typer programmer, som e-post, nettlesere eller 
-                        nettverkspill, kommuniserer på litt forskjellige måter på internett,
-                         gjennom såkalte porter. En IP-adressekan I tillegg til selve adressen 
-                         også ha med en port. Porten angis ved å sette et kolon og portnummeret 
-                         etter selve adressen. Et eksempel er https://www.mywonderfulclass.com:80 . 
-                        En brannmur kan være med og begrense hvilke porter som skal være åpne på maskinen,
-                         og hvilke programmer som skal få lov å snakke gjennom disse portene. Et nettverk 
-                         inneholder ofte flere brannmur. Du har gjerne en brannmur installert på datamaskinen din.
-                          På ruteren I hjemmenettverket som du kobler deg til internett via, fins  det også
-                           en brannmur. Ofte er disse brannmurene stilt inn slik at de er svært
-                            strenge med hvilke programmer og andre datamaskiner forsøker å sende
-                             data til datamaskinen din, sier brannmuren fra og spør om du vil 
-                             godkjenne kommunikasjon fra denne datamaskinen. Hvis du svarer "ja"
-                              , kan brannmuren også huske at du stoler på denne matamaskinen til
-                               neste gang.  </p>
+                    <p><strong>En brannmur</strong> er et sikkerhetssystem som filtrerer
+                        nettverkstrafikk etter bestemte regler. Den kan, for eksempel, blokkere
+                        uønskede tilkoblinger fra internett, begrense hvilke porter som er åpne
+                        og avgjøre hvilke programmer som får sende eller motta data.</p>
+                    <p>Brannmurer finnes som både maskinvare i rutere og som programmer på
+                        datamaskiner. De beskytter mot uønsket nettverkstrafikk, men erstatter
+                        ikke antivirusprogram, oppdateringer eller sikre passord. Det er derfor
+                        viktig å kombinere flere sikkerhetstiltak.</p>
                     <div class="pic_brannmur">
                         <img id="pic1_mur" src="/img/GetImage.png" alt="">
                         <iframe width="420" height="315" src="https://www.youtube.com/embed/kDEX1HXybrU" frameborder="0"></iframe>
@@ -265,17 +253,21 @@
                 <article>
                     <h2>Protokoller</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-                    <p> Et internettprotokoll (ofte forkortet IP, fra Internet Protocol) er et <strong>regelsett</strong>  som brukes for å sende og motta data over internett eller andre nettverk. 
-                    Internettprotokollen sørger for at data (for eksempel en nettside, e-post, video osv.) kan sendes fra én datamaskin til en annen på riktig måte og til riktig sted.
-                    Hver enhet som er koblet til internett får en <strong>IP-adresse</strong>, som fungerer som en slags "adresse" — omtrent som et telefonnummer eller gateadresse for datamaskiner.</p>
+                    <p><strong>En nettverksprotokoll</strong> er et felles regelsett som
+                        bestemmer hvordan enheter skal formere, sende, motta og tolke data.
+                        Protokollene gjør at ulike datamaskiner og systemer kan kommunisere på
+                        samme måte. TCP/IP er en samlebetegnelse på flere protokoller som
+                        samarbeider på internett.</p>
                     <ul class="type_protokoll">
                         <li>
-                            <h3>TCP-IP</h3>
+                            <h3>TCP/IP</h3>
                             <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-                            <p>TCP-protokollen (Transmission Control Protocol) er en av de viktigste protokollene på internett, og den samarbeider tett med IP — derfor snakker man ofte om TCP/IP.
-                                Mens IP tar seg av adressering (å sende data til riktig sted), sørger TCP for at dataene faktisk kommer fram riktig, komplett og i riktig rekkefølge.
-                                
-                            </p>
+                            <p><strong>IP (Internet Protocol)</strong> adresserer datapakker og
+                                hjelper dem med å finne riktig destinasjon. <strong>TCP (Transmission
+                                Control Protocol)</strong> sørger for at data blir delt opp i pakker,
+                                sendt i riktig rekkefølge og kontrollert slik at manglende eller
+                                ødelagte pakker blir sendt på nytt. TCP brukes derfor der pålitelig
+                                leveranse er viktig.</p>
                             <div class="video-ip">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/CRdL1PcherM?si=14oi2-te6hkiTCAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -283,18 +275,15 @@
                         </li>
                         <li>
                             <h3>HTTP og HTTPS</h3>
-                            <p>HTTP står for HyperText Transfer Protocol
-                                Det er protokollen som brukes til å overføre nettsider og data mellom en nettleser og en webserver. HTTP er ukryptert, som betyr at alt du sender og mottar er i klartekst.
-                                Alle dataene du sender – som brukernavn, passord, eller søkeord – kan leses av hvem som helst som har tilgang til nettverket (f.eks. på et offentlig Wi-Fi).
-                                 Med HTTP vet du ikke sikkert hvem du snakker med.
-                                En nettside kan late som den er “din bank”, men egentlig være en kopi laget for å stjele data. Hvorfor bruker vi det fortsatt? Før i tiden krevde HTTPS dyre SSL-sertifikater og mer oppsett.
-                                Det var mer styr for små nettsider, så mange valgte bare HTTP.
-                                (Nå finnes gratis sertifikater, som Let’s Encrypt, så dette er mindre problem nå.)
-                            </p>
-                            
-                            <p>HTTPS betyr HyperText Transfer Protocol Secure.
-                                Det er samme protokoll som HTTP, men med et viktig tillegg: kryptering via SSL/TLS. Fordelen med HTTPS er at ingen kan lese dataene mens de sendes 
-                                (for eksempel passord, kortinformasjon eller meldinger). Selv om noen <strong>"sniffer"</strong>nettet ditt (f.eks. på et offentlig Wi-Fi), vil de bare se uleselig data.</p>
+                            <p><strong>HTTP (Hypertext Transfer Protocol)</strong> er protokollen
+                                nettleseren og en webserver bruker for å utveksle forespørsler og
+                                nettsideinnhold. Vanlig HTTP-sider bruker normalt port 80 og har ingen
+                                innebygd kryptering.</p>
+                            <p><strong>HTTPS (HTTP Secure)</strong> bruker HTTP sammen med en
+                                kryptert TLS-forbindelse. HTTPS beskytter informasjonen som sendes
+                                mellom nettleser og server og bekrefter også serverens identitet.
+                                Vanligvis brukes port 443. HTTPS bør brukes på alle nettsider der
+                                brukere logger inn eller sender personlige opplysninger.</p>
                             <div class="video-ip">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/hExRDVZHhig?si=8AFclPnxxsxjRLW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -317,13 +306,14 @@
                 <article>
                     <h2>Porter</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-                    <p>En port er som en dør eller inngang i datamaskinen din som brukes for å 
-                        sende og motta informasjon over et nettverk. Når datamaskinen din kobler
-                         seg til internett, må den vite hvilket program dataene skal sendes til – og 
-                         det er portene som hjelper til med det.
-                         Hver port har et nummer (for eksempel port 80 eller port 443), 
-                         og forskjellige programmer bruker forskjellige portnumre for å 
-                         kommunisere.</p>
+                    <p><strong>En port</strong> er et logisk nummer som brukes til å skille
+                        forskjellige nettverkstjenester på samme datamaskin. IP-adressen finner
+                        riktig enhet, mens portnummeret finner riktig tjeneste eller program.
+                        Portnummeret ligger mellom 0 og 65535.</p>
+                    <p>For eksempel bruker vanlig webtrafikk med HTTP port <strong>80</strong>,
+                        mens sikker webtrafikk med HTTPS vanligvis bruker port <strong>443</strong>.
+                        Andre kjente eksempler er DNS på port 53 og SSH på port 22. TCP-porter
+                        og UDP-porter har separate nummerområder og brukes av ulike typer tjenester.</p>
 
                 </article>
                 <div class="video-ip">
@@ -344,7 +334,14 @@
             <section id="tema7">
                 <article>
                     <h2>DHCP</h2>
-
+                    <p><strong>DHCP (Dynamic Host Configuration Protocol)</strong> er en
+                        protokoll som automatisk fordeler nettverksinnstillinger til enheter.
+                        DHCP-serveren kan gi en datamaskin en IP-adresse, nettverksmaske,
+                        standardruter og adressen til DNS-servere.</p>
+                    <p>Uten DHCP må opplysningene skrives inn manuelt på hver enhet. DHCP
+                        gjør det enklere å koble nye enheter til nettverket og reduserer risikoen
+                        for at to enheter får samme IP-adresse. Adressen utleveres normalt for
+                        en bestemt tidsperiode og kan fornyes.</p>
                 </article>
                 <div class="video-ip">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/e6-TaH5bkjo?si=BRdmRLl6IZyJZXso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -356,7 +353,15 @@
                 <article>
                     <h2>DNS-server</h2>
                     <h4 id="btn1" class="textspeech1"><i onclick="main_speech()" class="fa-solid fa-book-open-reader"></i></h4>
-
+                    <p><strong>DNS (Domain Name System)</strong> oversetter lesbare domenenavn,
+                        for eksempel <em>ndla.no</em>, til IP-adresser som datamaskiner bruker
+                        for å finne og kontakte hverandre. DNS fungerer derfor som
+                        internettets adressebok.</p>
+                    <p>Når du skriver en adresse i nettleseren, spør datamaskinen vanligvis
+                        en DNS-server etter tilhørende IP-adresse. Svaret kan ha blitt lagret
+                        midlertidig i DNS-cache. Mange rutere har en egen lokal DNS-tjeneste,
+                        mens andre sender oppslag videre til DNS-servere hos internettleverandøren
+                        eller en offentlig tjeneste.</p>
                 </article>
                 <div class="video-ip">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/NiQTs9DbtW4?si=w7_7WCvpMdbNOxtP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

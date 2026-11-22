@@ -641,6 +641,19 @@ figcaption {
 #reading-mode-toggle:focus-visible {
     background: #003e6b;
 }
+#speech-status:not([hidden]) {
+    position: fixed;
+    bottom: 6.5rem;
+    left: 2rem;
+    z-index: 100;
+    max-width: min(28rem, calc(100vw - 3rem));
+    padding: 0.8rem 1rem;
+    border: 1px solid #8a4b00;
+    border-radius: 6px;
+    background: #fff4d6;
+    color: #442600;
+    font: 1rem/1.5 'Segoe UI', Tahoma, sans-serif;
+}
 
 /* Responsive design */
 @media (max-width: 800px) {
